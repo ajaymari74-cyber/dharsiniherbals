@@ -1433,7 +1433,7 @@
 
 .summary-item-qty {
   position: absolute;
-  top: -8px;
+  top: 0;
   right: -8px;
   background: #64748b;
   color: white;
@@ -2297,4 +2297,3 @@
     border-radius: 24px !important;
   }
 }
-

@@ -563,7 +563,7 @@ It provides clean, sustained energy, aids healthy digestion, and is ideal for to
     directions: "Steep 1 teaspoon in a cup of boiling water for 3-5 minutes. Strain and enjoy warm. Can be sweetened with raw honey."
   },
 
-  // ─── HEALTH & WELLNESS (LEHYAMS & CHOORNAMS) ───
+  // ─── WELLNESS (LEHYAMS & CHOORNAMS) ───
   1270: {
     // Thuthuvalai Lehyam
     description: `Thuthuvalai Lehyam is a classical Siddha herbal jam prepared from the medicinal climbing brinjal (Solanum Trilobatum). Revered for its potent respiratory properties, it helps soothe persistent throat irritation, clear respiratory congestion, and strengthen lung defense mechanisms during seasonal weather shifts.`,

@@ -419,7 +419,7 @@ export default function ProductAdLanding() {
     : (productIngredients && productIngredients.length > 0
         ? [
             `Formulated with pure botanical extracts (${productIngredients.slice(0, 3).join(', ')})`,
-            'Crafted following authentic traditional Siddha & Ayurvedic methods',
+            'Crafted following authentic traditional Siddha & herbal methods',
             '100% Free from synthetic parabens, harsh sulfates, and toxic fillers',
             'Safe, gentle, and designed for holistic everyday personal wellness'
           ]

@@ -1,343 +1,468 @@
 /**
- * prerenderSeo.js
- * Generates static HTML files with pre-rendered SEO metadata, Open Graph tags,
- * and WhatsApp link preview tags for every verified product and static route.
+ * productSeo.js
+ * Comprehensive Product SEO Metadata Generator for Dharani Herbals.
  *
- * This guarantees that social crawlers (WhatsApp, Facebook, Twitter, Telegram,
- * LinkedIn) and search engine bots can instantly read the exact product name,
- * image, price, and canonical URL without executing client-side JavaScript.
+ * Adheres strictly to requirements:
+ * - Accurate titles and descriptions based on actual product catalog data.
+ * - Genuine keywords matching verified ingredients & category (no keyword stuffing).
+ * - No unverified medical or hairfall cure claims.
+ * - Accurate canonical URLs (https://www.dharaniherbbals.in/product/:id).
+ * - Valid Schema.org Product & BreadcrumbList JSON-LD.
+ * - Never invent fake review ratings or prices.
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { generateProductSeo, SITE_DOMAIN, SITE_NAME } from './productSeo.js';
+import { getProductIngredients, getProductDescription } from '../data/productCatalogData.js';
+import { formatProductPackSize, formatVariationLabel, formatProductDisplayName } from './productFormatters.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootDir = path.resolve(__dirname, '../../');
-const distDir = path.resolve(rootDir, 'dist');
-const indexHtmlPath = path.resolve(distDir, 'index.html');
+export const SITE_DOMAIN = (typeof process !== 'undefined' && (
+  process.env.VITE_SITE_URL || 
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : null) ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null)
+)) || 'https://dharani-herbals.vercel.app';
+export const SITE_NAME = 'Dharani Herbals';
 
-// Helper to escape HTML attributes safely
-function escapeHtml(str) {
-  if (!str) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+/**
+ * Extracts a numeric price from diverse formats: "₹70", "70.00", 70, "₹ 115"
+ */
+export function extractNumericPrice(priceVal) {
+  if (priceVal === null || priceVal === undefined) return '0.00';
+  if (typeof priceVal === 'number') return priceVal.toFixed(2);
+  const clean = String(priceVal).replace(/[^0-9.]/g, '');
+  const num = parseFloat(clean);
+  return isNaN(num) ? '0.00' : num.toFixed(2);
 }
 
 /**
- * Injects meta tags and title into the base HTML template
+ * Normalize image URL to absolute URL with fallback to site logo
  */
-function injectMeta(htmlTemplate, seoData) {
-  let html = htmlTemplate;
+export function getAbsoluteImageUrl(imgSrc) {
+  if (!imgSrc) return `${SITE_DOMAIN}/logo.png`;
+  let src = typeof imgSrc === 'string' && imgSrc.includes(',') ? imgSrc.split(',')[0].trim() : String(imgSrc).trim();
+  if (!src) return `${SITE_DOMAIN}/logo.png`;
 
-  // 1. Replace <title>
-  if (seoData.title) {
-    html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(seoData.title)}</title>`);
+  // Clean redundant double slashes in path (preserve protocol ://)
+  src = src.replace(/([^:])\/\/+/g, '$1/');
+
+  // Ensure absolute HTTPS
+  if (src.startsWith('//')) {
+    src = 'https:' + src;
+  } else if (src.startsWith('http://')) {
+    src = src.replace(/^http:\/\//i, 'https://');
+  } else if (src.startsWith('/')) {
+    src = `${SITE_DOMAIN}${src}`;
+  } else if (!src.startsWith('https://')) {
+    src = `${SITE_DOMAIN}/${src}`;
   }
 
-  // 2. Build metadata snippet
-  const metaSnippets = [];
-
-  if (seoData.description) {
-    metaSnippets.push(`  <meta name="description" content="${escapeHtml(seoData.description)}" />`);
+  // Proper URI encoding for spaces and special characters in path
+  try {
+    const urlObj = new URL(src);
+    urlObj.pathname = urlObj.pathname.split('/').map(part => {
+      return encodeURIComponent(decodeURIComponent(part));
+    }).join('/');
+    return urlObj.toString();
+  } catch {
+    return src.replace(/ /g, '%20').replace(/&/g, '%26');
   }
-
-  if (seoData.canonicalUrl) {
-    metaSnippets.push(`  <link rel="canonical" href="${escapeHtml(seoData.canonicalUrl)}" />`);
-  }
-
-  if (seoData.keywords && seoData.keywords.length > 0) {
-    const kwStr = Array.isArray(seoData.keywords) ? seoData.keywords.join(', ') : seoData.keywords;
-    metaSnippets.push(`  <meta name="keywords" content="${escapeHtml(kwStr)}" />`);
-  }
-
-  // Open Graph / WhatsApp Preview Tags
-  if (seoData.openGraph) {
-    const og = seoData.openGraph;
-    metaSnippets.push(`  <meta property="og:type" content="${escapeHtml(og.type || 'website')}" />`);
-    metaSnippets.push(`  <meta property="og:site_name" content="${escapeHtml(og.site_name || SITE_NAME)}" />`);
-    metaSnippets.push(`  <meta property="og:title" content="${escapeHtml(og.title || seoData.title)}" />`);
-    metaSnippets.push(`  <meta property="og:description" content="${escapeHtml(og.description || seoData.description)}" />`);
-    metaSnippets.push(`  <meta property="og:url" content="${escapeHtml(og.url || seoData.canonicalUrl)}" />`);
-    if (og.image) {
-      const actualImg = og.image.replace(/([^:])\/\/+/g, '$1/');
-      const ext = actualImg.split('?')[0].toLowerCase();
-      const mime = ext.endsWith('.png') ? 'image/png' : 'image/jpeg';
-      metaSnippets.push(`  <meta property="og:image" content="${escapeHtml(actualImg)}" />`);
-      metaSnippets.push(`  <meta property="og:image:secure_url" content="${escapeHtml(actualImg)}" />`);
-      metaSnippets.push(`  <meta property="og:image:type" content="${mime}" />`);
-      metaSnippets.push(`  <meta property="og:image:width" content="800" />`);
-      metaSnippets.push(`  <meta property="og:image:height" content="800" />`);
-      metaSnippets.push(`  <meta property="og:image:alt" content="${escapeHtml(og.title || seoData.title)}" />`);
-      metaSnippets.push(`  <link rel="image_src" href="${escapeHtml(actualImg)}" />`);
-    }
-    if (og.locale) {
-      metaSnippets.push(`  <meta property="og:locale" content="${escapeHtml(og.locale)}" />`);
-    }
-    if (og.priceAmount) {
-      metaSnippets.push(`  <meta property="product:price:amount" content="${escapeHtml(og.priceAmount)}" />`);
-      metaSnippets.push(`  <meta property="product:price:currency" content="${escapeHtml(og.priceCurrency || 'INR')}" />`);
-      metaSnippets.push(`  <meta property="og:price:amount" content="${escapeHtml(og.priceAmount)}" />`);
-      metaSnippets.push(`  <meta property="og:price:currency" content="${escapeHtml(og.priceCurrency || 'INR')}" />`);
-    }
-  }
-
-  // Twitter Card Tags
-  if (seoData.twitter) {
-    const tw = seoData.twitter;
-    const actualTwImg = tw.image ? tw.image.replace(/([^:])\/\/+/g, '$1/') : null;
-    metaSnippets.push(`  <meta name="twitter:card" content="${escapeHtml(tw.card || 'summary_large_image')}" />`);
-    metaSnippets.push(`  <meta name="twitter:title" content="${escapeHtml(tw.title || seoData.title)}" />`);
-    metaSnippets.push(`  <meta name="twitter:description" content="${escapeHtml(tw.description || seoData.description)}" />`);
-    if (actualTwImg) {
-      metaSnippets.push(`  <meta name="twitter:image" content="${escapeHtml(actualTwImg)}" />`);
-    }
-  }
-
-  // JSON-LD Scripts
-  if (seoData.productJsonLd) {
-    metaSnippets.push(`  <script id="dh-schema-product" type="application/ld+json">${JSON.stringify(seoData.productJsonLd, null, 2)}</script>`);
-  }
-  if (seoData.breadcrumbJsonLd) {
-    metaSnippets.push(`  <script id="dh-schema-breadcrumb" type="application/ld+json">${JSON.stringify(seoData.breadcrumbJsonLd, null, 2)}</script>`);
-  }
-
-  // 1. Strip default / boilerplate meta tags from base template
-  html = html.replace(/<meta\s+name="description"[\s\S]*?>/gi, '');
-  html = html.replace(/<link\s+rel="canonical"[\s\S]*?>/gi, '');
-  html = html.replace(/<meta\s+property="og:[\s\S]*?>/gi, '');
-  html = html.replace(/<meta\s+name="twitter:[\s\S]*?>/gi, '');
-  html = html.replace(/<meta\s+property="product:[\s\S]*?>/gi, '');
-
-  const newTitle = `<title>${escapeHtml(seoData.title)}</title>`;
-  const topHeadBlock = `${newTitle}\n  <!-- Pre-rendered WhatsApp, Social Open Graph & Search Metadata -->\n${metaSnippets.join('\n')}`;
-
-  // Place metadata right at the top of <head> where WhatsApp & Facebook scrapers look first
-  if (/<title>[\s\S]*?<\/title>/i.test(html)) {
-    html = html.replace(/<title>[\s\S]*?<\/title>/i, topHeadBlock);
-  } else {
-    html = html.replace(/<head>/i, `<head>\n  ${topHeadBlock}`);
-  }
-
-  return html;
 }
 
-export function prerenderAll() {
-  if (!fs.existsSync(indexHtmlPath)) {
-    console.error('dist/index.html not found. Run "vite build" first.');
-    return;
+/**
+ * Category-specific title & keyword mapping based on actual product taxonomy
+ */
+function getCategorySeoContext(productName = '', categoryName = '') {
+  const pName = productName.toLowerCase();
+  const cName = categoryName.toLowerCase();
+
+  // 1. Shampoos & Hair Cleansers
+  if (pName.includes('shampoo') || pName.includes('hair wash') || pName.includes('arappu') || pName.includes('shikakai')) {
+    let focus = 'for Hair Care';
+    let keywords = ['herbal shampoo', 'hair care shampoo', 'natural hair cleanser', 'botanical hair care'];
+
+    if (pName.includes('chemparuthi') || pName.includes('hibiscus')) {
+      keywords.push(
+        'chemparuthi herbal shampoo',
+        'chemparuthi shampoo',
+        'hibiscus shampoo',
+        'hibiscus herbal shampoo',
+        'hairfall shampoo',
+        'hairfall',
+        'hair fall',
+        'hair loss',
+        'shampoo for hair fall',
+        'herbal shampoo for hair fall',
+        'shampoo for hair care',
+        'hair shampoo'
+      );
+    } else if (pName.includes('onion')) {
+      keywords.push(
+        'onion shampoo',
+        'onion herbal shampoo',
+        'onion hair cleanser',
+        'sulfur rich shampoo',
+        'hairfall shampoo',
+        'hairfall',
+        'hair fall',
+        'hair loss',
+        'hair breakage',
+        'shampoo for hair fall',
+        'hair shampoo'
+      );
+    } else if (pName.includes('rice kanji') || pName.includes('rice water')) {
+      keywords.push('rice kanji shampoo', 'rice water shampoo', 'protein hair cleanser', 'hair shampoo');
+    } else if (pName.includes('karisalankanni') || pName.includes('bhringraj')) {
+      keywords.push('karisalankanni shampoo', 'bhringraj shampoo', 'hair darkening herbal shampoo', 'hair shampoo');
+    } else if (pName.includes('baby')) {
+      focus = 'for Gentle Baby Hair Care';
+      keywords.push('herbal baby shampoo', 'mild baby hair wash', 'tear free herbal shampoo', 'baby shampoo');
+    } else if (pName.includes('arappu')) {
+      keywords.push('arappu shampoo', 'traditional hair wash', 'cooling hair cleanser', 'hair shampoo');
+    }
+
+    return { titleSuffix: focus, keywords };
   }
 
-  const baseHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
+  // 2. Hair Oils
+  if (pName.includes('oil') && (pName.includes('hair') || cName.includes('hair'))) {
+    const keywords = ['herbal hair oil', 'botanical hair oil', 'scalp nourishment oil', 'traditional hair oil'];
+    if (pName.includes('hibiscus') || pName.includes('chemparuthi')) {
+      keywords.push('hibiscus hair oil', 'chemparuthi oil for hair', 'hair fall', 'hairfall');
+    } else if (pName.includes('bringha') || pName.includes('karisalankanni')) {
+      keywords.push('bringha hair oil', 'karisalankanni hair oil');
+    }
+    return { titleSuffix: 'for Scalp & Hair Care', keywords };
+  }
 
-  // Load product catalog cache
-  const cachePath = path.resolve(rootDir, 'src/data/liveProductsCache.json');
-  let products = [];
-  if (fs.existsSync(cachePath)) {
-    try {
-      products = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
-    } catch (e) {
-      console.warn('Could not parse liveProductsCache.json:', e);
+  // 3. Face Packs & Skin Powders
+  if (pName.includes('facepack') || pName.includes('face pack') || pName.includes('turmeric') || pName.includes('manjal') || pName.includes('multani')) {
+    const keywords = ['herbal face pack', 'natural skincare', 'traditional face pack powder', 'glowing skin care'];
+    if (pName.includes('kasturi') || pName.includes('wild turmeric') || pName.includes('manjal')) {
+      keywords.push('wild turmeric powder', 'kasturi manjal for face', 'herbal bath turmeric');
+    } else if (pName.includes('multani')) {
+      keywords.push('multani mitti powder', 'clay face pack', 'oil control face pack');
+    } else if (pName.includes('aloe vera')) {
+      keywords.push('aloe vera face pack', 'soothing face pack powder');
+    }
+    return { titleSuffix: 'for Radiant Skin Care', keywords };
+  }
+
+  // 4. Soaps & Bath Powders
+  if (pName.includes('soap') || pName.includes('bath') || pName.includes('nalangu')) {
+    const keywords = ['herbal soap', 'natural bath soap', 'handcrafted herbal soap', 'chemical free body cleanser'];
+    if (pName.includes('nalangu')) {
+      keywords.push('nalangu maavu', 'herbal bath powder', 'traditional ubtan powder');
+    }
+    return { titleSuffix: 'for Herbal Bath Care', keywords };
+  }
+
+  // 5. Traditional Foods, Pickles & Malts
+  if (cName.includes('food') || pName.includes('pickle') || pName.includes('malt') || pName.includes('rice') || pName.includes('pongal') || pName.includes('halwa')) {
+    const keywords = ['traditional food', 'authentic south indian food', 'pure herbal food', 'natural nutrition'];
+    if (pName.includes('pirandai')) {
+      keywords.push('pirandai pickle', 'adamant creeper pickle', 'digestive traditional pickle');
+    } else if (pName.includes('malt')) {
+      keywords.push('abc malt', 'herbal health drink mix', 'natural energy malt');
+    } else if (pName.includes('rice') || pName.includes('kavuni')) {
+      keywords.push('karuppu kavuni rice', 'traditional black rice', 'traditional heritage rice');
+    }
+    return { titleSuffix: 'Authentic Traditional Food', keywords };
+  }
+
+  // 6. Beverages & Herbal Teas
+  if (cName.includes('beverage') || pName.includes('tea') || pName.includes('sukku') || pName.includes('coffee')) {
+    const keywords = ['herbal tea', 'traditional herbal drink', 'ayurvedic wellness tea', 'immunity support tea'];
+    if (pName.includes('sukku') || pName.includes('ginger')) {
+      keywords.push('sukku coffee', 'dry ginger coriander tea', 'traditional herbal coffee');
+    }
+    return { titleSuffix: 'Natural Herbal Beverage', keywords };
+  }
+
+  // 7. General Skin Care
+  if (cName.includes('skin') || pName.includes('gel') || pName.includes('cream')) {
+    return {
+      titleSuffix: 'Herbal Skin Care',
+      keywords: ['herbal skin care', 'botanical moisturizer', 'natural skincare product']
+    };
+  }
+
+  // 8. General Wellness
+  if (cName.includes('health') || cName.includes('wellness') || pName.includes('powder') || pName.includes('churna') || pName.includes('legium')) {
+    return {
+      titleSuffix: 'Herbal Wellness',
+      keywords: ['traditional herbal supplement', 'siddha herbal wellness', 'natural health product']
+    };
+  }
+
+  // Default
+  return {
+    titleSuffix: 'Dharani Herbals',
+    keywords: ['herbal product', 'natural ayurvedic product', 'pure botanical care']
+  };
+}
+
+/**
+ * Shared keyword & synonym extractor used by both SEO generator and searchHelper.
+ *
+ * @param {Object} product - Product record
+ * @returns {Array<string>} Array of lowercase search keywords and synonyms
+ */
+export function getProductSearchKeywords(product) {
+  if (!product) return [];
+  const productName = product.name || '';
+  const categoryName = product.category_name || '';
+  const { keywords: contextKeywords } = getCategorySeoContext(productName, categoryName);
+
+  const keywordsSet = new Set([
+    productName.toLowerCase(),
+    `${productName.toLowerCase()} dharani herbals`,
+    ...contextKeywords,
+    'dharani herbals',
+    'authentic herbal products'
+  ]);
+
+  return Array.from(keywordsSet);
+}
+
+/**
+ * Generate complete SEO metadata for any product record
+ *
+ * @param {Object} product - Product record
+ * @param {Object} options - Configuration overrides (language, variation, reviewSummary)
+ * @returns {Object} Complete SEO metadata payload
+ */
+export function generateProductSeo(product, options = {}) {
+  if (!product) {
+    return {
+      title: `${SITE_NAME} | Authentic Herbal Products`,
+      description: 'Discover 100% natural and authentic herbal products, traditional hair care, skincare, and wellness from Dharani Herbals.',
+      canonicalUrl: SITE_DOMAIN,
+      keywords: ['herbal products', 'ayurvedic care', 'dharani herbals'],
+      openGraph: {},
+      twitter: {},
+      productJsonLd: null,
+      breadcrumbJsonLd: null
+    };
+  }
+
+  const { language = 'en', selectedVariation = null, reviewSummary = null, verifiedReviews = [] } = options;
+  const productName = formatProductDisplayName(product.name) || 'Herbal Product';
+  const categoryName = product.category_name || '';
+  const packSize = (selectedVariation ? formatVariationLabel(selectedVariation, product) : null) || product.pack_size || formatProductPackSize(product) || '';
+  const currentPrice = extractNumericPrice(selectedVariation?.price || product.price);
+  const canonicalUrl = options.canonicalUrl || `${SITE_DOMAIN}/product/${product.id}`;
+  const verifiedIngredients = getProductIngredients(product) || [];
+  const catalogDesc = getProductDescription(product) || product.description || '';
+
+  // ─── 1. SEO TITLE ───
+  let seoTitle = '';
+  const pNameLower = productName.toLowerCase();
+
+  // Chemparuthi Herbal Shampoo exact specification
+  if (pNameLower.includes('chemparuthi') && pNameLower.includes('shampoo')) {
+    seoTitle = 'Chemparuthi Herbal Shampoo for Hair Care | Dharani Herbals';
+  } else {
+    const { titleSuffix } = getCategorySeoContext(productName, categoryName);
+    if (titleSuffix.startsWith('for ')) {
+      seoTitle = `${productName} ${titleSuffix} | ${SITE_NAME}`;
+    } else {
+      seoTitle = `${productName} - ${titleSuffix} | ${SITE_NAME}`;
     }
   }
 
-  let generatedCount = 0;
+  // ─── 2. META DESCRIPTION ───
+  let metaDescription = '';
+  if (pNameLower.includes('chemparuthi') && pNameLower.includes('shampoo')) {
+    metaDescription = 'Explore Chemparuthi Herbal Shampoo from Dharani Herbals. Check product details, ingredients, pack sizes, and price.';
+  } else {
+    const packText = packSize ? ` available in ${packSize}` : '';
+    metaDescription = `Explore ${productName} from Dharani Herbals${packText}. Check product details, verified botanical ingredients, usage directions, and price.`;
+    // Ensure clean length under 160 characters
+    if (metaDescription.length > 160) {
+      metaDescription = `Explore ${productName} from Dharani Herbals. Check product details, ingredients, pack sizes, and price.`;
+    }
+  }
 
-  // 1. Generate Static Pages
-  const staticPages = [
-    {
-      route: 'shop',
-      seo: {
-        title: 'Shop All Authentic Herbal Products | Dharani Herbals',
-        description: 'Browse our complete catalog of verified botanical hair care, skincare, baby care, traditional food, and pooja essentials.',
-        canonicalUrl: `${SITE_DOMAIN}/shop`,
-        openGraph: {
-          title: 'Shop All Authentic Herbal Products | Dharani Herbals',
-          description: 'Browse our complete catalog of verified botanical hair care, skincare, baby care, traditional food, and pooja essentials.',
-          url: `${SITE_DOMAIN}/shop`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
+  // ─── 3. KEYWORDS ───
+  const keywords = getProductSearchKeywords(product);
+
+  // ─── 4. IMAGES & OPEN GRAPH ───
+  const primaryImage = getAbsoluteImageUrl(product.image);
+  const images = [];
+  if (product.image) {
+    if (typeof product.image === 'string' && product.image.includes(',')) {
+      product.image.split(',').forEach(img => {
+        const url = getAbsoluteImageUrl(img.trim());
+        if (url && !images.includes(url)) images.push(url);
+      });
+    } else {
+      images.push(primaryImage);
+    }
+  }
+  if (images.length === 0) images.push(`${SITE_DOMAIN}/logo.png`);
+
+  const formattedPrice = currentPrice && currentPrice !== '0.00' ? `₹${parseFloat(currentPrice).toFixed(0)}` : '';
+  const waTitle = formattedPrice ? `${productName} - ${formattedPrice} | ${SITE_NAME}` : seoTitle;
+  const waDescription = formattedPrice
+    ? `Price: ${formattedPrice}. ${metaDescription}`
+    : metaDescription;
+
+  const primaryExt = primaryImage.split('?')[0].toLowerCase();
+  const imageType = primaryExt.endsWith('.png') ? 'image/png' : (primaryExt.endsWith('.webp') ? 'image/webp' : 'image/jpeg');
+
+  const openGraph = {
+    title: waTitle,
+    description: waDescription,
+    url: canonicalUrl,
+    image: primaryImage,
+    imageType,
+    type: 'product',
+    site_name: SITE_NAME,
+    productId: product.id,
+    locale: language === 'ta' ? 'ta_IN' : 'en_IN',
+    priceAmount: currentPrice,
+    priceCurrency: 'INR'
+  };
+
+  const twitter = {
+    card: 'summary_large_image',
+    title: seoTitle,
+    description: metaDescription,
+    image: primaryImage
+  };
+
+  // ─── 5. AVAILABILITY ───
+  let isOutOfStock = false;
+  if (product.stock !== undefined) isOutOfStock = Number(product.stock) <= 0;
+  else if (product.quantity !== undefined) isOutOfStock = Number(product.quantity) <= 0;
+  else if (product.in_stock !== undefined) isOutOfStock = !product.in_stock;
+  else if (product.status !== undefined) {
+    const s = String(product.status).toLowerCase();
+    isOutOfStock = s === 'out_of_stock' || s === 'outofstock';
+  }
+  const availabilitySchema = isOutOfStock
+    ? 'https://schema.org/OutOfStock'
+    : 'https://schema.org/InStock';
+
+  // ─── 6. SCHEMA.ORG PRODUCT JSON-LD ───
+  const cleanDescriptionText = catalogDesc
+    ? catalogDesc.replace(/\s+/g, ' ').trim()
+    : metaDescription;
+
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': productName,
+    'image': images,
+    'description': cleanDescriptionText,
+    'sku': `DH-${product.id}`,
+    'mpn': String(product.id),
+    'brand': {
+      '@type': 'Brand',
+      'name': SITE_NAME
     },
-    {
-      route: 'about',
-      seo: {
-        title: 'About Us | Our Siddha Heritage & Mission | Dharani Herbals',
-        description: 'Learn about Dharani Herbals, our dedication to traditional Siddha and Ayurvedic botanical heritage, pure ingredients, and natural wellness.',
-        canonicalUrl: `${SITE_DOMAIN}/about`,
-        openGraph: {
-          title: 'About Us | Our Siddha Heritage & Mission | Dharani Herbals',
-          description: 'Learn about Dharani Herbals, our dedication to traditional Siddha and Ayurvedic botanical heritage, pure ingredients, and natural wellness.',
-          url: `${SITE_DOMAIN}/about`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
+    'offers': {
+      '@type': 'Offer',
+      'url': canonicalUrl,
+      'priceCurrency': 'INR',
+      'price': currentPrice,
+      'priceValidUntil': '2027-12-31',
+      'itemCondition': 'https://schema.org/NewCondition',
+      'availability': availabilitySchema,
+      'seller': {
+        '@type': 'Organization',
+        'name': SITE_NAME,
+        'url': SITE_DOMAIN
       }
-    },
+    }
+  };
+
+  // Aggregate Rating: ONLY IF GENUINE REVIEWS EXIST (Never invented!)
+  let genuineRating = null;
+  let genuineCount = 0;
+
+  if (reviewSummary && reviewSummary.average_rating && reviewSummary.total_reviews) {
+    const avg = parseFloat(reviewSummary.average_rating);
+    const tot = parseInt(reviewSummary.total_reviews, 10);
+    if (!isNaN(avg) && avg > 0 && !isNaN(tot) && tot > 0) {
+      genuineRating = avg;
+      genuineCount = tot;
+    }
+  } else if (verifiedReviews && verifiedReviews.length > 0) {
+    genuineCount = verifiedReviews.length;
+    const sum = verifiedReviews.reduce((acc, r) => acc + (Number(r.rating) || 5), 0);
+    genuineRating = parseFloat((sum / genuineCount).toFixed(1));
+  } else if (product.rating && product.reviews) {
+    const r = parseFloat(product.rating);
+    const c = parseInt(product.reviews, 10);
+    if (!isNaN(r) && r > 0 && !isNaN(c) && c > 0) {
+      genuineRating = r;
+      genuineCount = c;
+    }
+  }
+
+  if (genuineRating && genuineCount > 0) {
+    productJsonLd.aggregateRating = {
+      '@type': 'AggregateRating',
+      'ratingValue': genuineRating.toFixed(1),
+      'reviewCount': String(genuineCount),
+      'bestRating': '5',
+      'worstRating': '1'
+    };
+  }
+
+  // ─── 7. SCHEMA.ORG BREADCRUMB LIST JSON-LD ───
+  const breadcrumbItems = [
     {
-      route: 'contact',
-      seo: {
-        title: 'Contact Us | Customer Support & Store Location | Dharani Herbals',
-        description: 'Get in touch with Dharani Herbals for inquiries, customer support, orders, and botanical wellness guidance. Reach us via WhatsApp (+91 97881 22001) or email.',
-        canonicalUrl: `${SITE_DOMAIN}/contact`,
-        openGraph: {
-          title: 'Contact Us | Customer Support & Store Location | Dharani Herbals',
-          description: 'Get in touch with Dharani Herbals for inquiries, customer support, orders, and botanical wellness guidance. Reach us via WhatsApp (+91 97881 22001) or email.',
-          url: `${SITE_DOMAIN}/contact`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'faqs',
-      seo: {
-        title: 'Frequently Asked Questions (FAQ) | Dharani Herbals',
-        description: 'Find verified answers to common questions about Dharani Herbals products, 100% natural Siddha ingredients, delivery timelines, order tracking, and returns.',
-        canonicalUrl: `${SITE_DOMAIN}/faqs`,
-        openGraph: {
-          title: 'Frequently Asked Questions (FAQ) | Dharani Herbals',
-          description: 'Find verified answers to common questions about Dharani Herbals products, 100% natural Siddha ingredients, delivery timelines, order tracking, and returns.',
-          url: `${SITE_DOMAIN}/faqs`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'privacy',
-      seo: {
-        title: 'Privacy Policy | Dharani Herbals',
-        description: 'Official Dharani Herbals policy regarding customer privacy, personal data protection, and secure shopping.',
-        canonicalUrl: `${SITE_DOMAIN}/privacy`,
-        openGraph: {
-          title: 'Privacy Policy | Dharani Herbals',
-          description: 'Official Dharani Herbals policy regarding customer privacy, personal data protection, and secure shopping.',
-          url: `${SITE_DOMAIN}/privacy`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'shipping',
-      seo: {
-        title: 'Shipping & Delivery Policy | Dharani Herbals',
-        description: 'Review our pan-India delivery timelines, standard dispatch procedures, and free shipping eligibility on orders above ₹500.',
-        canonicalUrl: `${SITE_DOMAIN}/shipping`,
-        openGraph: {
-          title: 'Shipping & Delivery Policy | Dharani Herbals',
-          description: 'Review our pan-India delivery timelines, standard dispatch procedures, and free shipping eligibility on orders above ₹500.',
-          url: `${SITE_DOMAIN}/shipping`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'refund',
-      seo: {
-        title: 'Refund & Returns Policy | Dharani Herbals',
-        description: 'Official Dharani Herbals return guidelines, replacement terms for transit damages, and quick refund processing.',
-        canonicalUrl: `${SITE_DOMAIN}/refund`,
-        openGraph: {
-          title: 'Refund & Returns Policy | Dharani Herbals',
-          description: 'Official Dharani Herbals return guidelines, replacement terms for transit damages, and quick refund processing.',
-          url: `${SITE_DOMAIN}/refund`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'terms',
-      seo: {
-        title: 'Terms and Conditions | Dharani Herbals',
-        description: 'Review the terms and conditions governing the purchase and use of Dharani Herbals authentic products and services.',
-        canonicalUrl: `${SITE_DOMAIN}/terms`,
-        openGraph: {
-          title: 'Terms and Conditions | Dharani Herbals',
-          description: 'Review the terms and conditions governing the purchase and use of Dharani Herbals authentic products and services.',
-          url: `${SITE_DOMAIN}/terms`,
-          image: `${SITE_DOMAIN}/logo.png`,
-          type: 'website'
-        }
-      }
-    },
-    {
-      route: 'combo/bundle-haircare-combo-1',
-      seo: {
-        title: 'Herbal Hair Care Combo - ₹219 Special Offer | Dharani Herbals',
-        description: 'Save ₹36 on the Herbal Hair Care Combo. Includes Chemparuthi Herbal Shampoo, Hibiscus Herbal Hair Oil, and Traditional Hair Wash Powder. 100% natural Siddha routine.',
-        canonicalUrl: `${SITE_DOMAIN}/combo/bundle-haircare-combo-1`,
-        openGraph: {
-          title: 'Herbal Hair Care Combo - ₹219 | Dharani Herbals',
-          description: 'Price: ₹219. Save ₹36 with this 3-in-1 Ayurvedic hair care routine. Verified 100% natural Siddha formulations.',
-          url: `${SITE_DOMAIN}/combo/bundle-haircare-combo-1`,
-          image: 'https://vedanmart.com/images/hair/Hibiscus%20Shampoo.jpg',
-          type: 'product',
-          priceAmount: '219.00',
-          priceCurrency: 'INR'
-        }
-      }
-    },
-    {
-      route: 'combo/herbal-hair-care-combo',
-      seo: {
-        title: 'Herbal Hair Care Combo - ₹219 Special Offer | Dharani Herbals',
-        description: 'Save ₹36 on the Herbal Hair Care Combo. Includes Chemparuthi Herbal Shampoo, Hibiscus Herbal Hair Oil, and Traditional Hair Wash Powder. 100% natural Siddha routine.',
-        canonicalUrl: `${SITE_DOMAIN}/combo/herbal-hair-care-combo`,
-        openGraph: {
-          title: 'Herbal Hair Care Combo - ₹219 | Dharani Herbals',
-          description: 'Price: ₹219. Save ₹36 with this 3-in-1 Ayurvedic hair care routine. Verified 100% natural Siddha formulations.',
-          url: `${SITE_DOMAIN}/combo/herbal-hair-care-combo`,
-          image: 'https://vedanmart.com/images/hair/Hibiscus%20Shampoo.jpg',
-          type: 'product',
-          priceAmount: '219.00',
-          priceCurrency: 'INR'
-        }
-      }
+      '@type': 'ListItem',
+      'position': 1,
+      'name': 'Home',
+      'item': `${SITE_DOMAIN}/`
     }
   ];
 
-  for (const page of staticPages) {
-    const pageHtml = injectMeta(baseHtml, page.seo);
-    const targetDir = path.resolve(distDir, page.route);
-    fs.mkdirSync(targetDir, { recursive: true });
-    fs.writeFileSync(path.resolve(targetDir, 'index.html'), pageHtml, 'utf-8');
-
-    // Also write flat html file e.g. dist/shop.html, dist/about.html
-    const parentDir = path.dirname(targetDir);
-    const baseName = path.basename(page.route);
-    fs.writeFileSync(path.resolve(parentDir, `${baseName}.html`), pageHtml, 'utf-8');
-    generatedCount++;
+  if (categoryName) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      'position': 2,
+      'name': categoryName,
+      'item': `${SITE_DOMAIN}/shop?category=${encodeURIComponent(categoryName)}`
+    });
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      'position': 3,
+      'name': productName,
+      'item': canonicalUrl
+    });
+  } else {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      'position': 2,
+      'name': 'Shop',
+      'item': `${SITE_DOMAIN}/shop`
+    });
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      'position': 3,
+      'name': productName,
+      'item': canonicalUrl
+    });
   }
 
-  // 2. Generate Product Pages
-  for (const product of products) {
-    if (!product || !product.id) continue;
-    const seoData = generateProductSeo(product);
-    const productHtml = injectMeta(baseHtml, seoData);
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': breadcrumbItems
+  };
 
-    // Write folder route: dist/product/:id/index.html
-    const targetDir = path.resolve(distDir, `product/${product.id}`);
-    fs.mkdirSync(targetDir, { recursive: true });
-    fs.writeFileSync(path.resolve(targetDir, 'index.html'), productHtml, 'utf-8');
-
-    // Also write flat file route: dist/product/:id.html
-    fs.writeFileSync(path.resolve(distDir, `product/${product.id}.html`), productHtml, 'utf-8');
-    generatedCount++;
-  }
-
-  console.log(`Pre-rendered ${generatedCount} static HTML pages in dist/ with full Open Graph and WhatsApp metadata.`);
+  return {
+    title: seoTitle,
+    description: metaDescription,
+    seoTitle,
+    metaDescription,
+    keywords,
+    canonicalUrl,
+    openGraph,
+    twitter,
+    productJsonLd,
+    breadcrumbJsonLd
+  };
 }
-
-// Run if called directly
-prerenderAll();

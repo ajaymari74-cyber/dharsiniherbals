@@ -3,7 +3,6 @@ import { API_BASE_URL, NGROK_DOMAIN, resolveMediaUrl } from '../services/api';
 import { formatProductPackSize, formatVariationLabel, formatProductDisplayName, formatCurrency, consolidateProducts, getProductFallbackImage } from '../utils/productFormatters';
 import { getProductVariations, getDefaultVariation } from '../data/productVariationsData';
 import { getProductDescription } from '../data/productCatalogData';
-import liveProductsBackup from '../data/liveProductsCache.json';
 
 const EXCLUDED_PRODUCT_IDS = new Set([1032, 1039, 1228, 1192, 1128]);
 
@@ -25,27 +24,6 @@ const isRemovedProduct = (p) => {
 const ProductsContext = createContext();
 
 export function ProductsProvider({ children }) {
-  const getCacheKey = () => {
-    try {
-      const storedUser = localStorage.getItem('user');
-      if (storedUser) {
-        const data = JSON.parse(storedUser);
-        const role1 = String(data.user?.role || '').toLowerCase();
-        const role2 = String(data.role || '').toLowerCase();
-        const type1 = String(data.user?.user_type || '').toLowerCase();
-        const type2 = String(data.user_type || '').toLowerCase();
-
-        const isStoreMember = data.is_store_login || data.is_store_member || data.user?.is_store_member || data.is_store ||
-          ['staff', 'store', 'store_member'].includes(role1) ||
-          ['staff', 'store', 'store_member'].includes(role2) ||
-          ['staff', 'store', 'store_member'].includes(type1) ||
-          ['staff', 'store', 'store_member'].includes(type2);
-        if (isStoreMember) return 'dharani_products_cache_store_v6';
-      }
-    } catch (e) { }
-    return 'dharani_products_cache_customer_v6';
-  };
-
   const transformProduct = (p) => {
     const r = (p.rating !== null && p.rating !== undefined && p.rating !== '') ? Number(p.rating) : null;
     const rev = (p.reviews !== null && p.reviews !== undefined && p.reviews !== '') ? Number(p.reviews) : null;
@@ -87,30 +65,8 @@ export function ProductsProvider({ children }) {
     };
   };
 
-  const [products, setProducts] = useState(() => {
-    try {
-      const cached = localStorage.getItem(getCacheKey());
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return consolidateProducts(parsed.filter(p => !isRemovedProduct(p)).map(transformProduct));
-        }
-      }
-    } catch (e) { }
-    if (Array.isArray(liveProductsBackup) && liveProductsBackup.length > 0) {
-      return consolidateProducts(liveProductsBackup.filter(p => !isRemovedProduct(p)).map(transformProduct));
-    }
-    return [];
-  });
-
-  const [loading, setLoading] = useState(() => {
-    try {
-      const cached = localStorage.getItem(getCacheKey());
-      return cached ? false : true;
-    } catch (e) {
-      return true;
-    }
-  });
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const refreshProducts = useCallback(() => {
     if (products.length === 0) {
@@ -323,20 +279,20 @@ export function ProductsProvider({ children }) {
             badge: p.is_new ? 'NEW' : '',
             badgeColor: p.is_new ? 'green' : '',
             image: (() => {
-              // 1. Highest priority: Fresh image uploaded from CRM via product-images API
+              // 1. Highest priority: Direct main product image
+              if (p.image && !p.image.includes('Vaishnavi.jpeg') && !p.image.endsWith('/logo.png')) {
+                return resolveMediaUrl(p.image);
+              }
+              // 2. Fresh image uploaded from CRM via product-images API (fallback only)
               if (extraImagesMap && extraImagesMap[String(p.id)]) {
                 return extraImagesMap[String(p.id)];
               }
-              // 2. Fresh image in product extra_images array (uploaded in CRM Django admin)
+              // 3. Fresh image in product extra_images array (fallback only)
               if (Array.isArray(p.extra_images) && p.extra_images.length > 0) {
                 const crmExtra = p.extra_images.slice().reverse().find(img => img && typeof img === 'string' && (img.includes('/media/products/') || img.includes('api.codingboss') || img.includes('WhatsApp_Image')));
                 if (crmExtra) {
                   return resolveMediaUrl(crmExtra);
                 }
-              }
-              // 3. Direct product image
-              if (p.image && !p.image.includes('Vaishnavi.jpeg') && !p.image.endsWith('/logo.png')) {
-                return resolveMediaUrl(p.image);
               }
               // 4. Any other extra image
               if (Array.isArray(p.extra_images) && p.extra_images.length > 0) {
@@ -384,22 +340,12 @@ export function ProductsProvider({ children }) {
 
         const finalProducts = [...normalProducts, ...endProducts];
 
-        // Update state and cache only if data has changed to prevent flickering
-        setProducts(prevProducts => {
-          if (JSON.stringify(prevProducts) === JSON.stringify(finalProducts)) {
-            return prevProducts;
-          }
-          return finalProducts;
-        });
-        try {
-          localStorage.setItem(getCacheKey(), JSON.stringify(finalProducts));
-        } catch (e) {
-          console.warn("Failed to cache products:", e);
-        }
+        // Set fresh products directly from API
+        setProducts(finalProducts);
       })
       .catch(err => {
         if (err.name === 'AbortError') return;
-        console.warn("Unable to fetch fresh products from API, using cached data:", err.message);
+        console.error("Error fetching live products from API:", err);
       })
       .finally(() => {
         setLoading(false);
@@ -407,6 +353,15 @@ export function ProductsProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    // Purge any stale legacy product cache in client localStorage
+    try {
+      localStorage.removeItem('dharani_products_cache_customer_v8');
+      localStorage.removeItem('dharani_products_cache_store_v8');
+      localStorage.removeItem('dharani_featured_cache_v11');
+      localStorage.removeItem('dharani_featured_cache_v9');
+      localStorage.removeItem('dharani_categories_cache');
+    } catch (e) {}
+
     refreshProducts();
 
     const handleOnline = () => {
