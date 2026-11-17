@@ -27,14 +27,14 @@
 .deals-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #111827;
+  color: #07031a;
   margin: 0;
   letter-spacing: -1px;
 }
 
 .deals-subtitle {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #6c5f74;
   max-width: 600px;
   line-height: 1.5;
   margin: 0;
@@ -71,14 +71,14 @@
 
 .deal-card.ultra:focus-visible {
   border-radius: 24px;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.24);
+  box-shadow: 0 0 0 3px rgba(78, 63, 110, 0.25);
 }
 
 .deal-img-wrapper {
   position: relative;
   width: 100%;
   padding-top: 100%;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@
   left: 50%;
   width: 60%;
   height: 60%;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(78, 63, 110, 0.15) 0%, transparent 70%);
   transform: translate(-50%, -50%);
   border-radius: 50%;
   opacity: 0;
@@ -118,7 +118,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
@@ -128,7 +128,7 @@
   align-items: center;
   gap: 4px;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.35);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -156,8 +156,8 @@
 }
 
 .deal-badge-right:hover svg {
-  fill: #22c55e;
-  color: #22c55e;
+  fill: #4e3f6e;
+  color: #4e3f6e;
 }
 
 /* Info Section */
@@ -173,14 +173,14 @@
 .deal-name {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #111827;
+  color: #07031a;
   margin: 0 0 8px 0;
   letter-spacing: -0.5px;
   transition: color 0.3s ease;
 }
 
 .deal-card.ultra:hover .deal-name {
-  color: #22c55e;
+  color: #4e3f6e;
 }
 
 .deal-rating {
@@ -197,7 +197,7 @@
 
 .deal-score {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #6c5f74;
   font-weight: 700;
 }
 
@@ -211,7 +211,7 @@
 .deal-price {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #111827;
+  color: #07031a;
 }
 
 /* Circular Icon Button */
@@ -220,11 +220,11 @@
   height: 48px;
   border-radius: 50%;
   background: white;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(78, 63, 110, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #16a34a;
+  color: #4e3f6e;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -235,11 +235,11 @@
 }
 
 .deal-buy-btn:hover {
-  background: #16a34a;
+  background: #4e3f6e;
   color: white;
-  border-color: #16a34a;
+  border-color: #4e3f6e;
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.25);
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.25);
 }
 
 @media (max-width: 1180px) {
@@ -311,19 +311,19 @@
 /* ── Landing Page (Home Screen) Product Card Image Optimization ── */
 /* Prevents harsh zoom-ins, ensures caps/lids/bottles are 100% visible with elegant breathing room */
 .deals-container .uc-card {
-  box-shadow: 0 6px 20px rgba(23, 61, 43, 0.05);
-  border: 1px solid rgba(197, 161, 90, 0.25);
+  box-shadow: 0 10px 28px -8px rgba(7, 3, 26, 0.08);
+  border: 1px solid rgba(78, 63, 110, 0.18);
   border-radius: 20px;
   overflow: hidden;
-  background: #FAF8F2;
+  background: #ffffff;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .deals-container .uc-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 14px 32px rgba(3, 51, 35, 0.08);
-    border-color: rgba(34, 197, 94, 0.3);
+    box-shadow: 0 18px 36px -10px rgba(7, 3, 26, 0.14);
+    border-color: rgba(78, 63, 110, 0.4);
   }
 
   .deals-container .uc-card:hover .uc-img {

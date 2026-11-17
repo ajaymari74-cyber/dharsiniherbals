@@ -3,13 +3,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f8faf8;
+  background-color: #fff5fd;
   font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   color: #1f2937;
 }
 
 .faq-header {
-  background: linear-gradient(145deg, #072a19 0%, #0c3e25 60%, #124d30 100%);
+  background: linear-gradient(135deg, #07031a 0%, #4e3f6e 50%, #07031a 100%);
   color: #ffffff;
   padding: 150px 20px 50px;
   text-align: center;
@@ -24,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 20%, rgba(78, 63, 110, 0.45) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -42,7 +42,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #a7f3d0;
+  color: rgba(78, 63, 110, 0.25);
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 500;
@@ -65,9 +65,9 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: rgba(16, 185, 129, 0.2);
-  border: 1px solid rgba(16, 185, 129, 0.35);
-  color: #a7f3d0;
+  background: rgba(78, 63, 110, 0.2);
+  border: 1px solid rgba(78, 63, 110, 0.35);
+  color: rgba(78, 63, 110, 0.25);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -92,7 +92,7 @@
   font-weight: 400;
   max-width: 650px;
   line-height: 1.6;
-  color: #d1fae5;
+  color: #dbdeed;
 }
 
 .faq-content {
@@ -128,12 +128,12 @@
 
 .faq-strip-item:hover {
   transform: translateY(-2px);
-  border-color: #10b981;
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.12);
+  border-color: #4e3f6e;
+  box-shadow: 0 6px 18px rgba(78, 63, 110, 0.12);
 }
 
 .strip-icon {
-  color: #059669;
+  color: #4e3f6e;
   flex-shrink: 0;
 }
 
@@ -171,7 +171,7 @@
 }
 
 .faq-search-input:focus {
-  border-color: #059669;
+  border-color: #4e3f6e;
   box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.12), 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
@@ -180,7 +180,7 @@
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #059669;
+  color: #4e3f6e;
   pointer-events: none;
 }
 
@@ -238,15 +238,15 @@
 }
 
 .faq-category-chip:hover {
-  background-color: #f0fdf4;
-  color: #065f46;
-  border-color: #a7f3d0;
+  background-color: #fff5fd;
+  color: #07031a;
+  border-color: rgba(78, 63, 110, 0.25);
 }
 
 .faq-category-chip.active {
-  background-color: #065f46;
+  background-color: #07031a;
   color: #ffffff;
-  border-color: #065f46;
+  border-color: #07031a;
   box-shadow: 0 2px 8px rgba(6, 95, 70, 0.2);
 }
 
@@ -301,13 +301,13 @@
 }
 
 .faq-item:hover {
-  border-color: #a7f3d0;
+  border-color: rgba(78, 63, 110, 0.25);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .faq-item.open {
-  border-color: #6ee7b7;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+  border-color: #dbdeed;
+  box-shadow: 0 4px 16px rgba(78, 63, 110, 0.08);
 }
 
 .faq-question-btn {
@@ -332,7 +332,7 @@
 }
 
 .faq-item.open .faq-question-text {
-  color: #065f46;
+  color: #07031a;
 }
 
 .faq-chevron-box {
@@ -350,8 +350,8 @@
 
 .faq-chevron-box.open {
   transform: rotate(180deg);
-  background: #ecfdf5;
-  color: #059669;
+  background: #f3f0f8;
+  color: #4e3f6e;
 }
 
 .faq-answer {
@@ -402,7 +402,7 @@
 }
 
 .faq-reset-btn {
-  background: #065f46;
+  background: #07031a;
   color: #ffffff;
   border: none;
   font-weight: 600;
@@ -419,12 +419,12 @@
 
 /* Contact Card */
 .faq-contact-card {
-  background: linear-gradient(135deg, #0b3b24 0%, #064e3b 100%);
+  background: linear-gradient(135deg, #07031a 0%, #4e3f6e 100%);
   color: #ffffff;
   border-radius: 20px;
   padding: 36px 30px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(6, 78, 59, 0.15);
+  box-shadow: 0 12px 30px rgba(7, 3, 26, 0.15);
 }
 
 .faq-contact-icon {
@@ -432,7 +432,7 @@
   height: 54px;
   background: rgba(52, 211, 153, 0.2);
   border: 1px solid rgba(52, 211, 153, 0.35);
-  color: #34d399;
+  color: #4e3f6e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -448,7 +448,7 @@
 }
 
 .faq-contact-card p {
-  color: #d1fae5;
+  color: #dbdeed;
   font-size: 1rem;
   max-width: 580px;
   margin: 0 auto 24px;
@@ -500,11 +500,11 @@
 
 .faq-contact-btn.primary {
   background: #ffffff;
-  color: #065f46;
+  color: #07031a;
 }
 
 .faq-contact-btn.primary:hover {
-  background: #f0fdf4;
+  background: #fff5fd;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

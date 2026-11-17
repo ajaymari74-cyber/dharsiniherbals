@@ -54,7 +54,7 @@
 
 /* Online state (Emerald) */
 .network-status-capsule.online {
-  background: rgba(16, 185, 129, 0.95);
+  background: rgba(78, 63, 110, 0.95);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }

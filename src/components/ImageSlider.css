@@ -458,7 +458,7 @@
 
 .slider-arrow:hover {
   background: white;
-  color: #10b981; /* Primary Green */
+  color: #4e3f6e; /* Bright Eyes Amethyst */
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }

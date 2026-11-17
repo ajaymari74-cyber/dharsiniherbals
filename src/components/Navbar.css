@@ -8,18 +8,18 @@
   --nav-height: 72px;
   --nav-height-scrolled: 62px;
   --control-height: 38px;
-  --primary-color: #10b981;
-  --primary-dark: #059669;
-  --primary-deep: #047857;
-  --primary-light: #ecfdf5;
-  --primary-glow: rgba(16, 185, 129, 0.25);
-  --text-dark: #0f172a;
-  --text-slate: #334155;
-  --text-muted: #64748b;
-  --bg-glass: rgba(255, 255, 255, 0.90);
+  --primary-color: #4e3f6e;
+  --primary-dark: #07031a;
+  --primary-deep: #07031a;
+  --primary-light: #f4f1f8;
+  --primary-glow: rgba(78, 63, 110, 0.25);
+  --text-dark: #07031a;
+  --text-slate: #4b4352;
+  --text-muted: #6c5f74;
+  --bg-glass: rgba(255, 245, 253, 0.90);
   --bg-glass-scrolled: rgba(255, 255, 255, 0.97);
-  --border-glass: rgba(255, 255, 255, 0.85);
-  --border-subtle: rgba(226, 232, 240, 0.85);
+  --border-glass: rgba(219, 222, 237, 0.85);
+  --border-subtle: rgba(219, 222, 237, 0.85);
   --font-main: 'Outfit', 'Noto Sans Tamil', 'Nirmala UI', -apple-system, BlinkMacSystemFont, sans-serif;
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -174,7 +174,7 @@
   font-weight: 700;
   vertical-align: super;
   margin-left: 2px;
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 .navbar-ultra.scrolled .brand-text-line1,
@@ -223,7 +223,7 @@
 .nav-link.active {
   color: var(--primary-dark);
   font-weight: 650;
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(78, 63, 110, 0.12);
 }
 
 .nav-link.active::after {
@@ -235,8 +235,8 @@
   width: 14px;
   height: 3px;
   border-radius: 9999px;
-  background: linear-gradient(90deg, #10b981, #059669);
-  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(90deg, #6c5f74, #4e3f6e);
+  box-shadow: 0 1px 4px rgba(78, 63, 110, 0.4);
 }
 
 .nav-link-text {
@@ -505,7 +505,7 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
 }
 
 .search-suggestion-active {
-  background: #f0fdf4 !important;
+  background: #fff5fd !important;
   border-left: 3px solid var(--primary-color);
 }
 
@@ -518,7 +518,7 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
   font-size: 0.72rem;
   color: var(--primary-dark);
   font-weight: 700;
-  background: #d1fae5;
+  background: #dbdeed;
   border-radius: 6px;
   padding: 2px 6px;
   flex-shrink: 0;
@@ -556,8 +556,8 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
 }
 
 .recent-searches-clear:hover {
-  background: #f0fdf4;
-  color: #047857;
+  background: #f4f1f8;
+  color: #4e3f6e;
 }
 
 .recent-search-item {
@@ -719,7 +719,7 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
 
 .capsule-btn.nav-avatar-btn:hover .nav-user-avatar {
   transform: scale(1.08);
-  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.45);
+  box-shadow: 0 3px 10px rgba(78, 63, 110, 0.45);
 }
 
 .nav-account-dropdown {
@@ -745,7 +745,7 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
   align-items: center;
   gap: 12px;
   padding: 12px 14px;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%);
   border-radius: 12px;
   margin-bottom: 4px;
 }
@@ -854,7 +854,7 @@ html[lang="ta"] .nav-links-center .nav-link:nth-child(2).active .nav-link-text::
 .capsule-btn.cart-btn:hover {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 14px rgba(78, 63, 110, 0.35);
   transform: translateY(-1px);
 }
 
@@ -950,7 +950,7 @@ html[lang="ta"] .cart-text,
 
 @keyframes cartPatasuPop {
   0%   { transform: scale(1); }
-  25%  { transform: scale(1.16); filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8)); }
+  25%  { transform: scale(1.16); filter: drop-shadow(0 0 10px rgba(78, 63, 110, 0.8)); }
   50%  { transform: scale(1.1); filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.8)); }
   75%  { transform: scale(1.04); }
   100% { transform: scale(1); filter: none; }
@@ -1187,7 +1187,7 @@ html[lang="ta"] .cart-text,
 
 .mobile-nav-link:hover .nav-icon-box, 
 .mobile-nav-link.active .nav-icon-box {
-  background: rgba(16, 185, 129, 0.18);
+  background: rgba(78, 63, 110, 0.18);
   color: var(--primary-dark);
   transform: scale(1.08);
 }

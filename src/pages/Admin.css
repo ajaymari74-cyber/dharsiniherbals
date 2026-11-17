@@ -33,7 +33,7 @@
 .admin-logo-circle {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border-radius: 12px;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: center;
   font-weight: 800;
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 10px rgba(78, 63, 110, 0.3);
 }
 
 .admin-brand h2 {
@@ -85,8 +85,8 @@
 }
 
 .admin-nav li.active {
-  background: #f0fdf4;
-  color: #16a34a;
+  background: #fff5fd;
+  color: #4e3f6e;
 }
 
 .admin-nav li svg {
@@ -166,7 +166,7 @@
 .admin-search-bar:focus-within {
   background: #ffffff;
   border-color: #cbd5e1;
-  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
 }
 
 .admin-search-bar input {
@@ -299,7 +299,7 @@
 }
 
 /* Icon Box Colors */
-.bg-emerald { background: #dcfce7; color: #16a34a; }
+.bg-emerald { background: #dbdeed; color: #4e3f6e; }
 .bg-blue { background: #dbeafe; color: #2563eb; }
 .bg-purple { background: #f3e8ff; color: #9333ea; }
 .bg-orange { background: #ffedd5; color: #ea580c; }
@@ -317,7 +317,7 @@
   gap: 4px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #16a34a;
+  color: #4e3f6e;
 }
 
 .admin-stat-vs {
@@ -434,6 +434,6 @@
 }
 
 .status-delivered {
-  background: #dcfce7;
-  color: #166534;
+  background: #dbdeed;
+  color: #4e3f6e;
 }

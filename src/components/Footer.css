@@ -2,13 +2,13 @@
 
 /* Base Footer Wrapper */
 .footer-wrapper {
-  background-color: #022c22; /* Deep Forest Green */
+  background-color: #07031a; /* Deep Midnight Violet */
   color: #f8fafc;
   padding: 80px 20px 60px 20px;
   position: relative;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
-  border-top: 1px  solid rgba(16, 185, 129, 0.1);
+  border-top: 1px solid rgba(219, 222, 237, 0.15);
 }
 
 /* Emerald Aurora Background Effect */
@@ -19,7 +19,7 @@
   left: -10%;
   width: 120%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(78, 63, 110, 0.12) 0%, transparent 60%);
   animation: aurora-spin 30s linear infinite;
   z-index: 0;
   pointer-events: none;
@@ -58,7 +58,7 @@
 
 .footer-powered-by {
   font-size: 0.85rem;
-  color: #a7f3d0;
+  color: #dbdeed;
   margin-top: 12px;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -70,7 +70,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   line-height: 1.8;
-  color: #a7f3d0; /* Soft Emerald */
+  color: #dbdeed; /* Soft Emerald */
   margin-bottom: 40px;
   max-width: 600px;
   font-weight: 400;
@@ -100,12 +100,12 @@
 }
 
 .footer-inline-links a:hover {
-  color: #34d399; /* Bright Emerald */
-  text-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(219, 222, 237, 0.4);
 }
 
 .footer-inline-links .separator {
-  color: #047857;
+  color: #4e3f6e;
   font-size: 1.2rem;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .footer-inline-contact .separator {
-  color: #064e3b;
+  color: #4e3f6e;
 }
 
 /* Social Row */
@@ -164,21 +164,21 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(78, 63, 110, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a7f3d0;
-  background: rgba(2, 44, 34, 0.5);
+  color: #dbdeed;
+  background: rgba(7, 3, 26, 0.6);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-link:hover {
-  color: #022c22;
-  background: #34d399;
-  border-color: #34d399;
+  color: #ffffff;
+  background: #4e3f6e;
+  border-color: #dbdeed;
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(52, 211, 153, 0.3);
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.4);
 }
 
 /* Responsive */

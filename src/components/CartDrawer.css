@@ -45,7 +45,7 @@
 
 .btn-checkout:active {
   transform: scale(0.98);
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 15px rgba(78, 63, 110, 0.3);
 }
 
 .cart-drawer.open {
@@ -78,8 +78,8 @@
 }
 
 .cart-title svg {
-  color: #10b981;
-  filter: drop-shadow(0 4px 6px rgba(16, 185, 129, 0.3));
+  color: #4e3f6e;
+  filter: drop-shadow(0 4px 6px rgba(78, 63, 110, 0.3));
 }
 
 .cart-title h2 {
@@ -94,13 +94,13 @@
 }
 
 .cart-count-badge {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   font-size: 0.85rem;
   font-weight: 800;
   padding: 3px 10px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.3);
 }
 
 .cart-close-btn {
@@ -154,7 +154,7 @@
 }
 
 .btn-continue-shopping {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   padding: 16px 32px;
@@ -163,12 +163,12 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 25px rgba(78, 63, 110, 0.3);
 }
 
 .btn-continue-shopping:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.4);
 }
 
 /* Item List */
@@ -245,7 +245,7 @@
 .cart-item-price {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #10b981;
+  color: #4e3f6e;
   margin: 0;
 }
 
@@ -279,8 +279,8 @@
 }
 
 .cart-qty-controls button:hover {
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+  background: #f3f0f8;
+  color: #4e3f6e;
 }
 
 .cart-qty-controls span {
@@ -352,7 +352,7 @@
 .btn-checkout {
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   border-radius: 24px;
@@ -360,7 +360,7 @@
   font-weight: 800;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3), inset 0 2px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(78, 63, 110, 0.3), inset 0 2px 0 rgba(255,255,255,0.2);
   position: relative;
   overflow: hidden;
 }
@@ -375,7 +375,7 @@
 
 .btn-checkout:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4), inset 0 2px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 15px 35px rgba(78, 63, 110, 0.4), inset 0 2px 0 rgba(255,255,255,0.2);
 }
 
 .btn-checkout:hover::before {
@@ -493,8 +493,8 @@
 
 /* Drawer Shipping Progress & Rows */
 .drawer-shipping-progress {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background: #fff5fd;
+  border: 1px solid #dbdeed;
   border-radius: 12px;
   padding: 10px 14px;
   margin-bottom: 12px;
@@ -506,7 +506,7 @@
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #166534;
+  color: #4e3f6e;
   margin-bottom: 6px;
 }
 
@@ -520,7 +520,7 @@
 
 .drawer-shipping-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #10b981, #059669);
+  background: linear-gradient(90deg, #4e3f6e, #07031a);
   border-radius: 999px;
   transition: width 0.3s ease;
 }

@@ -18,7 +18,7 @@
 .contact-page::before {
   width: 600px;
   height: 600px;
-  background: rgba(34, 197, 94, 0.15);
+  background: rgba(78, 63, 110, 0.15);
   top: 10%;
   left: -10%;
   animation: floatOrb 20s infinite alternate ease-in-out;
@@ -43,7 +43,8 @@
 
 /* Hero Section */
 .contact-hero {
-  background-color: #0a3318;
+  background: linear-gradient(135deg, #07031a 0%, #4e3f6e 50%, #07031a 100%);
+  border-bottom: 2px solid rgba(219, 222, 237, 0.2);
   padding: 170px 20px 160px;
   text-align: center;
   color: white;
@@ -55,8 +56,7 @@
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 50%, rgba(78, 63, 110, 0.45) 0%, transparent 60%), radial-gradient(circle at 80% 80%, rgba(219, 222, 237, 0.18) 0%, transparent 50%);
   animation: pulseBg 8s infinite alternate;
   pointer-events: none;
 }
@@ -79,7 +79,7 @@
   margin-bottom: 20px;
   letter-spacing: -1.5px;
   text-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  background: linear-gradient(to right, #ffffff, #dcfce7);
+  background: linear-gradient(to right, #ffffff, #dbdeed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -90,7 +90,7 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  color: rgba(255,255,255,0.95);
+  color: #dbdeed;
 }
 
 /* Overlapping Info Cards */
@@ -129,7 +129,7 @@
 
 .contact-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 45px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 25px 45px rgba(78, 63, 110, 0.1);
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -148,7 +148,7 @@
   transform: scale(1.15) translateY(-5px);
 }
 
-.contact-icon-circle.green { background: #dcfce7; }
+.contact-icon-circle.green { background: #dbdeed; }
 .contact-icon-circle.blue { background: #dbeafe; }
 .contact-icon-circle.red { background: #fee2e2; }
 .contact-icon-circle.purple { background: #f3e8ff; }
@@ -168,7 +168,7 @@
 }
 
 .contact-card-link:hover p {
-  color: #16a34a;
+  color: #4e3f6e;
   font-weight: 700;
 }
 
@@ -216,7 +216,7 @@
 }
 
 .header-icon {
-  color: #22c55e;
+  color: #4e3f6e;
 }
 
 .contact-form-body {
@@ -266,9 +266,9 @@
 .form-group input:focus, 
 .form-group textarea:focus, 
 .form-group select:focus {
-  border-color: #22c55e;
+  border-color: #4e3f6e;
   background: white;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.15);
 }
 
 .select-wrapper {
@@ -292,7 +292,7 @@
 }
 
 .btn-submit-contact {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #4e3f6e, #07031a);
   color: white;
   border: none;
   padding: 18px;
@@ -306,12 +306,12 @@
   gap: 12px;
   transition: all 0.3s ease;
   margin-top: 10px;
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.25);
 }
 
 .btn-submit-contact:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(34, 197, 94, 0.35);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.35);
 }
 
 /* Right Column: Sidebar */
@@ -363,8 +363,8 @@
 .feature-icon {
   width: 48px;
   height: 48px;
-  background: #dcfce7;
-  color: #16a34a;
+  background: #dbdeed;
+  color: #4e3f6e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -418,8 +418,8 @@
 .social-circle {
   width: 56px;
   height: 56px;
-  background: #dcfce7;
-  color: #16a34a;
+  background: #dbdeed;
+  color: #4e3f6e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -428,10 +428,10 @@
 }
 
 .social-circle:hover {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #4e3f6e, #07031a);
   color: white;
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.3);
 }
 
 @media (max-width: 1024px) {

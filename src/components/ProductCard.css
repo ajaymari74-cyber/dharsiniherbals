@@ -1,84 +1,95 @@
 /* ==========================================================================
-   DHARANI HERBALS LUXURY AYURVEDIC PRODUCT CARD (Matches Mockup 100%)
+   DHARANI HERBALS LUXURY AYURVEDIC PRODUCT CARD
+   Full Responsive CSS — Desktop, Laptop (2/3-Col Grids), Tablet & Mobile
    ========================================================================== */
 
-/* Outer Card Container */
+/* 1. Outer Card Container (Desktop & Base) */
 .uc-card,
 .uc-card.redesigned-product-card,
 .shop-grid .uc-card.redesigned-product-card,
 .shop-root .uc-card.redesigned-product-card,
-.deals-container .uc-card {
+.deals-grid .uc-card.redesigned-product-card,
+.deals-container .uc-card,
+.deals-container .uc-card.redesigned-product-card {
   display: flex !important;
   flex-direction: row !important;
   align-items: stretch !important;
-  background: #FAF8F2 !important;
-  border-radius: 20px !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
   padding: 0 !important;
-  border: 1px solid rgba(197, 161, 90, 0.25) !important;
-  box-shadow: 0 6px 20px rgba(23, 61, 43, 0.05) !important;
+  border: 1px solid rgba(78, 63, 110, 0.16) !important;
+  box-shadow: 0 10px 30px -10px rgba(7, 3, 26, 0.07), 0 2px 6px -1px rgba(0, 0, 0, 0.02) !important;
   transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease, border-color 0.32s ease !important;
   position: relative !important;
   overflow: hidden !important;
   width: 100% !important;
   max-width: 100% !important;
-  min-height: 275px !important;
+  min-height: 310px !important;
   box-sizing: border-box !important;
   cursor: pointer !important;
   content-visibility: auto !important;
-  contain-intrinsic-size: 0 280px !important;
+  contain-intrinsic-size: 0 315px !important;
   transform: translateZ(0) !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
+
   .uc-card:hover,
   .uc-card.redesigned-product-card:hover,
   .shop-grid .uc-card.redesigned-product-card:hover,
   .shop-root .uc-card.redesigned-product-card:hover,
-  .deals-container .uc-card:hover {
-    transform: translateY(-6px) !important;
-    box-shadow: 0 16px 36px rgba(23, 61, 43, 0.12) !important;
-    border-color: #C5A15A !important;
+  .deals-grid .uc-card.redesigned-product-card:hover,
+  .deals-container .uc-card:hover,
+  .deals-container .uc-card.redesigned-product-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 42px -10px rgba(7, 3, 26, 0.12), 0 0 20px rgba(78, 63, 110, 0.14) !important;
+    border-color: rgba(78, 63, 110, 0.45) !important;
   }
 
   .uc-card:hover .uc-img,
   .uc-card.redesigned-product-card:hover .uc-img,
-  .shop-grid .uc-card.redesigned-product-card:hover .uc-img {
+  .shop-grid .uc-card.redesigned-product-card:hover .uc-img,
+  .shop-root .uc-card.redesigned-product-card:hover .uc-img,
+  .deals-container .uc-card:hover .uc-img {
     transform: scale(1.04) !important;
   }
 }
 
-/* 1. Right Image Section (Arched Dome Pod on Desktop) */
+/* 2. Right Image Section (Sweeping Bottom-Left Quarter-Circle Curve) */
 .uc-card .uc-img-section,
 .uc-card.redesigned-product-card .uc-img-section,
 .shop-grid .uc-card.redesigned-product-card .uc-img-section,
 .shop-root .uc-card.redesigned-product-card .uc-img-section,
+.deals-grid .uc-card.redesigned-product-card .uc-img-section,
+.deals-container .uc-card .uc-img-section,
 .deals-container .uc-card.redesigned-product-card .uc-img-section {
   order: 2 !important;
-  width: 53% !important;
-  flex: 1 1 53% !important;
-  min-height: 275px !important;
-  height: 100% !important;
+  flex: 0 0 49% !important;
+  width: 49% !important;
+  max-width: 49% !important;
+  align-self: stretch !important;
+  min-height: 310px !important;
+  height: auto !important;
   position: relative !important;
-  background: #ffffff !important;
-  border-top-left-radius: 120px !important;
-  border-bottom-left-radius: 120px !important;
-  border-left: 1.5px solid rgba(197, 161, 90, 0.3) !important;
+  background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%) !important;
+  border-radius: 0 0 0 clamp(120px, 12vw, 175px) !important;
+  border: none !important;
   overflow: hidden !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
-  padding: 12px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
-  border-top: none !important;
-  border-right: none !important;
-  border-bottom: none !important;
 }
 
 .uc-card.redesigned-product-card .uc-img-wrapper,
 .shop-grid .uc-card.redesigned-product-card .uc-img-wrapper,
-.shop-root .uc-card.redesigned-product-card .uc-img-wrapper {
-  position: relative !important;
+.shop-root .uc-card.redesigned-product-card .uc-img-wrapper,
+.deals-grid .uc-card.redesigned-product-card .uc-img-wrapper,
+.deals-container .uc-img-wrapper {
+  position: absolute !important;
+  inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
@@ -90,47 +101,48 @@
   overflow: hidden !important;
 }
 
-/* Base image styling */
+/* Base Product Image — Uncropped, Centered, Full Product Visibility */
 .uc-card.redesigned-product-card .uc-img,
 .shop-grid .uc-card.redesigned-product-card .uc-img,
 .shop-root .uc-card.redesigned-product-card .uc-img,
-.deals-container .uc-card.redesigned-product-card .uc-img {
+.deals-grid .uc-card.redesigned-product-card .uc-img,
+.deals-container .uc-img {
   position: relative !important;
   top: auto !important;
   left: auto !important;
   right: auto !important;
   bottom: auto !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
   width: 100% !important;
   height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   object-fit: contain !important;
   object-position: center center !important;
+  mix-blend-mode: normal !important;
+  padding: 12px !important;
+  margin: auto !important;
   box-sizing: border-box !important;
   display: block !important;
-  margin: auto !important;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* 1. Standard Fit (Jars, Pickles, Varkey, Kasthuri Manjal) */
+/* Product-Specific Fit Presets (Preserves Full Packaging Without Side Cropping) */
 .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
 .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
 .deals-container .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit {
-  transform: scale(1.02) !important;
-  padding: 6px 8px !important;
+  padding: 10px !important;
+  transform: scale(1) !important;
 }
 
-/* 2. Tight Fit (Tall edge-to-edge bottles like Rice Kanji Shampoo, Chemparuthi Shampoo, Onion Shampoo) */
 .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
 .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
 .deals-container .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit {
-  transform: scale(0.90) !important;
-  padding: 10px 12px !important;
+  padding: 16px 12px !important;
+  transform: scale(0.95) !important;
 }
 
-/* 3. Boost Fit (Padded bottles, Pongal mixes, oils with wide margins) */
 .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
 .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
 .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
@@ -138,171 +150,235 @@
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
 .deals-container .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit {
-  transform: scale(1.36) !important;
-  transform-origin: center center !important;
   padding: 0 !important;
+  transform: scale(1.12) !important;
+  transform-origin: center center !important;
 }
 
-/* 4. Landscape Fit (Studio landscape shots) */
 .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
 .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
 .deals-container .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit {
-  transform: scale(1.18) !important;
-  transform-origin: center center !important;
-  padding: 2px !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  transform: scale(1) !important;
 }
 
-/* 5. Multigrain Fit */
 .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
 .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
 .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
 .deals-container .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit {
-  transform: scale(1.04) translateX(2px) !important;
-  padding: 6px 8px !important;
+  padding: 8px !important;
+  transform: scale(1.02) !important;
 }
 
-
-/* Discount Badge (Top-Left) */
+/* Discount Badge (Bottom-Right so Sweeping Curve Never Clips It) */
 .uc-card.redesigned-product-card .uc-discount-badge {
   position: absolute !important;
-  top: 10px !important;
-  left: 10px !important;
+  bottom: 12px !important;
+  right: 12px !important;
+  top: auto !important;
+  left: auto !important;
   z-index: 4 !important;
-  background: #a67c33 !important;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
   color: #ffffff !important;
-  font-size: 0.72rem !important;
+  font-size: 0.7rem !important;
   font-weight: 700 !important;
   padding: 3px 10px !important;
   border-radius: 999px !important;
-  letter-spacing: 0.2px !important;
-  box-shadow: 0 2px 6px rgba(166, 124, 51, 0.3) !important;
+  letter-spacing: 0.25px !important;
+  box-shadow: 0 3px 10px rgba(78, 63, 110, 0.25) !important;
+  border: 1px solid rgba(219, 222, 237, 0.3) !important;
+  pointer-events: none !important;
 }
 
-/* Wishlist Heart Button (Top-Right over Arched Image Section) */
-.uc-card.redesigned-product-card .uc-wishlist-btn {
+/* Frosted Circular Action Buttons (Top-Right over Image) */
+.uc-card.redesigned-product-card .uc-wishlist-btn,
+.uc-card.redesigned-product-card .uc-share-btn {
   position: absolute !important;
-  top: 10px !important;
-  right: 10px !important;
-  z-index: 4 !important;
-  width: 34px !important;
-  height: 34px !important;
+  top: 12px !important;
+  z-index: 5 !important;
+  width: 36px !important;
+  height: 36px !important;
   border-radius: 50% !important;
-  background: #FFF1F2 !important;
-  border: 1.5px solid rgba(244, 63, 94, 0.35) !important;
-  color: #e11d48 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(78, 63, 110, 0.18) !important;
+  color: #07031a !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 2px 8px rgba(244, 63, 94, 0.16) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
   cursor: pointer !important;
   padding: 0 !important;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+  margin: 0 !important;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+.uc-card.redesigned-product-card .uc-wishlist-btn {
+  right: 12px !important;
+}
+
+.uc-card.redesigned-product-card .uc-share-btn {
+  right: 54px !important;
 }
 
 .uc-card.redesigned-product-card .uc-wishlist-btn:hover {
-  transform: scale(1.12) !important;
-  background: #FFE4E6 !important;
+  transform: scale(1.08) !important;
+  background: #FFF1F2 !important;
   border-color: #e11d48 !important;
-  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.28) !important;
+  color: #e11d48 !important;
 }
 
 .uc-card.redesigned-product-card .uc-wishlist-btn.is-active {
   background: #FFE4E6 !important;
   border-color: #e11d48 !important;
+  color: #e11d48 !important;
 }
 
-/* Share Button (Outside on Card) */
-.uc-card.redesigned-product-card .uc-share-btn {
-  position: absolute !important;
-  top: 10px !important;
-  right: 50px !important;
-  z-index: 4 !important;
-  width: 34px !important;
-  height: 34px !important;
-  border-radius: 50% !important;
-  background: #F0FDF4 !important;
-  border: 1.5px solid rgba(22, 163, 74, 0.35) !important;
-  color: #15803d !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.16) !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+/* Share Button - Curved Arrow matching User Design */
+.uc-card.redesigned-product-card .uc-share-btn:not(.is-shared) svg,
+.uc-share-btn:not(.is-shared) svg {
+  display: none !important;
+}
+
+.uc-card.redesigned-product-card .uc-share-btn:not(.is-shared)::before,
+.uc-share-btn:not(.is-shared)::before {
+  content: "" !important;
+  display: block !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #07031a !important;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' fill-rule='evenodd'%3E%3Cpath d='M21.93,9.95L12.44,3.08L12.1,3.14L11.97,3.41L11.9,6.85L9.54,7.39L7.99,7.93L6.71,8.53L5.03,9.68L3.95,10.75L3.01,12.17L2.4,13.65L2.0,15.8L2.07,18.84L2.27,20.25L2.47,20.86L2.81,20.92L3.08,20.65L3.62,18.23L4.09,16.95L4.69,15.74L5.23,15.0L6.44,13.92L7.52,13.45L8.8,13.25L10.55,13.31L11.97,13.58L11.97,17.02L12.03,17.22L12.44,17.35L21.66,10.69L22.0,10.35ZM20.99,10.22L12.77,16.21L12.71,13.18L12.57,12.98L10.35,12.57L8.33,12.57L6.71,12.98L5.64,13.58L4.56,14.66L4.02,15.47L3.41,16.68L2.81,18.43L2.67,17.42L2.81,15.06L3.28,13.31L4.15,11.7L5.37,10.35L7.12,9.14L9.34,8.2L11.09,7.72L12.57,7.45L12.71,7.25L12.84,4.22Z'/%3E%3C/svg%3E") no-repeat center / contain !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' fill-rule='evenodd'%3E%3Cpath d='M21.93,9.95L12.44,3.08L12.1,3.14L11.97,3.41L11.9,6.85L9.54,7.39L7.99,7.93L6.71,8.53L5.03,9.68L3.95,10.75L3.01,12.17L2.4,13.65L2.0,15.8L2.07,18.84L2.27,20.25L2.47,20.86L2.81,20.92L3.08,20.65L3.62,18.23L4.09,16.95L4.69,15.74L5.23,15.0L6.44,13.92L7.52,13.45L8.8,13.25L10.55,13.31L11.97,13.58L11.97,17.02L12.03,17.22L12.44,17.35L21.66,10.69L22.0,10.35ZM20.99,10.22L12.77,16.21L12.71,13.18L12.57,12.98L10.35,12.57L8.33,12.57L6.71,12.98L5.64,13.58L4.56,14.66L4.02,15.47L3.41,16.68L2.81,18.43L2.67,17.42L2.81,15.06L3.28,13.31L4.15,11.7L5.37,10.35L7.12,9.14L9.34,8.2L11.09,7.72L12.57,7.45L12.71,7.25L12.84,4.22Z'/%3E%3C/svg%3E") no-repeat center / contain !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.uc-card.redesigned-product-card .uc-share-btn:hover:not(.is-shared)::before,
+.uc-share-btn:hover:not(.is-shared)::before {
+  background-color: #4e3f6e !important;
+  transform: scale(1.08) !important;
 }
 
 .uc-card.redesigned-product-card .uc-share-btn:hover {
-  transform: scale(1.12) !important;
-  background: #DCFCE7 !important;
-  border-color: #16a34a !important;
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.28) !important;
+  transform: scale(1.08) !important;
+  background: #f3f0f8 !important;
+  border-color: #4e3f6e !important;
+  color: #4e3f6e !important;
 }
 
 .uc-card.redesigned-product-card .uc-share-btn.is-shared {
-  background: #22c55e !important;
-  border-color: #16a34a !important;
+  background: #4e3f6e !important;
+  border-color: #4e3f6e !important;
   color: #ffffff !important;
 }
 
-/* 2. Left Content Section (Desktop Horizontal Flow) */
+/* 3. Left Content Section (Balanced Proportions for 2-Col & 3-Col Grids) */
 .uc-card .uc-info-section,
 .uc-card.redesigned-product-card .uc-info-section,
 .shop-grid .uc-card.redesigned-product-card .uc-info-section,
-.shop-root .uc-card.redesigned-product-card .uc-info-section {
+.shop-root .uc-card.redesigned-product-card .uc-info-section,
+.deals-grid .uc-card.redesigned-product-card .uc-info-section,
+.deals-container .uc-card .uc-info-section {
   order: 1 !important;
-  width: 47% !important;
-  flex: 1 1 47% !important;
-  padding: 22px 14px 20px 20px !important;
+  flex: 0 0 51% !important;
+  width: 51% !important;
+  max-width: 51% !important;
+  min-width: 0 !important;
+  padding: 20px 14px 20px 18px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 8px !important;
   box-sizing: border-box !important;
-  min-width: 0 !important;
 }
 
-/* Meta Top Row: Category Pill & Star Rating */
+/* Meta Top Row: Full Un-truncated Category Pill + Rating */
 .uc-card.redesigned-product-card .uc-meta-top-row {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
-  gap: 8px !important;
-  margin-bottom: 6px !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  gap: 6px 8px !important;
+  margin: 0 !important;
 }
 
 .uc-card.redesigned-product-card .uc-category-tag {
-  background: transparent !important;
-  color: #16a34a !important;
-  font-size: 0.72rem !important;
+  background: #f3f0f8 !important;
+  color: #4e3f6e !important;
+  font-size: 0.68rem !important;
   font-weight: 700 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  letter-spacing: 0.8px !important;
+  padding: 5px 10px !important;
+  border-radius: 999px !important;
+  letter-spacing: 0.4px !important;
   text-transform: uppercase !important;
-  border: none !important;
+  border: 1px solid rgba(78, 63, 110, 0.22) !important;
   width: fit-content !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  flex-shrink: 0 !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 5px !important;
+  line-height: 1.1 !important;
 }
 
 .uc-card.redesigned-product-card .uc-category-leaf-icon {
-  color: #16a34a !important;
+  color: #4e3f6e !important;
+  flex-shrink: 0 !important;
 }
 
-.uc-card.redesigned-product-card .uc-rating-row {
-  display: flex !important;
+.uc-card.redesigned-product-card .uc-rating-row,
+.uc-rating-row {
+  display: inline-flex !important;
   align-items: center !important;
-  gap: 3px !important;
-  font-size: 0.76rem !important;
+  gap: 4px !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
-  color: #1e293b !important;
+  color: #07031a !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  line-height: 1.1 !important;
 }
 
-.uc-card.redesigned-product-card .uc-review-count {
-  font-size: 0.70rem !important;
-  color: #64748b !important;
+.uc-card.redesigned-product-card .uc-rating-row::before {
+  content: "" !important;
+  width: 4px !important;
+  height: 4px !important;
+  margin-right: 3px !important;
+  border-radius: 50% !important;
+  background: #BCC3BC !important;
+  flex-shrink: 0 !important;
+}
+
+.uc-card.redesigned-product-card .uc-rating-row svg,
+.uc-rating-row svg {
+  color: #f59e0b !important;
+  fill: #f59e0b !important;
+  stroke: #f59e0b !important;
+  flex-shrink: 0 !important;
+  filter: drop-shadow(0 1px 2px rgba(245, 158, 11, 0.35)) !important;
+}
+
+.uc-card.redesigned-product-card .uc-rating-text,
+.uc-rating-text {
+  color: #07031a !important;
+  font-weight: 700 !important;
+}
+
+.uc-card.redesigned-product-card .uc-review-count,
+.uc-review-count {
+  font-size: 0.75rem !important;
+  color: #6c5f74 !important;
   font-weight: 500 !important;
 }
 
@@ -313,27 +389,30 @@
 .deals-grid .uc-card.redesigned-product-card .uc-title,
 .deals-container .uc-card.redesigned-product-card .uc-title {
   font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 1.15rem !important;
-  font-weight: 600 !important;
-  color: #173D2B !important;
-  margin: 4px 0 6px 0 !important;
-  line-height: 1.25 !important;
-  min-height: 2.5em !important;
+  font-size: clamp(1.12rem, 1.4vw, 1.48rem) !important;
+  font-weight: 700 !important;
+  color: #1C2B22 !important;
+  margin: 4px 0 2px 0 !important;
+  padding: 0 !important;
+  line-height: 1.24 !important;
+  width: 100% !important;
+  min-height: 0 !important;
   max-height: 2.5em !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
+  word-break: break-word !important;
 }
 
 .uc-card.redesigned-product-card .uc-title a {
-  color: #173D2B !important;
+  color: inherit !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
 }
 
 .uc-card.redesigned-product-card .uc-title a:hover {
-  color: #C5A15A !important;
+  color: #4e3f6e !important;
 }
 
 /* Short Description */
@@ -342,24 +421,27 @@
 .shop-root .uc-card.redesigned-product-card .uc-subtitle,
 .deals-grid .uc-card.redesigned-product-card .uc-subtitle,
 .deals-container .uc-card.redesigned-product-card .uc-subtitle {
-  font-size: 0.78rem !important;
-  color: #64748b !important;
-  line-height: 1.35 !important;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif !important;
+  font-size: 0.84rem !important;
+  color: #4B5751 !important;
+  line-height: 1.45 !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
-  margin: 0 0 10px 0 !important;
-  min-height: 2.7em !important;
-  max-height: 2.7em !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: 2.9em !important;
 }
 
-/* Card Divider - Hidden for clean luxury aesthetic */
-.uc-card.redesigned-product-card .uc-card-divider {
+.uc-card.redesigned-product-card .uc-card-divider,
+.uc-card.redesigned-product-card .uc-mobile-pack-badge {
   display: none !important;
 }
 
-/* Modern Action & Pricing Box Column - Distinct Ayurvedic Luxury UI */
+/* Bottom Pack & Pricing/Action Stack */
 .uc-card.redesigned-product-card .uc-bottom-box,
 .shop-grid .uc-card.redesigned-product-card .uc-bottom-box,
 .shop-root .uc-card.redesigned-product-card .uc-bottom-box,
@@ -368,46 +450,44 @@
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
+  padding: 6px 0 0 0 !important;
   margin-top: auto !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 8px !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
   width: 100% !important;
+  min-width: 0 !important;
   box-sizing: border-box !important;
-  transition: all 0.28s ease !important;
 }
 
-.uc-card:hover .uc-bottom-box {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Pack Size Row: Pill Badge + Strike-through MRP */
+/* Pack Size Row */
 .uc-card.redesigned-product-card .uc-pack-row,
 .shop-grid .uc-card.redesigned-product-card .uc-pack-row,
 .deals-container .uc-card.redesigned-product-card .uc-pack-row {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
   width: 100% !important;
+  margin: 0 !important;
 }
 
-/* Herbal Pack Size Badge (e.g. 100 g / 50 g / 250 g / 125 ml) */
 .uc-card.redesigned-product-card .uc-pack-badge,
 .shop-grid .uc-card.redesigned-product-card .uc-pack-badge,
 .deals-container .uc-card.redesigned-product-card .uc-pack-badge {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 5px !important;
-  background: #E8F5E9 !important;
-  color: #166534 !important;
-  border: 1px solid rgba(22, 163, 74, 0.3) !important;
-  border-radius: 6px !important;
-  padding: 2.5px 8px !important;
-  font-size: 0.76rem !important;
+  gap: 6px !important;
+  background: #dbdeed !important;
+  color: #07031a !important;
+  border: 1px solid rgba(78, 63, 110, 0.2) !important;
+  border-radius: 9px !important;
+  padding: 4px 10px !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.3px !important;
+  letter-spacing: 0.2px !important;
   line-height: 1.2 !important;
   box-shadow: none !important;
 }
@@ -416,323 +496,452 @@
   width: 5px !important;
   height: 5px !important;
   border-radius: 50% !important;
-  background: #16a34a !important;
+  background: #4e3f6e !important;
+  flex-shrink: 0 !important;
 }
 
-/* Strike-through MRP */
 .uc-card.redesigned-product-card .uc-original-mrp {
-  font-size: 0.76rem !important;
+  font-size: 0.78rem !important;
   color: #94A3B8 !important;
   text-decoration: line-through !important;
   font-weight: 500 !important;
 }
 
-/* Price & Action Row */
+/* Price & Add to Cart Row — Never Crushes or Truncates "Add to Cart" */
 .uc-card.redesigned-product-card .uc-price-action-row,
 .shop-grid .uc-card.redesigned-product-card .uc-price-action-row,
 .deals-container .uc-card.redesigned-product-card .uc-price-action-row {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
+  flex-wrap: wrap !important;
   width: 100% !important;
+  min-width: 0 !important;
   gap: 8px !important;
+  margin: 0 !important;
 }
 
-/* Luxury Emerald Price Typography */
 .uc-card.redesigned-product-card .uc-price-display {
   display: inline-flex !important;
   align-items: baseline !important;
-  color: #173D2B !important;
+  color: #4e3f6e !important;
   font-family: 'Outfit', system-ui, sans-serif !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
 }
 
 .uc-card.redesigned-product-card .uc-currency-sign {
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #173D2B !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  color: #4e3f6e !important;
   margin-right: 1px !important;
 }
 
 .uc-card.redesigned-product-card .uc-price-val {
-  font-size: 1.28rem !important;
+  font-size: 1.32rem !important;
   font-weight: 800 !important;
-  color: #173D2B !important;
-  letter-spacing: -0.3px !important;
+  color: #4e3f6e !important;
+  letter-spacing: -0.4px !important;
   line-height: 1 !important;
 }
 
-/* Green Add Pill Button */
+/* Modern Amethyst Pill CTA Button — Full Label Always Visible */
 .uc-card.redesigned-product-card .uc-add-pill-btn,
 .shop-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
 .shop-root .uc-card.redesigned-product-card .uc-add-pill-btn,
 .deals-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
 .deals-container .uc-card.redesigned-product-card .uc-add-pill-btn {
-  background: #173827 !important;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 999px !important;
-  padding: 7px 14px !important;
-  font-size: 0.80rem !important;
-  font-weight: 700 !important;
+  padding: 8px 14px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 5px !important;
   cursor: pointer !important;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 3px 10px rgba(23, 56, 39, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(78, 63, 110, 0.3) !important;
   white-space: nowrap !important;
   flex-shrink: 0 !important;
+  width: auto !important;
+  min-width: max-content !important;
+  line-height: 1.2 !important;
 }
 
 .uc-card.redesigned-product-card .uc-btn-icon {
   flex-shrink: 0 !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.uc-card.redesigned-product-card .uc-btn-text {
+  display: inline !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
 }
 
 .uc-card.redesigned-product-card .uc-add-pill-btn:hover {
-  background: #11291d !important;
+  background: linear-gradient(135deg, #6c5f74 0%, #4e3f6e 100%) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px rgba(23, 56, 39, 0.3) !important;
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.42) !important;
 }
 
 .uc-card.redesigned-product-card .uc-add-pill-btn.is-added {
-  background: #16a34a !important;
+  background: #4e3f6e !important;
   color: #ffffff !important;
-  transform: scale(0.97) !important;
-  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3) !important;
+  transform: scale(0.98) !important;
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.35) !important;
 }
 
-/* Mobile Responsiveness & Sticky Hover Elimination */
-@media (max-width: 768px), (hover: none) {
+
+/* ==========================================================================
+   4. LARGE DESKTOP & WIDE 2-COLUMN ENHANCEMENTS (>= 1440px)
+   ========================================================================== */
+@media (min-width: 1440px) {
+
+  .uc-card,
+  .uc-card.redesigned-product-card {
+    min-height: 345px !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-info-section {
+    padding: 26px 20px 26px 26px !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-title {
+    font-size: 1.55rem !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-price-val {
+    font-size: 1.5rem !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-add-pill-btn {
+    padding: 10px 18px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   5. MOBILE VIEW (Matches Attached Mobile Mockup 100%)
+   ========================================================================== */
+@media (max-width: 767px) {
+
   .uc-card,
   .uc-card.redesigned-product-card,
   .shop-grid .uc-card.redesigned-product-card,
   .shop-root .uc-card.redesigned-product-card,
-  .deals-container .uc-card {
+  .deals-grid .uc-card.redesigned-product-card,
+  .deals-container .uc-card,
+  .deals-container .uc-card.redesigned-product-card {
     flex-direction: column !important;
-    padding: 8px !important;
-    border-radius: 16px !important;
-    min-height: auto !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+    border-radius: 24px !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(78, 63, 110, 0.16) !important;
+    box-shadow: 0 10px 28px rgba(7, 3, 26, 0.08) !important;
     transform: none !important;
-    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+    contain-intrinsic-size: 0 420px !important;
   }
 
   .uc-card:hover,
   .uc-card.redesigned-product-card:hover,
   .shop-grid .uc-card.redesigned-product-card:hover,
   .shop-root .uc-card.redesigned-product-card:hover,
+  .deals-grid .uc-card.redesigned-product-card:hover,
   .deals-container .uc-card:hover,
   .uc-card:active,
-  .uc-card.redesigned-product-card:active,
-  .deals-container .uc-card:active {
+  .uc-card.redesigned-product-card:active {
     transform: none !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
-    border-color: rgba(197, 161, 90, 0.25) !important;
+    box-shadow: 0 10px 28px rgba(7, 3, 26, 0.08) !important;
+    border-color: rgba(78, 63, 110, 0.35) !important;
   }
 
-  /* Strict Uniform Image Box & Alignment on Mobile */
+  /* Top Image Container */
   .uc-card .uc-img-section,
   .uc-card.redesigned-product-card .uc-img-section,
   .shop-grid .uc-card.redesigned-product-card .uc-img-section,
   .shop-root .uc-card.redesigned-product-card .uc-img-section,
+  .deals-grid .uc-card.redesigned-product-card .uc-img-section,
   .deals-container .uc-img-section {
-    order: -1 !important;
-    width: 100% !important;
-    height: 155px !important;
-    min-height: 155px !important;
-    max-height: 155px !important;
-    padding: 6px 8px !important;
-    border-radius: 14px !important;
-    border-top-left-radius: 14px !important;
-    border-bottom-left-radius: 14px !important;
-    border-left: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #ffffff !important;
-    overflow: hidden !important;
+    order: 0 !important;
     flex: none !important;
-  }
-
-  .uc-card .uc-info-section,
-  .uc-card.redesigned-product-card .uc-info-section,
-  .shop-grid .uc-card.redesigned-product-card .uc-info-section,
-  .shop-root .uc-card.redesigned-product-card .uc-info-section {
-    order: 1 !important;
     width: 100% !important;
-    flex: 1 1 auto !important;
-    padding: 8px 4px 0 4px !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-img-wrapper,
-  .shop-grid .uc-card.redesigned-product-card .uc-img-wrapper,
-  .shop-root .uc-card.redesigned-product-card .uc-img-wrapper {
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    max-width: 100% !important;
+    height: 235px !important;
+    min-height: 235px !important;
+    max-height: 235px !important;
+    border-radius: 0 !important;
+    border: none !important;
     padding: 0 !important;
-    margin: 0 !important;
+    background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%) !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
 
   .uc-card.redesigned-product-card .uc-img,
   .shop-grid .uc-card.redesigned-product-card .uc-img,
   .shop-root .uc-card.redesigned-product-card .uc-img,
+  .deals-grid .uc-card.redesigned-product-card .uc-img,
   .deals-container .uc-img {
     width: 100% !important;
     height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
     object-fit: contain !important;
     object-position: center center !important;
-    margin: auto !important;
-    display: block !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
-  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
-  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-standard-fit,
-  .deals-container .uc-img.uc-img-standard-fit {
-    transform: scale(1.08) !important;
-    padding: 2px 4px !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
-  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
-  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-tight-fit,
-  .deals-container .uc-img.uc-img-tight-fit {
-    transform: scale(0.90) !important;
-    padding: 6px 8px !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
-  .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
-  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
-  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
-  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
-  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
-  .deals-container .uc-img.uc-img-boost-fit {
-    transform: scale(1.34) !important;
-    transform-origin: center center !important;
-    padding: 0 !important;
+    padding: 12px !important;
+    transform: none !important;
   }
 
   .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
   .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
   .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-landscape-fit,
   .deals-container .uc-img.uc-img-landscape-fit {
-    transform: scale(1.16) !important;
-    transform-origin: center center !important;
-    padding: 2px !important;
+    padding: 0 !important;
+    object-fit: cover !important;
   }
 
-  .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
-  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
-  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-multigrain-fit,
-  .deals-container .uc-img.uc-img-multigrain-fit {
-    transform: scale(1.03) !important;
-    padding: 4px 6px !important;
+  .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
+  .uc-card.redesigned-product-card .uc-img.uc-img-zoom-fit,
+  .shop-grid .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit,
+  .shop-root .uc-card.redesigned-product-card .uc-img.uc-img-boost-fit {
+    padding: 0 !important;
+    transform: scale(1.14) !important;
   }
 
+  /* Top-Left Floating Frosted Category Pill */
+  .uc-card.redesigned-product-card .uc-meta-top-row {
+    position: absolute !important;
+    top: 14px !important;
+    left: 14px !important;
+    right: 104px !important;
+    width: auto !important;
+    z-index: 5 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+  }
 
-
-  .uc-card.redesigned-product-card .uc-title,
-  .shop-grid .uc-card.redesigned-product-card .uc-title,
-  .shop-root .uc-card.redesigned-product-card .uc-title,
-  .deals-grid .uc-card.redesigned-product-card .uc-title,
-  .deals-container .uc-card.redesigned-product-card .uc-title {
-    font-size: 0.88rem !important;
-    min-height: 2.5em !important;
-    max-height: 2.5em !important;
-    line-height: 1.25 !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
+  .uc-card.redesigned-product-card .uc-category-tag {
+    pointer-events: auto !important;
+    max-width: 100% !important;
     overflow: hidden !important;
-    margin: 4px 0 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    background: #f3f0f8 !important;
+    border: 1px solid rgba(78, 63, 110, 0.22) !important;
+    border-radius: 999px !important;
+    padding: 6px 12px !important;
+    color: #4e3f6e !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
   }
 
-  .uc-card.redesigned-product-card .uc-title a,
-  .shop-grid .uc-card.redesigned-product-card .uc-title a,
-  .shop-root .uc-card.redesigned-product-card .uc-title a,
-  .deals-grid .uc-card.redesigned-product-card .uc-title a,
-  .deals-container .uc-card.redesigned-product-card .uc-title a {
-    color: #173D2B !important;
-    text-decoration: none !important;
+  .uc-card.redesigned-product-card .uc-category-leaf-icon {
+    color: #4e3f6e !important;
   }
 
-  /* Hide noisy description on mobile 2-column cards for clean, balanced, equal-height alignment */
-  .uc-card.redesigned-product-card .uc-subtitle,
-  .shop-grid .uc-card.redesigned-product-card .uc-subtitle,
-  .shop-root .uc-card.redesigned-product-card .uc-subtitle,
-  .deals-grid .uc-card.redesigned-product-card .uc-subtitle,
-  .deals-container .uc-card.redesigned-product-card .uc-subtitle {
+  /* Top-Right Floating Frosted Action Circles */
+  .uc-card.redesigned-product-card .uc-wishlist-btn,
+  .uc-card.redesigned-product-card .uc-share-btn {
+    top: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(78, 63, 110, 0.18) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-wishlist-btn {
+    right: 14px !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-share-btn {
+    right: 58px !important;
+  }
+
+  /* Overlapping Bottom-Right Rating Pill */
+  .uc-card.redesigned-product-card .uc-rating-row {
+    position: absolute !important;
+    top: 217px !important;
+    right: 14px !important;
+    z-index: 6 !important;
+    pointer-events: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(78, 63, 110, 0.18) !important;
+    box-shadow: 0 6px 16px rgba(7, 3, 26, 0.09) !important;
+    color: #07031a !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-rating-row::before {
     display: none !important;
   }
 
-  /* Seamless, box-free bottom action row on mobile */
+  .uc-card.redesigned-product-card .uc-rating-row svg {
+    color: #f59e0b !important;
+    fill: #f59e0b !important;
+    stroke: #f59e0b !important;
+    filter: drop-shadow(0 1px 2px rgba(245, 158, 11, 0.35)) !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-review-count {
+    font-size: 0.78rem !important;
+    color: #64748B !important;
+    font-weight: 500 !important;
+  }
+
+  /* Bottom Cream Content Body */
+  .uc-card .uc-info-section,
+  .uc-card.redesigned-product-card .uc-info-section,
+  .shop-grid .uc-card.redesigned-product-card .uc-info-section,
+  .shop-root .uc-card.redesigned-product-card .uc-info-section,
+  .deals-grid .uc-card.redesigned-product-card .uc-info-section,
+  .deals-container .uc-card .uc-info-section {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 18px 18px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+  }
+
   .uc-card.redesigned-product-card .uc-bottom-box,
   .shop-grid .uc-card.redesigned-product-card .uc-bottom-box,
   .shop-root .uc-card.redesigned-product-card .uc-bottom-box,
   .deals-grid .uc-card.redesigned-product-card .uc-bottom-box,
   .deals-container .uc-card.redesigned-product-card .uc-bottom-box {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    gap: 6px !important;
-    margin-top: auto !important;
-    width: 100% !important;
-    box-shadow: none !important;
-    display: flex !important;
-    flex-direction: column !important;
+    display: contents !important;
   }
 
-  /* Clean herbal pack badge on mobile (e.g. 100 g / 50 g / 125 ml) */
-  .uc-card.redesigned-product-card .uc-pack-badge {
-    background: #E8F5E9 !important;
-    color: #166534 !important;
-    border: 1px solid rgba(22, 163, 74, 0.3) !important;
-    border-radius: 6px !important;
-    font-size: 0.70rem !important;
-    padding: 2px 7px !important;
+  /* Pack Weight Pill Row (Above Title) */
+  .uc-card.redesigned-product-card .uc-pack-row,
+  .shop-grid .uc-card.redesigned-product-card .uc-pack-row,
+  .deals-container .uc-card.redesigned-product-card .uc-pack-row {
+    order: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    margin: 0 0 2px 0 !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-pack-badge,
+  .shop-grid .uc-card.redesigned-product-card .uc-pack-badge,
+  .deals-container .uc-card.redesigned-product-card .uc-pack-badge {
+    background: #dbdeed !important;
+    color: #07031a !important;
+    border: 1px solid rgba(78, 63, 110, 0.2) !important;
+    border-radius: 999px !important;
+    padding: 4px 12px !important;
+    font-size: 0.78rem !important;
     font-weight: 700 !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 4px !important;
-    box-shadow: none !important;
+    gap: 5px !important;
   }
 
   .uc-card.redesigned-product-card .uc-pack-dot {
-    width: 5px !important;
-    height: 5px !important;
-    border-radius: 50% !important;
-    background: #16a34a !important;
+    display: none !important;
   }
 
-  .uc-card.redesigned-product-card .uc-original-mrp {
-    font-size: 0.70rem !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-price-val {
-    font-size: 1.05rem !important;
-    font-weight: 800 !important;
-    color: #173D2B !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-currency-sign {
-    font-size: 0.76rem !important;
+  /* Rich Slate & Botanical Title on Mobile */
+  .uc-card.redesigned-product-card .uc-title,
+  .shop-grid .uc-card.redesigned-product-card .uc-title,
+  .shop-root .uc-card.redesigned-product-card .uc-title,
+  .deals-grid .uc-card.redesigned-product-card .uc-title,
+  .deals-container .uc-card.redesigned-product-card .uc-title {
+    order: 2 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 1.38rem !important;
     font-weight: 700 !important;
-    color: #173D2B !important;
+    color: #07031a !important;
+    line-height: 1.22 !important;
+    min-height: 0 !important;
+    max-height: 2.44em !important;
+    margin: 0 !important;
   }
 
-  .uc-card.redesigned-product-card .uc-price-action-row {
+  /* Single-Line Clamped Subtitle */
+  .uc-card.redesigned-product-card .uc-subtitle,
+  .shop-grid .uc-card.redesigned-product-card .uc-subtitle,
+  .shop-root .uc-card.redesigned-product-card .uc-subtitle,
+  .deals-grid .uc-card.redesigned-product-card .uc-subtitle,
+  .deals-container .uc-card.redesigned-product-card .uc-subtitle {
+    order: 3 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+    color: #6c5f74 !important;
+    min-height: 0 !important;
+    max-height: 1.45em !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  /* Bottom Price + Vertical Divider + Full-Width Add Pill */
+  .uc-card.redesigned-product-card .uc-price-action-row,
+  .shop-grid .uc-card.redesigned-product-card .uc-price-action-row,
+  .deals-container .uc-card.redesigned-product-card .uc-price-action-row {
+    order: 4 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    flex-wrap: nowrap !important;
     width: 100% !important;
-    gap: 4px !important;
+    min-width: 0 !important;
+    gap: 12px !important;
+    margin-top: auto !important;
+    padding-top: 4px !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-price-display {
+    padding-right: 12px !important;
+    border-right: 1px solid rgba(78, 63, 110, 0.15) !important;
+    flex-shrink: 0 !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-currency-sign {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    color: #4e3f6e !important;
+  }
+
+  .uc-card.redesigned-product-card .uc-price-val {
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: #4e3f6e !important;
   }
 
   .uc-card.redesigned-product-card .uc-add-pill-btn,
@@ -740,102 +949,155 @@
   .shop-root .uc-card.redesigned-product-card .uc-add-pill-btn,
   .deals-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
   .deals-container .uc-card.redesigned-product-card .uc-add-pill-btn {
-    padding: 6px 10px !important;
-    font-size: 0.74rem !important;
-    font-weight: 700 !important;
-    gap: 3px !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    min-height: 42px !important;
+    padding: 9px 14px !important;
+    font-size: 0.86rem !important;
+    font-weight: 600 !important;
+    gap: 6px !important;
     border-radius: 999px !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-wishlist-btn {
-    width: 28px !important;
-    height: 28px !important;
-    top: 6px !important;
-    right: 6px !important;
-  }
-
-  .uc-card.redesigned-product-card .uc-share-btn {
-    width: 28px !important;
-    height: 28px !important;
-    top: 6px !important;
-    right: 38px !important;
+    background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(78, 63, 110, 0.28) !important;
   }
 
   .uc-card.redesigned-product-card .uc-discount-badge {
-    top: 6px !important;
-    left: 6px !important;
-    font-size: 0.65rem !important;
-    padding: 2px 7px !important;
+    top: auto !important;
+    bottom: 12px !important;
+    left: 14px !important;
+    right: auto !important;
+    font-size: 0.68rem !important;
+    padding: 3px 9px !important;
+    background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(219, 222, 237, 0.3) !important;
   }
 }
 
 
 /* ==========================================================================
-   FULL PRODUCT CARD IMAGE SIZING & SEAMLESS BACKGROUND (NO WHITE BOX)
+   6. COMPACT 2-COLUMN MOBILE GRID REFINEMENTS (<= 480px)
    ========================================================================== */
-.uc-card .uc-img-section,
-.uc-card.redesigned-product-card .uc-img-section,
-.shop-grid .uc-card.redesigned-product-card .uc-img-section,
-.shop-root .uc-card.redesigned-product-card .uc-img-section,
-.deals-container .uc-card.redesigned-product-card .uc-img-section,
-.deals-container .uc-img-section {
-  background: #FAF8F2 !important;
-  padding: 0 !important;
-}
+@media (max-width: 480px) {
 
-.uc-card.redesigned-product-card .uc-img,
-.shop-grid .uc-card.redesigned-product-card .uc-img,
-.shop-root .uc-card.redesigned-product-card .uc-img,
-.deals-container .uc-card.redesigned-product-card .uc-img,
-.deals-container .uc-img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  mix-blend-mode: multiply !important;
-  transform: scale(1.16) !important;
-  transform-origin: center center !important;
-  display: block !important;
-}
+  .shop-grid .uc-card.redesigned-product-card,
+  .deals-grid .uc-card.redesigned-product-card {
+    border-radius: 18px !important;
+  }
 
-@media (max-width: 768px), (hover: none) {
-  .uc-card.redesigned-product-card .uc-img-section,
   .shop-grid .uc-card.redesigned-product-card .uc-img-section,
-  .shop-root .uc-card.redesigned-product-card .uc-img-section,
-  .deals-container .uc-img-section {
-    height: 180px !important;
-    min-height: 180px !important;
-    max-height: 180px !important;
-    padding: 0 !important;
-    background: #FAF8F2 !important;
-    border-radius: 14px 14px 0 0 !important;
+  .deals-grid .uc-card.redesigned-product-card .uc-img-section {
+    height: 170px !important;
+    min-height: 170px !important;
+    max-height: 170px !important;
   }
 
-  .uc-card.redesigned-product-card .uc-img,
   .shop-grid .uc-card.redesigned-product-card .uc-img,
-  .shop-root .uc-card.redesigned-product-card .uc-img,
-  .deals-container .uc-img {
-    transform: scale(1.18) !important;
-    mix-blend-mode: multiply !important;
-    object-fit: contain !important;
+  .deals-grid .uc-card.redesigned-product-card .uc-img {
+    padding: 8px !important;
   }
-}
 
-/* Keep product category labels on a single line */
-.uc-card.redesigned-product-card .uc-category-tag {
-  white-space: nowrap !important;
-  flex-shrink: 0 !important;
-  font-size: 0.66rem !important;
-  letter-spacing: 0.2px !important;
-}
+  .shop-grid .uc-card.redesigned-product-card .uc-meta-top-row,
+  .deals-grid .uc-card.redesigned-product-card .uc-meta-top-row {
+    top: 10px !important;
+    left: 10px !important;
+    right: 82px !important;
+  }
 
-.uc-card.redesigned-product-card .uc-meta-top-row {
-  gap: 4px !important;
-}
+  .shop-grid .uc-card.redesigned-product-card .uc-category-tag,
+  .deals-grid .uc-card.redesigned-product-card .uc-category-tag {
+    padding: 4px 8px !important;
+    font-size: 0.66rem !important;
+    gap: 4px !important;
+  }
 
-.uc-card.redesigned-product-card .uc-rating-row {
-  flex-shrink: 1 !important;
+  .shop-grid .uc-card.redesigned-product-card .uc-wishlist-btn,
+  .shop-grid .uc-card.redesigned-product-card .uc-share-btn,
+  .deals-grid .uc-card.redesigned-product-card .uc-wishlist-btn,
+  .deals-grid .uc-card.redesigned-product-card .uc-share-btn {
+    top: 10px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-wishlist-btn,
+  .deals-grid .uc-card.redesigned-product-card .uc-wishlist-btn {
+    right: 10px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-share-btn,
+  .deals-grid .uc-card.redesigned-product-card .uc-share-btn {
+    right: 44px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-share-btn:not(.is-shared)::before,
+  .deals-grid .uc-card.redesigned-product-card .uc-share-btn:not(.is-shared)::before {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-rating-row,
+  .deals-grid .uc-card.redesigned-product-card .uc-rating-row {
+    top: 154px !important;
+    right: 10px !important;
+    padding: 4px 8px !important;
+    font-size: 0.72rem !important;
+    gap: 3px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-info-section,
+  .deals-grid .uc-card.redesigned-product-card .uc-info-section {
+    padding: 15px 11px 12px 11px !important;
+    gap: 5px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-pack-badge,
+  .deals-grid .uc-card.redesigned-product-card .uc-pack-badge {
+    padding: 3px 8px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-title,
+  .deals-grid .uc-card.redesigned-product-card .uc-title {
+    font-size: 1.02rem !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-subtitle,
+  .deals-grid .uc-card.redesigned-product-card .uc-subtitle {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-price-action-row,
+  .deals-grid .uc-card.redesigned-product-card .uc-price-action-row {
+    gap: 6px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-price-display,
+  .deals-grid .uc-card.redesigned-product-card .uc-price-display {
+    padding-right: 6px !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-currency-sign,
+  .deals-grid .uc-card.redesigned-product-card .uc-currency-sign {
+    font-size: 0.82rem !important;
+    color: #4e3f6e !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-price-val,
+  .deals-grid .uc-card.redesigned-product-card .uc-price-val {
+    font-size: 1.08rem !important;
+    color: #4e3f6e !important;
+  }
+
+  .shop-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
+  .deals-grid .uc-card.redesigned-product-card .uc-add-pill-btn {
+    min-height: 34px !important;
+    padding: 6px 9px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+    color: #ffffff !important;
+  }
 }

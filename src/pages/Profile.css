@@ -50,7 +50,7 @@
 .saas-avatar {
   width: 96px;
   height: 96px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -58,7 +58,7 @@
   align-items: center;
   font-size: 2.5rem;
   font-weight: 800;
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4);
   border: 4px solid #ffffff;
 }
 
@@ -113,9 +113,9 @@
 }
 
 .saas-nav-item.active {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.25);
 }
 
 .saas-nav-item.active:hover {
@@ -207,8 +207,8 @@
 .info-icon {
   width: 56px;
   height: 56px;
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+  background: rgba(78, 63, 110, 0.1);
+  color: #4e3f6e;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -251,8 +251,8 @@
 }
 .btn-change-mobile {
   background: transparent;
-  border: 1.5px solid #10b981;
-  color: #10b981;
+  border: 1.5px solid #4e3f6e;
+  color: #4e3f6e;
   font-size: 0.78rem;
   font-weight: 700;
   padding: 4px 14px;
@@ -262,7 +262,7 @@
   font-family: inherit;
 }
 .btn-change-mobile:hover {
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #fff;
 }
 .profile-mobile-input-row,
@@ -287,7 +287,7 @@
   box-sizing: border-box;
 }
 .mobile-change-input:focus {
-  border-color: #10b981;
+  border-color: #4e3f6e;
   background: #fff;
 }
 .profile-mobile-actions {
@@ -303,7 +303,7 @@
 }
 .profile-mobile-actions .btn-save:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 6px 16px rgba(78, 63, 110, 0.25);
 }
 
 .profile-mobile-error {
@@ -322,7 +322,7 @@
 .profile-resend-otp {
   background: transparent;
   border: none;
-  color: #10b981;
+  color: #4e3f6e;
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
@@ -336,9 +336,9 @@
   cursor: not-allowed;
 }
 .profile-mobile-success {
-  background: #f0fdf4;
-  border: 1.5px solid #86efac;
-  color: #15803d;
+  background: #fff5fd;
+  border: 1.5px solid rgba(78, 63, 110, 0.25);
+  color: #4e3f6e;
   border-radius: 12px;
   padding: 12px 18px;
   font-size: 0.9rem;
@@ -380,7 +380,7 @@
 }
 
 .btn-shop-now {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -389,12 +389,12 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.2);
 }
 
 .btn-shop-now:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.3);
 }
 
 .orders-list {
@@ -415,7 +415,7 @@
 .order-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(255,255,255,0.8);
   transform: translateY(-4px);
-  border-color: rgba(16, 185, 129, 0.2);
+  border-color: rgba(78, 63, 110, 0.2);
 }
 
 .order-card-header {
@@ -486,8 +486,8 @@
 }
 
 .order-status.delivered {
-  background: #f0fdf4;
-  color: #16a34a;
+  background: #fff5fd;
+  color: #4e3f6e;
 }
 
 .order-items-summary {
@@ -549,7 +549,7 @@
 }
 
 .btn-track-order {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   border: none;
   color: white;
   padding: 12px 24px;
@@ -558,12 +558,12 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.2);
 }
 
 .btn-track-order:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.3);
 }
 
 /* Wishlist Styling */
@@ -586,7 +586,7 @@
 }
 
 .wishlist-row:hover {
-  border-color: rgba(16, 185, 129, 0.2);
+  border-color: rgba(78, 63, 110, 0.2);
   box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 
@@ -643,7 +643,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -652,13 +652,13 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.3);
   white-space: nowrap;
 }
 
 .btn-add-all-to-cart:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 14px 28px rgba(78, 63, 110, 0.4);
 }
 
 .btn-add-all-to-cart:disabled {
@@ -671,7 +671,7 @@
 .btn-wishlist-row-cart {
   background: transparent;
   border: none;
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 4px 0;
@@ -681,7 +681,7 @@
 }
 
 .btn-wishlist-row-cart:hover {
-  color: #059669;
+  color: #4e3f6e;
 }
 
 /* Row "Remove" button */
@@ -729,7 +729,7 @@
 
 /* Address Styling */
 .btn-add-address {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -741,12 +741,12 @@
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.2);
 }
 
 .btn-add-address:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.3);
 }
 
 .address-list {
@@ -768,7 +768,7 @@
 .address-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(255,255,255,0.8);
   transform: translateY(-4px);
-  border-color: rgba(16, 185, 129, 0.2);
+  border-color: rgba(78, 63, 110, 0.2);
 }
 
 .address-card-header {
@@ -891,8 +891,8 @@
 .address-form select:focus {
   outline: none;
   background-color: #ffffff;
-  border-color: #10b981;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  border-color: #4e3f6e;
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
 }
 
 .address-form .form-row {
@@ -929,7 +929,7 @@
 
 .btn-save {
   padding: 14px 28px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   border: none;
   border-radius: 20px;
   font-weight: 700;
@@ -937,12 +937,12 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.2);
 }
 
 .btn-save:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.3);
 }
 
 /* Delete Modal */
@@ -1181,10 +1181,10 @@
   }
 
   .saas-nav-item.active {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
     color: #ffffff !important;
-    border: 1px solid #059669 !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35) !important;
+    border: 1px solid #4e3f6e !important;
+    box-shadow: 0 4px 12px rgba(78, 63, 110, 0.35) !important;
     transform: translateY(-1px) !important;
   }
 
@@ -1341,9 +1341,9 @@
 }
 
 .btn-review-order {
-  background: #f0fdf4;
-  color: #16a34a;
-  border: 1px solid #86efac;
+  background: #fff5fd;
+  color: #4e3f6e;
+  border: 1px solid rgba(78, 63, 110, 0.25);
   border-radius: 8px;
   padding: 8px 14px;
   font-weight: 600;
@@ -1356,9 +1356,9 @@
 }
 
 .btn-review-order:hover {
-  background: #16a34a;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
-  border-color: #16a34a;
+  border-color: #4e3f6e;
   transform: translateY(-1px);
 }
 
@@ -1403,15 +1403,15 @@
 
 .address-form .custom-select-trigger:hover {
   background-color: #ffffff;
-  border-color: rgba(16, 185, 129, 0.45);
+  border-color: rgba(78, 63, 110, 0.45);
 }
 
 .address-form .custom-select-trigger:focus,
 .address-form .custom-select-trigger:focus-within {
   outline: none;
   background-color: #ffffff;
-  border-color: #10b981;
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  border-color: #4e3f6e;
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
 }
 
 .address-form .custom-select-trigger span {
@@ -1499,12 +1499,12 @@
 }
 
 .address-form .custom-select-option:hover {
-  background-color: #f0fdf4;
-  color: #059669;
+  background-color: #fff5fd;
+  color: #4e3f6e;
 }
 
 .address-form .custom-select-option.selected {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
   font-weight: 700;
 }

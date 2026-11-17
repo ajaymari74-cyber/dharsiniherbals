@@ -1,45 +1,52 @@
 /* Font loaded in index.html to eliminate render blocking */
 
 :root {
-  /* Luxury Ayurvedic Palette */
-  --color-forest: #173D2B;
-  --color-forest-dark: #0E2419;
-  --color-forest-light: #24573F;
-  --color-sage: #66865A;
-  --color-sage-light: #8CA97F;
-  --color-sage-soft: #E8EFE5;
-  --color-cream: #F7F3E8;
-  --color-cream-light: #FAF8F2;
-  --color-cream-dark: #ECE5D5;
-  --color-gold: #C5A15A;
-  --color-gold-light: #E3CA86;
-  --color-gold-dark: #9F7E3B;
-  --color-gold-glow: rgba(197, 161, 90, 0.25);
+  /* "Bright Eyes" Luxury Amethyst & Midnight Violet Palette */
+  --color-midnight: #07031a;
+  --color-slate-violet: #6c5f74;
+  --color-amethyst: #4e3f6e;
+  --color-lavender-ice: #dbdeed;
+  --color-lavender-blush: #fff5fd;
+
+  --color-forest: #07031a;
+  --color-forest-dark: #050212;
+  --color-forest-light: #4e3f6e;
+  --color-sage: #6c5f74;
+  --color-sage-light: #8e7f97;
+  --color-sage-soft: #f4f1f8;
+  --color-cream: #fff5fd;
+  --color-cream-light: #fdfafd;
+  --color-cream-dark: #dbdeed;
+  --color-gold: #4e3f6e;
+  --color-gold-light: #6c5f74;
+  --color-gold-dark: #07031a;
+  --color-gold-glow: rgba(78, 63, 110, 0.25);
   
   /* Primary & Semantic Mappings */
-  --color-primary: #173D2B;
-  --color-primary-light: #24573F;
-  --color-primary-dark: #0E2419;
-  --color-secondary: #66865A;
-  --color-accent: #C5A15A;
+  --color-primary: #4e3f6e;
+  --color-primary-light: #6c5f74;
+  --color-primary-dark: #07031a;
+  --color-primary-deep: #07031a;
+  --color-secondary: #6c5f74;
+  --color-accent: #4e3f6e;
   
   /* Neutral Palette */
-  --color-bg-light: #FAF8F2;
-  --color-bg-dark: #FAF8F2;
+  --color-bg-light: #fff5fd;
+  --color-bg-dark: #fff5fd;
   --color-surface-light: #ffffff;
   --color-surface-dark: #ffffff;
   
-  --color-text-light: #14241B;
-  --color-text-dark: #14241B;
-  --color-text-muted-light: #5A6A5E;
-  --color-text-muted-dark: #5A6A5E;
+  --color-text-light: #07031a;
+  --color-text-dark: #07031a;
+  --color-text-muted-light: #6c5f74;
+  --color-text-muted-dark: #6c5f74;
   
   /* Glassmorphism */
-  --glass-bg-light: rgba(255, 255, 255, 0.92);
-  --glass-bg-dark: rgba(23, 61, 43, 0.94);
-  --glass-border-light: rgba(197, 161, 90, 0.25);
-  --glass-border-dark: rgba(197, 161, 90, 0.25);
-  --glass-shadow: 0 10px 30px -10px rgba(23, 61, 43, 0.08);
+  --glass-bg-light: rgba(255, 245, 253, 0.92);
+  --glass-bg-dark: rgba(7, 3, 26, 0.95);
+  --glass-border-light: rgba(78, 63, 110, 0.18);
+  --glass-border-dark: rgba(219, 222, 237, 0.25);
+  --glass-shadow: 0 12px 36px -10px rgba(7, 3, 26, 0.08);
   
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -56,7 +63,7 @@
   --text-muted: var(--color-text-muted-light);
   --glass-bg: var(--glass-bg-light);
   --glass-border: var(--glass-border-light);
-  --border: rgba(102, 134, 90, 0.18);
+  --border: rgba(78, 63, 110, 0.18);
 }
 
 /* Removed dark mode to force white and green theme */
@@ -79,7 +86,12 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: #FAF8F2 !important;
+  background: #fff5fd !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(219, 222, 237, 0.55) 0px, transparent 45%),
+    radial-gradient(at 100% 0%, rgba(78, 63, 110, 0.08) 0px, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(219, 222, 237, 0.4) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -103,7 +115,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  background: #FAF8F2 !important;
+  background: transparent !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -188,16 +200,17 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--color-primary); /* Solid flat green */
-  color: white;
-  box-shadow: none;
-  border-radius: 8px; /* Slightly rounded, not a full pill */
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(78, 63, 110, 0.28);
+  border-radius: 12px;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+  background: linear-gradient(135deg, #6c5f74 0%, #4e3f6e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(78, 63, 110, 0.38);
 }
 
 .btn-primary:active {
@@ -205,13 +218,16 @@ a:hover {
 }
 
 .btn-outline {
-  background: transparent;
+  background: #ffffff;
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: 1.5px solid rgba(78, 63, 110, 0.35);
+  box-shadow: 0 2px 8px rgba(7, 3, 26, 0.04);
 }
 
 .btn-outline:hover {
-  background: rgba(76, 175, 80, 0.1);
+  background: #f4f1f8;
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .btn-full {
@@ -265,10 +281,10 @@ a:hover {
   margin-bottom: 50px;
   padding: 36px 32px;
   position: relative;
-  border: 1px solid rgba(197, 161, 90, 0.32);
-  border-radius: 24px;
-  background: #FAF8F2;
-  box-shadow: 0 10px 30px rgba(23, 61, 43, 0.04);
+  border: 1px solid rgba(78, 63, 110, 0.2);
+  border-radius: 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #fff5fd 50%, #f7f4fc 100%);
+  box-shadow: 0 14px 38px -10px rgba(7, 3, 26, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
   overflow: hidden;
 }
 
@@ -281,14 +297,14 @@ a:hover {
   top: -100px;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(197, 161, 90, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(78, 63, 110, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(40px);
 }
 .bento-header-blob.left { 
   left: -100px; 
-  background: radial-gradient(circle, rgba(102, 134, 90, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(219, 222, 237, 0.6) 0%, transparent 70%);
 }
 .bento-header-blob.right { 
   right: -100px; 
@@ -302,10 +318,10 @@ a:hover {
 .bento-title-badge {
   display: inline-block;
   padding: 5px 14px;
-  background: rgba(23, 61, 43, 0.06);
-  border: 1px solid rgba(197, 161, 90, 0.35);
+  background: #f3f0f8;
+  border: 1px solid rgba(78, 63, 110, 0.28);
   border-radius: 100px;
-  color: #C5A15A;
+  color: #4e3f6e;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 1.5px;
@@ -318,7 +334,7 @@ a:hover {
   font-style: normal;
   font-size: clamp(1.75rem, 3.8vw, 2.5rem);
   font-weight: 600;
-  color: #173D2B;
+  color: #07031a;
   margin: 0;
   line-height: 1.25;
   letter-spacing: -0.5px;
@@ -375,13 +391,13 @@ a:hover {
 }
 
 .brand-logo-crisp-d {
-  filter: drop-shadow(0 2px 6px rgba(34, 197, 94, 0.25));
+  filter: drop-shadow(0 2px 6px rgba(78, 63, 110, 0.25));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .brand-logo-video-wrap:hover .brand-logo-crisp-d {
   transform: scale(1.08);
-  filter: drop-shadow(0 4px 10px rgba(34, 197, 94, 0.45));
+  filter: drop-shadow(0 4px 10px rgba(78, 63, 110, 0.45));
 }
 
 .brand-logo-video-canvas {
@@ -430,20 +446,20 @@ a:hover {
 }
 
 .bento-title-text span.highlight {
-  color: #C5A15A;
+  color: #4e3f6e;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .bento-desc-col {
   flex: 1 1 400px;
   z-index: 1;
-  border-left: 2px solid rgba(197, 161, 90, 0.3);
+  border-left: 2px solid rgba(78, 63, 110, 0.22);
   padding-left: 30px;
 }
 
 .bento-desc-text {
-  color: #475569;
+  color: #6c5f74;
   font-size: 1.15rem;
   margin: 0;
   line-height: 1.8;
@@ -488,7 +504,7 @@ a:hover {
   .bento-desc-col {
     flex-basis: auto;
     border-left: none;
-    border-top: 2px solid rgba(197, 161, 90, 0.3);
+    border-top: 2px solid rgba(78, 63, 110, 0.25);
     padding-left: 0;
     padding-top: 12px;
     margin-top: 4px;

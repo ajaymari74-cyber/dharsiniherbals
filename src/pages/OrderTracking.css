@@ -40,7 +40,7 @@
 }
 
 .text-primary {
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 .mt-4 {
@@ -81,7 +81,7 @@
 }
 
 .back-link:hover {
-  color: #10b981;
+  color: #4e3f6e;
   transform: translateX(-4px);
 }
 
@@ -105,13 +105,13 @@
 }
 
 .order-total-badge {
-  background: #10b981;
+  background: #4e3f6e;
   color: white;
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 1rem;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.2);
 }
 
 .track-status-card {
@@ -156,9 +156,9 @@
 }
 
 .status-step.active .step-icon {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
-  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 12px 24px rgba(78, 63, 110, 0.3);
   transform: scale(1.1);
 }
 
@@ -191,7 +191,7 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background: #10b981;
+  background: #4e3f6e;
   transition: width 0.5s ease;
 }
 
@@ -318,7 +318,7 @@
 }
 
 .shipping-icon {
-  color: #10b981;
+  color: #4e3f6e;
   flex-shrink: 0;
 }
 
@@ -387,8 +387,8 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  box-shadow: 0 8px 16px rgba(78, 63, 110, 0.2);
 }
 
 .popup-text h4 {
@@ -542,13 +542,13 @@
 
 .feedback-form-group textarea:focus {
   outline: none;
-  border-color: #16a34a;
+  border-color: #4e3f6e;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
 }
 
 .btn-submit-feedback {
-  background: #16a34a;
+  background: #4e3f6e;
   color: white;
   border: none;
   border-radius: 50px;
@@ -561,8 +561,8 @@
 }
 
 .btn-submit-feedback:hover:not(:disabled) {
-  background: #15803d;
-  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.3);
+  background: #4e3f6e;
+  box-shadow: 0 6px 20px rgba(78, 63, 110, 0.3);
   transform: translateY(-2px);
 }
 

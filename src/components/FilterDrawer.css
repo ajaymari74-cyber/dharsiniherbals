@@ -1,10 +1,17 @@
+/* ==========================================================================
+   DHARANI HERBALS LUXURY FILTER DRAWER (BRIGHT EYES PALETTE)
+   Deep Midnight Violet (#07031a), Slate Mauve (#6c5f74), Royal Amethyst (#4e3f6e)
+   ========================================================================== */
+
 .filter-drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(7, 3, 26, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 99999;
   opacity: 0;
   pointer-events: none;
@@ -22,14 +29,15 @@
   left: 0;
   transform: translateX(-100%); /* Slide from left */
   width: 100%;
-  max-width: 350px;
+  max-width: 360px;
   height: 100vh;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 100000;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 8px 0 30px rgba(7, 3, 26, 0.15);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
 .filter-drawer.open {
@@ -41,47 +49,57 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 24px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(78, 63, 110, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #fff5fd 100%);
 }
 
 .filter-header h2 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
+  color: #07031a;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.filter-header h2 svg {
+  color: #4e3f6e;
 }
 
 .filter-close-btn {
-  background: none;
-  border: none;
+  background: #f3f0f8;
+  border: 1px solid rgba(78, 63, 110, 0.15);
   cursor: pointer;
-  color: #6b7280;
+  color: #07031a;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .filter-close-btn:hover {
-  background-color: #f3f4f6;
-  color: #111827;
+  background-color: #4e3f6e;
+  color: #ffffff;
+  border-color: #4e3f6e;
+  transform: rotate(90deg);
 }
 
 .filter-content {
   flex: 1;
   overflow-y: auto;
   padding: 10px 24px 20px;
+  background: #ffffff;
 }
 
 /* Accordion Styles */
 .filter-accordion {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 16px 0;
+  border-bottom: 1px solid rgba(78, 63, 110, 0.1);
+  padding: 18px 0;
 }
 
 .filter-accordion:last-child {
@@ -97,24 +115,37 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #374151;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #07031a;
   text-align: left;
+  transition: color 0.2s ease;
 }
 
-.filter-accordion-header svg {
-  transition: transform 0.3s ease;
+.filter-accordion-header:hover {
+  color: #4e3f6e;
 }
 
-.filter-accordion-header.open svg {
+/* Force override of inline style on selectedCount tag from JSX */
+.filter-accordion-header span span,
+.filter-accordion-header span span[style] {
+  color: #4e3f6e !important;
+  font-weight: 800 !important;
+}
+
+.filter-accordion-header .filter-chevron {
+  color: #4e3f6e;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-accordion-header.open .filter-chevron {
   transform: rotate(180deg);
 }
 
 .filter-accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  transition: max-height 0.32s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.25s ease;
 }
 
 .filter-accordion-content.open {
@@ -133,11 +164,16 @@
 .filter-checkbox-label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
-  font-size: 0.95rem;
-  color: #4b5563;
+  font-size: 0.92rem;
+  color: #4b4352;
   user-select: none;
+  transition: all 0.2s ease;
+}
+
+.filter-checkbox-label:hover {
+  color: #4e3f6e;
 }
 
 .filter-checkbox-label input[type="checkbox"] {
@@ -145,41 +181,49 @@
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #d1d5db;
-  border-radius: 4px;
+  border: 2px solid rgba(78, 63, 110, 0.25);
+  border-radius: 6px;
   outline: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: #ffffff;
+}
+
+.filter-checkbox-label input[type="checkbox"]:hover {
+  border-color: #4e3f6e;
+  background: #fff5fd;
 }
 
 .filter-checkbox-label input[type="checkbox"]:checked {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+  border-color: #4e3f6e !important;
+  box-shadow: 0 3px 8px rgba(78, 63, 110, 0.35) !important;
 }
 
 .filter-checkbox-label input[type="checkbox"]:checked::after {
   content: '✓';
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .filter-total-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #10b981;
-  color: white;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+  color: #ffffff !important;
   border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  width: 20px;
-  height: 20px;
-  margin-left: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  box-shadow: 0 3px 8px rgba(78, 63, 110, 0.3);
 }
 
 .filter-opt-text {
@@ -187,70 +231,69 @@
 }
 
 .filter-opt-count {
-  font-size: 0.82rem;
-  color: #94a3b8;
-  font-weight: 500;
+  font-size: 0.8rem;
+  color: #6c5f74;
+  font-weight: 600;
   margin-left: auto;
 }
 
 .filter-checkbox-label.selected {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-.filter-checkbox-label.selected .filter-opt-count {
-  color: #10b981;
+  color: #07031a;
   font-weight: 700;
 }
 
-.filter-checkbox-label:hover {
-  color: #111827;
+.filter-checkbox-label.selected .filter-opt-count {
+  color: #4e3f6e !important;
+  font-weight: 800 !important;
 }
 
 /* Footer Actions */
 .filter-footer {
-  padding: 20px 24px;
-  border-top: 1px solid #f0f0f0;
+  padding: 18px 24px;
+  border-top: 1px solid rgba(78, 63, 110, 0.12);
   display: flex;
-  gap: 16px;
-  background-color: #fff;
+  gap: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 -4px 16px rgba(7, 3, 26, 0.04);
 }
 
 .btn-filter-clear {
   flex: 1;
   padding: 12px;
-  background-color: #fff;
-  color: #4b5563;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+  background-color: #f3f0f8;
+  color: #07031a;
+  border: 1.5px solid rgba(78, 63, 110, 0.22);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .btn-filter-clear:hover {
-  background-color: #f3f4f6;
-  color: #111827;
+  background-color: #dbdeed;
+  border-color: #4e3f6e;
+  color: #07031a;
 }
 
 .btn-filter-apply {
-  flex: 1;
+  flex: 1.4;
   padding: 12px;
-  background-color: var(--color-primary);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.2);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(78, 63, 110, 0.35) !important;
 }
 
 .btn-filter-apply:hover {
-  background-color: var(--color-primary-dark);
-  box-shadow: 0 6px 12px rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, #6c5f74 0%, #4e3f6e 100%) !important;
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.45) !important;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 480px) {
@@ -259,8 +302,9 @@
     transform: translateY(100%); /* Slide from bottom on mobile */
     height: 90vh;
     max-width: 100%;
-    border-radius: 20px 20px 0 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px 24px 0 0;
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 -8px 30px rgba(7, 3, 26, 0.2);
   }
 
   .filter-drawer.open {

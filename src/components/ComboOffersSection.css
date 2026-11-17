@@ -1,7 +1,7 @@
 /* Combo & Bundles Offers Section - Clean, Compact & Perfectly Aligned */
 .combo-offers-section {
   padding: 16px 16px 28px;
-  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #fff5fd 0%, #ffffff 100%);
   position: relative;
   overflow: hidden;
   scroll-margin-top: 90px;
@@ -23,8 +23,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(16, 185, 129, 0.12);
-  color: #047857;
+  background: #f3f0f8;
+  color: #4e3f6e;
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 0.82rem;
@@ -32,17 +32,17 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(78, 63, 110, 0.25);
 }
 
 .combo-sparkle-icon {
-  color: #059669;
+  color: #4e3f6e;
 }
 
 .combo-section-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
-  color: #064e3b;
+  color: #07031a;
   margin-bottom: 6px;
   line-height: 1.25;
 }
@@ -65,14 +65,14 @@
 .combo-card-hero {
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  box-shadow: 0 8px 28px -6px rgba(6, 78, 59, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(78, 63, 110, 0.25);
+  box-shadow: 0 8px 28px -6px rgba(7, 3, 26, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .combo-card-hero:hover {
-  box-shadow: 0 14px 34px -6px rgba(6, 78, 59, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 14px 34px -6px rgba(7, 3, 26, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
 }
 
 /* Top Strip */
@@ -81,8 +81,8 @@
   align-items: center;
   gap: 10px;
   padding: 10px 24px;
-  background: linear-gradient(90deg, #ecfdf5 0%, #f0fdf4 100%);
-  border-bottom: 1px solid #d1fae5;
+  background: linear-gradient(90deg, #fff5fd 0%, #f4f0f9 100%);
+  border-bottom: 1px solid #dbdeed;
   flex-wrap: wrap;
 }
 
@@ -90,7 +90,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: #059669;
+  background: #4e3f6e;
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 800;
@@ -195,11 +195,11 @@
 .combo-items-count-badge {
   font-size: 0.74rem;
   font-weight: 700;
-  color: #059669;
-  background: #ecfdf5;
+  color: #4e3f6e;
+  background: #f3f0f8;
   padding: 2px 8px;
   border-radius: 999px;
-  border: 1px solid #a7f3d0;
+  border: 1px solid rgba(78, 63, 110, 0.25);
 }
 
 .combo-items-row {
@@ -236,7 +236,7 @@
 
 .combo-item-thumb-box:hover {
   transform: translateY(-2px);
-  border-color: #10b981;
+  border-color: #4e3f6e;
 }
 
 .combo-item-thumb-box img {
@@ -287,17 +287,17 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #ecfdf5;
-  color: #059669;
-  border: 1px solid #a7f3d0;
+  background: #f3f0f8;
+  color: #4e3f6e;
+  border: 1px solid rgba(78, 63, 110, 0.25);
   flex: 0 0 22px;
   margin-top: 27px; /* (76px thumb height - 22px divider height) / 2 = 27px for exact vertical centering with images */
 }
 
 /* Value Highlight Card */
 .combo-value-highlight {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background: #fff5fd;
+  border: 1px solid #dbdeed;
   border-radius: 14px;
   padding: 12px 16px;
   display: flex;
@@ -324,12 +324,12 @@
 }
 
 .combo-value-row.highlight .value-label {
-  color: #064e3b;
+  color: #07031a;
   font-weight: 700;
 }
 
 .combo-value-row.highlight .value-offer {
-  color: #059669;
+  color: #4e3f6e;
   font-weight: 800;
   font-size: 1.05rem;
 }
@@ -338,8 +338,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #dcfce7;
-  color: #15803d;
+  background: #dbdeed;
+  color: #4e3f6e;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 4px 8px;
@@ -360,7 +360,7 @@
   gap: 6px;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #059669;
+  color: #4e3f6e;
   margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -369,7 +369,7 @@
 .combo-title {
   font-size: 1.55rem;
   font-weight: 800;
-  color: #064e3b;
+  color: #07031a;
   margin: 0 0 4px 0;
   line-height: 1.25;
 }
@@ -416,7 +416,7 @@
 }
 
 .pill-check {
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 /* CTA Block */
@@ -438,7 +438,7 @@
 .combo-price-main {
   display: flex;
   align-items: flex-start;
-  color: #059669;
+  color: #4e3f6e;
   line-height: 1;
 }
 
@@ -496,7 +496,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #4e3f6e 100%);
   color: #ffffff;
   border: none;
   padding: 12px 20px;
@@ -504,14 +504,14 @@
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.3);
   transition: all 0.2s ease;
 }
 
 .btn-add-combo:hover {
-  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
+  box-shadow: 0 6px 16px rgba(78, 63, 110, 0.4);
 }
 
 .btn-view-combo-details {
@@ -521,8 +521,8 @@
   justify-content: center;
   gap: 6px;
   background: #ffffff;
-  color: #064e3b;
-  border: 1.5px solid #059669;
+  color: #07031a;
+  border: 1.5px solid #4e3f6e;
   padding: 11px 16px;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -532,8 +532,8 @@
 }
 
 .btn-view-combo-details:hover {
-  background: #ecfdf5;
-  color: #047857;
+  background: #f3f0f8;
+  color: #4e3f6e;
 }
 
 .combo-assurance {
@@ -545,7 +545,7 @@
 }
 
 .assurance-icon {
-  color: #10b981;
+  color: #4e3f6e;
   flex-shrink: 0;
 }
 

@@ -28,7 +28,7 @@
 .login-modal-overlay::before {
   width: 350px;
   height: 350px;
-  background: rgba(143, 174, 104, 0.4); 
+  background: rgba(78, 63, 110, 0.35); 
   top: 10%;
   left: 15%;
 }
@@ -36,7 +36,7 @@
 .login-modal-overlay::after {
   width: 300px;
   height: 300px;
-  background: rgba(34, 197, 94, 0.3);
+  background: rgba(78, 63, 110, 0.3);
   bottom: 10%;
   right: 15%;
   animation-delay: -4s;
@@ -96,7 +96,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(15, 60, 25, 0.95) 0%, rgba(34, 197, 94, 0.3) 60%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to top, rgba(7, 3, 26, 0.95) 0%, rgba(78, 63, 110, 0.3) 60%, rgba(0,0,0,0.3) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -216,9 +216,9 @@
 }
 
 .mobile-input-wrapper:focus-within {
-  border-color: #22c55e;
+  border-color: #4e3f6e;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15), 0 6px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.15), 0 6px 16px rgba(0,0,0,0.06);
   transform: translateY(-2px);
 }
 
@@ -271,7 +271,7 @@
 .subscribe-checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #15803d;
+  accent-color: #4e3f6e;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -299,7 +299,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #15803d;
+  color: #4e3f6e;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 2px 4px rgba(0,0,0,0.02) inset;
   transition: all 0.3s ease;
@@ -311,14 +311,14 @@
 
 .otp-box-input:focus,
 .otp-box-input.active-box {
-  border-color: #22c55e;
+  border-color: #4e3f6e;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15), 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.15), 0 4px 12px rgba(0,0,0,0.06);
   transform: translateY(-2px);
 }
 
 .otp-box-input.filled {
-  border-color: #15803d;
+  border-color: #4e3f6e;
   background: #ffffff;
 }
 
@@ -347,7 +347,7 @@
 
 .submit-btn:active {
   transform: translateY(1px);
-  box-shadow: 0 4px 8px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 4px 8px rgba(78, 63, 110, 0.2);
 }
 
 .submit-btn:disabled {
@@ -385,7 +385,7 @@
 .edit-mobile-btn {
   background: none;
   border: none;
-  color: #15803d;
+  color: #4e3f6e;
   font-weight: 700;
   margin-left: 8px;
   cursor: pointer;
@@ -394,7 +394,7 @@
 }
 
 .edit-mobile-btn:hover {
-  color: #22c55e;
+  color: #4e3f6e;
 }
 
 /* Footer */
@@ -407,21 +407,21 @@
 }
 
 .terms-footer a {
-  color: #15803d;
+  color: #4e3f6e;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .terms-footer a:hover {
-  color: #22c55e;
+  color: #4e3f6e;
   text-decoration: underline;
 }
 
 .support-email {
   display: inline-block;
   margin-top: 12px;
-  color: #15803d;
+  color: #4e3f6e;
   font-weight: 700;
   background: rgba(21, 128, 61, 0.1);
   padding: 6px 14px;
@@ -603,8 +603,8 @@
   }
   
   .otp-box-input:focus {
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
-    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(78, 63, 110, 0.2);
+    border-color: #4e3f6e;
   }
 
   .submit-btn {
@@ -612,8 +612,8 @@
     font-size: 1.02rem;
     font-weight: 700;
     border-radius: 12px;
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
+    background: linear-gradient(135deg, #4e3f6e, #4e3f6e);
+    box-shadow: 0 6px 16px rgba(78, 63, 110, 0.3);
   }
 
   .terms-footer {
@@ -652,7 +652,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     font-weight: 700;
-    color: #15803d;
+    color: #4e3f6e;
   }
   .mobile-brand-line2 {
     font-family: 'Playfair Display', serif;

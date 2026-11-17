@@ -1,5 +1,5 @@
 .checkout-page-wrapper {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%);
   min-height: calc(100vh - 80px);
   padding: 120px 20px 60px 20px;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 .back-link:hover {
-  color: #10b981;
+  color: #4e3f6e;
   transform: translateX(-4px);
 }
 
@@ -101,8 +101,8 @@
 }
 
 .stepper-item.completed .step-circle {
-  border-color: #10b981;
-  color: #10b981;
+  border-color: #4e3f6e;
+  color: #4e3f6e;
 }
 
 .stepper-item.completed .step-label {
@@ -129,7 +129,7 @@
 }
 
 .stepper-line.completed {
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
 }
 
 .checkout-title {
@@ -198,7 +198,7 @@
   gap: 12px;
   width: 100%;
   padding: 18px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   border-radius: 16px;
@@ -206,12 +206,12 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 8px 20px rgba(78, 63, 110, 0.25);
 }
 
 .btn-get-location-large:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 12px 25px rgba(78, 63, 110, 0.35);
 }
 
 .btn-get-location-large:disabled {
@@ -264,7 +264,7 @@
 .btn-get-location-small {
   background: transparent;
   border: none;
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 600;
   font-size: 0.85rem;
   display: flex;
@@ -277,7 +277,7 @@
 }
 
 .btn-get-location-small:hover {
-  background: #ecfdf5;
+  background: #f3f0f8;
 }
 
 .btn-get-location-small:disabled {
@@ -291,9 +291,9 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(78, 63, 110, 0.1);
+  color: #4e3f6e;
+  border: 1px solid rgba(78, 63, 110, 0.2);
   padding: 8px 16px;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -303,10 +303,10 @@
 }
 
 .btn-add-address-sm:hover {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(78, 63, 110, 0.15);
+  border-color: rgba(78, 63, 110, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
+  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.08);
 }
 
 .btn-add-address-sm:active {
@@ -317,9 +317,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(16, 185, 129, 0.05);
+  background: rgba(78, 63, 110, 0.05);
   color: #0f172a;
-  border: 1.5px solid #10b981;
+  border: 1.5px solid #4e3f6e;
   padding: 10px 16px;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -331,18 +331,18 @@
 }
 
 .btn-back-to-addresses:hover {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(78, 63, 110, 0.1);
   transform: translateY(-1px);
 }
 
 .btn-back-to-addresses:active {
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(78, 63, 110, 0.15);
   transform: translateY(0);
 }
 
 /* Check Icon */
 .check-icon {
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 /* Address Card Actions */
@@ -486,14 +486,14 @@
   width: 54px;
   height: 54px;
   border-radius: 18px;
-  background: linear-gradient(145deg, #34d399 0%, #059669 100%);
+  background: linear-gradient(145deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
   font-size: 1.7rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.28);
+  box-shadow: 0 6px 18px rgba(78, 63, 110, 0.28);
   flex-shrink: 0;
 }
 
@@ -661,7 +661,7 @@
   display: inline-block;
   align-self: flex-start;
   background: #ffffff;
-  border: 1.5px solid #86efac;
+  border: 1.5px solid rgba(78, 63, 110, 0.25);
   color: #0d7f46;
   font-size: 0.82rem;
   font-weight: 800;
@@ -928,7 +928,7 @@
   align-items: center;
   gap: 6px;
   padding: 8px 16px;
-  background: #16a34a;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -936,11 +936,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+  box-shadow: 0 2px 8px rgba(78, 63, 110, 0.25);
 }
 
 .btn-add-new-address:hover {
-  background: #15803d;
+  background: #6c5f74;
   transform: translateY(-1px);
 }
 
@@ -964,15 +964,15 @@
 }
 
 .modern-address-card:hover {
-  border-color: #86efac;
+  border-color: rgba(78, 63, 110, 0.25);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   transform: translateY(-1px);
 }
 
 .modern-address-card.selected {
-  border-color: #22c55e;
-  background: linear-gradient(145deg, #f7fdf9 0%, #ffffff 100%);
-  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.12);
+  border-color: #4e3f6e;
+  background: linear-gradient(145deg, #fff5fd 0%, #ffffff 100%);
+  box-shadow: 0 6px 20px rgba(78, 63, 110, 0.12);
 }
 
 .address-card-selection-indicator {
@@ -991,14 +991,14 @@
 }
 
 .custom-radio.checked {
-  border-color: #22c55e;
+  border-color: #4e3f6e;
 }
 
 .radio-inner-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #22c55e;
+  background-color: #4e3f6e;
 }
 
 .address-card-main {
@@ -1022,8 +1022,8 @@
 .pill-selected {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #15803d;
-  background: #dcfce7;
+  color: #4e3f6e;
+  background: #dbdeed;
   padding: 2px 8px;
   border-radius: 10px;
 }
@@ -1048,7 +1048,7 @@
 }
 
 .address-location-row .addr-pin {
-  color: #16a34a;
+  color: #4e3f6e;
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -1089,7 +1089,7 @@
 }
 
 .shipping-summary-icon {
-  color: #16a34a;
+  color: #4e3f6e;
   margin-top: 2px;
   flex-shrink: 0;
 }
@@ -1238,9 +1238,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #10b981;
+  border-color: #4e3f6e;
   background-color: white;
-  box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 0 5px rgba(78, 63, 110, 0.1);
 }
 
 /* Custom Select Dropdown */
@@ -1252,12 +1252,12 @@
 .custom-select-trigger {
   width: 100%;
   padding: 16px 20px;
-  border: 1.5px solid #10b981;
+  border: 1.5px solid #4e3f6e;
   border-radius: 12px;
   font-size: 1rem;
   background: #ffffff;
   color: #0f172a;
-  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.05) inset;
+  box-shadow: 0 2px 4px rgba(78, 63, 110, 0.05) inset;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1295,12 +1295,12 @@
 
 .custom-select-option:hover {
   background: #f1f5f9;
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 .custom-select-option.selected {
-  background: #ecfdf5;
-  color: #10b981;
+  background: #f3f0f8;
+  color: #4e3f6e;
   font-weight: 600;
 }
 
@@ -1335,7 +1335,7 @@
 
 .btn-place-order {
   margin-top: 32px;
-  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: white;
   border: none;
   padding: 18px;
@@ -1348,13 +1348,13 @@
   align-items: center;
   gap: 12px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 25px rgba(78, 63, 110, 0.3);
   letter-spacing: 0.5px;
 }
 
 .btn-place-order:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 20px 40px rgba(78, 63, 110, 0.35);
 }
 
 .btn-place-order:disabled {
@@ -1477,7 +1477,7 @@
 }
 
 .text-free {
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 600;
 }
 
@@ -1494,10 +1494,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 600;
   font-size: 0.9rem;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(78, 63, 110, 0.1);
   padding: 12px;
   border-radius: 12px;
 }
@@ -1751,8 +1751,8 @@
 
 .modern-floating-input:focus {
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 0 1px #10b981;
+  border-color: #4e3f6e;
+  box-shadow: 0 0 0 1px #4e3f6e;
 }
 
 .modern-floating-label {
@@ -1775,12 +1775,12 @@
 }
 
 .modern-floating-input:focus~.modern-floating-label {
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 .modern-btn-save {
   padding: 18px 24px;
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -1796,11 +1796,11 @@
 }
 
 .modern-btn-save:hover {
-  background: #059669;
+  background: #6c5f74;
 }
 
 .modern-btn-save:active {
-  background: #047857;
+  background: #07031a;
 }
 
 @media (min-width: 640px) {
@@ -1904,7 +1904,7 @@
 }
 
 .step-badge.completed {
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
 }
 
 .step-badge.pending {
@@ -1915,7 +1915,7 @@
 .btn-edit-step {
   background: transparent;
   border: none;
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -1924,7 +1924,7 @@
 }
 
 .btn-edit-step:hover {
-  color: #059669;
+  color: #4e3f6e;
   text-decoration: underline;
 }
 
@@ -1948,8 +1948,8 @@
   font-size: 1.15rem;
   font-weight: 700;
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 0 1px #10b981;
+  border-color: #4e3f6e;
+  box-shadow: 0 0 0 1px #4e3f6e;
 }
 
 .modern-floating-label {
@@ -1972,12 +1972,12 @@
 }
 
 .modern-floating-input:focus~.modern-floating-label {
-  color: #10b981;
+  color: #4e3f6e;
 }
 
 .modern-btn-save {
   padding: 18px 24px;
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -1993,11 +1993,11 @@
 }
 
 .modern-btn-save:hover {
-  background: #059669;
+  background: #6c5f74;
 }
 
 .modern-btn-save:active {
-  background: #047857;
+  background: #07031a;
 }
 
 @media (min-width: 640px) {
@@ -2101,7 +2101,7 @@
 }
 
 .step-badge.completed {
-  background: #10b981;
+  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
 }
 
 .step-badge.pending {
@@ -2112,7 +2112,7 @@
 .btn-edit-step {
   background: transparent;
   border: none;
-  color: #10b981;
+  color: #4e3f6e;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -2121,7 +2121,7 @@
 }
 
 .btn-edit-step:hover {
-  color: #059669;
+  color: #4e3f6e;
   text-decoration: underline;
 }
 
@@ -2151,7 +2151,7 @@
 
 @media (max-width: 900px) {
   .checkout-page-wrapper {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%) !important;
+    background: linear-gradient(135deg, #fff5fd 0%, #dbdeed 100%) !important;
   }
 
   .checkout-grid {

@@ -19,7 +19,7 @@
 
 /* Top Features Section */
 .pf-features-section {
-  background: #e6f9ed; /* Light mint green */
+  background: #fff5fd;
   padding: 80px 20px;
 }
 
@@ -70,7 +70,7 @@
 
 /* Colored glowing shadows based on icon */
 .pf-hover-green:hover .pf-icon-circle {
-  box-shadow: 0 16px 32px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 16px 32px rgba(78, 63, 110, 0.25);
   transform: translateY(-4px);
 }
 
@@ -101,14 +101,14 @@
 }
 
 /* Text color changes on hover */
-.pf-hover-green:hover .pf-feature-title { color: #16a34a; }
+.pf-hover-green:hover .pf-feature-title { color: #4e3f6e; }
 .pf-hover-orange:hover .pf-feature-title { color: #ea580c; }
 .pf-hover-yellow:hover .pf-feature-title { color: #ca8a04; }
 
 
 /* Bottom WhatsApp Signup Section */
 .pf-signup-section {
-  background: linear-gradient(135deg, #022c22 0%, #065f46 50%, #10b981 100%);
+  background: linear-gradient(135deg, #07031a 0%, #4e3f6e 50%, #6c5f74 100%);
   background-size: 200% 200%;
   animation: gradientFlow 10s ease infinite;
   padding: 100px 20px;
@@ -137,7 +137,7 @@
 .pf-orb-1 {
   width: 300px;
   height: 300px;
-  background: #22c55e;
+  background: #4e3f6e;
   top: -100px;
   left: -50px;
   animation-duration: 20s;
@@ -146,7 +146,7 @@
 .pf-orb-2 {
   width: 400px;
   height: 400px;
-  background: #15803d;
+  background: #07031a;
   bottom: -150px;
   right: -100px;
   animation-duration: 18s;
@@ -156,7 +156,7 @@
 .pf-orb-3 {
   width: 200px;
   height: 200px;
-  background: #4ade80;
+  background: #dbdeed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -203,7 +203,7 @@
 
 .pf-signup-subtitle {
   font-size: 1.15rem;
-  color: #dcfce7;
+  color: #dbdeed;
   margin: 0 0 40px 0;
   font-weight: 500;
 }
@@ -247,8 +247,8 @@
 }
 
 .pf-shiny-btn {
-  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
-  color: #065f46;
+  background: linear-gradient(135deg, #ffffff 0%, #fff5fd 100%);
+  color: #4e3f6e;
   border: none;
   padding: 0 32px;
   border-radius: 50px;
@@ -272,7 +272,7 @@
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, rgba(22, 163, 74, 0) 0%, rgba(22, 163, 74, 0.15) 50%, rgba(22, 163, 74, 0) 100%);
+  background: linear-gradient(to right, rgba(78, 63, 110, 0) 0%, rgba(78, 63, 110, 0.15) 50%, rgba(78, 63, 110, 0) 100%);
   transform: skewX(-20deg);
   animation: btnShine 4s infinite 1s;
 }
@@ -286,7 +286,7 @@
 .pf-shiny-btn:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  color: #15803d;
+  color: #07031a;
 }
 
 .pf-btn-icon {
@@ -312,7 +312,7 @@
 }
 
 .pf-checkbox {
-  accent-color: #22c55e;
+  accent-color: #4e3f6e;
   width: 18px;
   height: 18px;
   cursor: pointer;
