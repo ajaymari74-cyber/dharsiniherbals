@@ -4,7 +4,13 @@
 
 .ad-landing-page {
   min-height: 100vh;
-  background-color: #f8fafc;
+  background-color: #F4F1E8;
+  background-image:
+    radial-gradient(ellipse 56% 42% at 8% 8%, rgba(27, 67, 50, 0.14) 0%, transparent 62%),
+    radial-gradient(ellipse 52% 40% at 92% 14%, rgba(198, 139, 44, 0.16) 0%, transparent 60%),
+    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
   color: #0f172a;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   padding-bottom: 30px;
@@ -58,13 +64,13 @@
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #07031a;
+  color: #1C2320;
   line-height: 1.2;
 }
 
 .ad-brand-tagline {
   font-size: 0.72rem;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -79,7 +85,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   border: 1px solid #cbd5e1;
   color: #475569;
   font-size: 0.85rem;
@@ -103,15 +109,15 @@
   width: 40px;
   height: 40px;
   border-radius: 9999px;
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .ad-header-cart-btn:hover {
-  background: #4e3f6e;
+  background: #1B4332;
   color: #ffffff;
 }
 
@@ -172,7 +178,7 @@
   position: relative;
   width: 100%;
   height: 420px;
-  background: radial-gradient(circle, #f8fafc 0%, #edf2f7 100%);
+  background: radial-gradient(circle, #FBF8F1 0%, #edf2f7 100%);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -206,13 +212,13 @@
   gap: 6px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
-  color: #4e3f6e;
+  color: #1B4332;
   padding: 6px 12px;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(78, 63, 110, 0.2);
+  border: 1px solid rgba(27, 67, 50, 0.2);
 }
 
 .ad-savings-flag {
@@ -242,7 +248,7 @@
   width: 68px;
   height: 68px;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 2px solid #e2e8f0;
   padding: 4px;
   cursor: pointer;
@@ -251,9 +257,9 @@
 }
 
 .ad-thumbnail-btn.active {
-  border-color: #4e3f6e;
-  background: #f3f0f8;
-  box-shadow: 0 0 0 2px rgba(78, 63, 110, 0.2);
+  border-color: #1B4332;
+  background: #F4EFE4;
+  box-shadow: 0 0 0 2px rgba(27, 67, 50, 0.2);
 }
 
 .ad-thumbnail-btn img {
@@ -326,7 +332,7 @@
 }
 
 .ad-category-badge {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #475569;
   font-size: 0.75rem;
   font-weight: 700;
@@ -340,13 +346,13 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: #f3f0f8;
-  color: #4e3f6e;
+  background: #F4EFE4;
+  color: #1B4332;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  border: 1px solid rgba(27, 67, 50, 0.25);
 }
 
 .ad-product-title {
@@ -365,7 +371,7 @@
 
 .ad-product-tamil-title {
   font-size: 1.05rem;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 600;
   margin: -8px 0 0;
 }
@@ -397,7 +403,7 @@
 
 /* Pricing Panel */
 .ad-pricing-panel {
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 16px;
@@ -413,7 +419,7 @@
 .ad-active-price {
   font-size: 2.1rem;
   font-weight: 900;
-  color: #07031a;
+  color: #1C2320;
   letter-spacing: -0.02em;
 }
 
@@ -434,9 +440,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   padding: 6px 12px;
   border-radius: 8px;
   font-size: 0.82rem;
@@ -483,13 +489,13 @@
 }
 
 .ad-variation-card:hover {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
 }
 
 .ad-variation-card.selected {
-  border-color: #4e3f6e;
-  background: #f3f0f8;
-  box-shadow: 0 0 0 1px #4e3f6e;
+  border-color: #1B4332;
+  background: #F4EFE4;
+  box-shadow: 0 0 0 1px #1B4332;
 }
 
 .ad-variation-radio {
@@ -504,14 +510,14 @@
 }
 
 .ad-variation-card.selected .ad-variation-radio {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
 }
 
 .ad-radio-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4e3f6e;
+  background: #1B4332;
 }
 
 .ad-variation-info {
@@ -527,7 +533,7 @@
 
 .ad-variation-price {
   font-size: 0.8rem;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 700;
 }
 
@@ -569,7 +575,7 @@
   width: 38px;
   height: 38px;
   border: none;
-  background: #f8fafc;
+  background: #FBF8F1;
   color: #334155;
   font-size: 1.1rem;
   font-weight: 700;
@@ -610,22 +616,22 @@
   gap: 10px;
   width: 100%;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
   color: #ffffff;
   font-size: 1.05rem;
   font-weight: 800;
   border: none;
   border-radius: 14px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(78, 63, 110, 0.4);
+  box-shadow: 0 4px 15px rgba(27, 67, 50, 0.4);
   transition: all 0.2s ease;
   letter-spacing: 0.02em;
 }
 
 .ad-btn-buy-now:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(78, 63, 110, 0.5);
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  box-shadow: 0 8px 24px rgba(27, 67, 50, 0.5);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
 }
 
 .ad-btn-buy-now:disabled {
@@ -650,8 +656,8 @@
   width: 100%;
   padding: 14px 20px;
   background: #ffffff;
-  border: 2px solid #4e3f6e;
-  color: #4e3f6e;
+  border: 2px solid #1B4332;
+  color: #1B4332;
   font-size: 0.98rem;
   font-weight: 700;
   border-radius: 14px;
@@ -660,7 +666,7 @@
 }
 
 .ad-btn-add-cart:hover {
-  background: #f3f0f8;
+  background: #F4EFE4;
 }
 
 /* Micro Trust */
@@ -671,7 +677,7 @@
   gap: 8px;
   flex-wrap: wrap;
   padding-top: 8px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid #F4EFE4;
 }
 
 .ad-micro-trust span {
@@ -710,7 +716,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 18px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #F4EFE4;
   padding-bottom: 12px;
 }
 
@@ -739,14 +745,14 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  background: #f8fafc;
+  background: #FBF8F1;
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
 }
 
 .ad-benefit-icon-wrap {
-  color: #4e3f6e;
+  color: #1B4332;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -770,9 +776,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f3f0f8;
-  color: #07031a;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1C2320;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   padding: 8px 14px;
   border-radius: 9999px;
   font-size: 0.88rem;
@@ -783,7 +789,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #64748b;
   padding: 14px 16px;
   border-radius: 12px;
@@ -835,7 +841,7 @@
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  background: #f8fafc;
+  background: #FBF8F1;
   padding: 16px;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
@@ -845,7 +851,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #4e3f6e;
+  background: #1B4332;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -883,7 +889,7 @@
 }
 
 .ad-review-card {
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 16px;
@@ -929,7 +935,7 @@
 }
 
 .ad-review-stars {
-  color: #f59e0b;
+  color: #D99B38;
   font-size: 0.9rem;
   letter-spacing: 2px;
 }
@@ -947,7 +953,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.72rem;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 700;
   align-self: flex-start;
 }
@@ -994,7 +1000,7 @@
     height: 44px;
     border-radius: 8px;
     object-fit: contain;
-    background: #f8fafc;
+    background: #FBF8F1;
     border: 1px solid #e2e8f0;
     flex-shrink: 0;
   }
@@ -1014,7 +1020,7 @@
   .ad-sticky-active-price {
     font-size: 1.15rem;
     font-weight: 800;
-    color: #07031a;
+    color: #1C2320;
   }
 
   .ad-sticky-mrp {
@@ -1039,7 +1045,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+    background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 800;
@@ -1047,7 +1053,7 @@
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(78, 63, 110, 0.4);
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.4);
   }
 }
 
@@ -1075,7 +1081,7 @@
 }
 
 .ad-footer-links a {
-  color: #4e3f6e;
+  color: #1B4332;
   text-decoration: none;
   font-weight: 600;
 }
@@ -1096,14 +1102,14 @@
   justify-content: center;
   min-height: 70vh;
   gap: 16px;
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .ad-loading-spinner {
   width: 44px;
   height: 44px;
-  border: 4px solid #dbdeed;
-  border-top-color: #4e3f6e;
+  border: 4px solid #E8E1D3;
+  border-top-color: #1B4332;
   border-radius: 50%;
   animation: adSpin 0.8s linear infinite;
 }
@@ -1154,7 +1160,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #4e3f6e;
+  background: #1B4332;
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -1165,10 +1171,10 @@
 }
 
 .ad-btn-return-shop:hover {
-  background: #4e3f6e;
+  background: #1B4332;
 }
 
 /* Colors */
-.text-emerald { color: #4e3f6e; }
-.text-amber { color: #f59e0b; }
+.text-emerald { color: #1B4332; }
+.text-amber { color: #D99B38; }
 .text-blue { color: #3b82f6; }

@@ -1,56 +1,83 @@
-/* Combo & Bundles Offers Section - Clean, Compact & Perfectly Aligned */
+/* Combo & Bundles Offers Section — 2026 Sunlit Botanical Champagne Pavilion */
 .combo-offers-section {
-  padding: 16px 16px 28px;
-  background: linear-gradient(180deg, #fff5fd 0%, #ffffff 100%);
+  padding: 52px 24px 56px;
+  margin: 28px 0;
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse 55% 48% at 10% 10%, rgba(198, 139, 44, 0.18) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 92% 88%, rgba(27, 67, 50, 0.15) 0%, transparent 64%),
+    radial-gradient(rgba(198, 139, 44, 0.08) 1px, transparent 1px),
+    linear-gradient(145deg, #FDF7EB 0%, #F4F7F3 52%, #EEE6D6 100%);
+  background-size: 100% 100%, 100% 100%, 24px 24px, 100% 100%;
+  border: 1px solid rgba(198, 139, 44, 0.30);
+  box-shadow:
+    0 24px 56px -20px rgba(17, 36, 28, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
   position: relative;
   overflow: hidden;
   scroll-margin-top: 90px;
 }
 
+.combo-offers-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, #C68B2C, #1B4332, #C68B2C, transparent);
+  pointer-events: none;
+}
+
 .combo-offers-container {
   max-width: 1140px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header */
 .combo-section-header {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 28px auto;
 }
 
 .combo-header-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f3f0f8;
-  color: #4e3f6e;
-  padding: 4px 12px;
+  background: linear-gradient(135deg, #153527 0%, #1F4D3A 100%);
+  color: #F4D28A;
+  padding: 6px 16px;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(229, 180, 84, 0.45);
+  box-shadow: 0 6px 18px -6px rgba(17, 36, 28, 0.3);
 }
 
 .combo-sparkle-icon {
-  color: #4e3f6e;
+  color: #F4D28A;
 }
 
 .combo-section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 800;
-  color: #07031a;
-  margin-bottom: 6px;
-  line-height: 1.25;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  color: #15261E;
+  margin-bottom: 8px;
+  line-height: 1.22;
+  letter-spacing: -0.4px;
 }
 
 .combo-section-subtitle {
-  font-size: 0.95rem;
-  color: #64748b;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  color: #4A5A52;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -58,31 +85,35 @@
 .combo-cards-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 }
 
 /* Hero Card */
 .combo-card-hero {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(78, 63, 110, 0.25);
-  box-shadow: 0 8px 28px -6px rgba(7, 3, 26, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 22px;
+  border: 1px solid rgba(198, 139, 44, 0.28);
+  box-shadow: 0 16px 38px -14px rgba(17, 36, 28, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95);
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
 .combo-card-hero:hover {
-  box-shadow: 0 14px 34px -6px rgba(7, 3, 26, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+  border-color: rgba(198, 139, 44, 0.55);
+  box-shadow: 0 24px 48px -14px rgba(17, 36, 28, 0.18), 0 0 0 1px rgba(198, 139, 44, 0.22);
 }
 
-/* Top Strip */
+/* Top Strip — Deep Forest Editorial Ribbon */
 .combo-card-top-strip {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 24px;
-  background: linear-gradient(90deg, #fff5fd 0%, #f4f0f9 100%);
-  border-bottom: 1px solid #dbdeed;
+  padding: 12px 24px;
+  background: linear-gradient(95deg, #112A1F 0%, #1B4332 58%, #22543F 100%);
+  border-bottom: 1px solid rgba(229, 180, 84, 0.32);
   flex-wrap: wrap;
 }
 
@@ -90,23 +121,23 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: #4e3f6e;
-  color: #ffffff;
+  background: linear-gradient(135deg, #E5B454 0%, #C68B2C 100%);
+  color: #11241C;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.6px;
-  padding: 3px 9px;
-  border-radius: 6px;
+  padding: 4px 11px;
+  border-radius: 999px;
   text-transform: uppercase;
 }
 
 .combo-discount-tag {
-  background: #dc2626;
+  background: linear-gradient(135deg, #C95D2E 0%, #B44B1E 100%);
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
   letter-spacing: 0.4px;
 }
 
@@ -115,7 +146,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: #64748b;
+  color: #E2ECE6;
   font-size: 0.78rem;
   font-weight: 600;
 }
@@ -139,7 +170,7 @@
 
 /* Visual Equation / Nodes */
 .combo-visual-formula {
-  background: #f8fafc;
+  background: #FBF8F1;
   border-radius: 14px;
   padding: 14px;
   border: 1px solid #e2e8f0;
@@ -195,11 +226,11 @@
 .combo-items-count-badge {
   font-size: 0.74rem;
   font-weight: 700;
-  color: #4e3f6e;
-  background: #f3f0f8;
+  color: #1B4332;
+  background: #F4EFE4;
   padding: 2px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  border: 1px solid rgba(27, 67, 50, 0.25);
 }
 
 .combo-items-row {
@@ -236,7 +267,7 @@
 
 .combo-item-thumb-box:hover {
   transform: translateY(-2px);
-  border-color: #4e3f6e;
+  border-color: #1B4332;
 }
 
 .combo-item-thumb-box img {
@@ -287,17 +318,17 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   flex: 0 0 22px;
   margin-top: 27px; /* (76px thumb height - 22px divider height) / 2 = 27px for exact vertical centering with images */
 }
 
 /* Value Highlight Card */
 .combo-value-highlight {
-  background: #fff5fd;
-  border: 1px solid #dbdeed;
+  background: #FBF8F1;
+  border: 1px solid #E8E1D3;
   border-radius: 14px;
   padding: 12px 16px;
   display: flex;
@@ -324,12 +355,12 @@
 }
 
 .combo-value-row.highlight .value-label {
-  color: #07031a;
+  color: #1C2320;
   font-weight: 700;
 }
 
 .combo-value-row.highlight .value-offer {
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 800;
   font-size: 1.05rem;
 }
@@ -338,8 +369,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #dbdeed;
-  color: #4e3f6e;
+  background: #E8E1D3;
+  color: #1B4332;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 4px 8px;
@@ -360,7 +391,7 @@
   gap: 6px;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #4e3f6e;
+  color: #1B4332;
   margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -369,7 +400,7 @@
 .combo-title {
   font-size: 1.55rem;
   font-weight: 800;
-  color: #07031a;
+  color: #1C2320;
   margin: 0 0 4px 0;
   line-height: 1.25;
 }
@@ -406,7 +437,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #1e293b;
   font-size: 0.78rem;
   font-weight: 500;
@@ -416,7 +447,7 @@
 }
 
 .pill-check {
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 /* CTA Block */
@@ -438,7 +469,7 @@
 .combo-price-main {
   display: flex;
   align-items: flex-start;
-  color: #4e3f6e;
+  color: #1B4332;
   line-height: 1;
 }
 
@@ -496,7 +527,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, #4e3f6e 0%, #4e3f6e 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1B4332 100%);
   color: #ffffff;
   border: none;
   padding: 12px 20px;
@@ -504,14 +535,14 @@
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.3);
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.3);
   transition: all 0.2s ease;
 }
 
 .btn-add-combo:hover {
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(78, 63, 110, 0.4);
+  box-shadow: 0 6px 16px rgba(27, 67, 50, 0.4);
 }
 
 .btn-view-combo-details {
@@ -521,8 +552,8 @@
   justify-content: center;
   gap: 6px;
   background: #ffffff;
-  color: #07031a;
-  border: 1.5px solid #4e3f6e;
+  color: #1C2320;
+  border: 1.5px solid #1B4332;
   padding: 11px 16px;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -532,8 +563,8 @@
 }
 
 .btn-view-combo-details:hover {
-  background: #f3f0f8;
-  color: #4e3f6e;
+  background: #F4EFE4;
+  color: #1B4332;
 }
 
 .combo-assurance {
@@ -545,7 +576,7 @@
 }
 
 .assurance-icon {
-  color: #4e3f6e;
+  color: #1B4332;
   flex-shrink: 0;
 }
 
@@ -716,7 +747,8 @@
 
 @media (max-width: 360px) {
   .combo-offers-section {
-    padding: 12px 4px 20px;
+    padding: 18px 8px 24px;
+    border-radius: 20px;
   }
 
   .combo-card-content {

@@ -1,61 +1,95 @@
-/* Font loaded in index.html to eliminate render blocking */
+/* Google Fonts: Elegant Editorial Serif + Clean Modern Sans */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* "Bright Eyes" Luxury Amethyst & Midnight Violet Palette */
-  --color-midnight: #07031a;
-  --color-slate-violet: #6c5f74;
-  --color-amethyst: #4e3f6e;
-  --color-lavender-ice: #dbdeed;
-  --color-lavender-blush: #fff5fd;
+  /* ── 2026 Dharani Herbals Botanical Design Tokens ── */
+  --color-primary: #1B4332;
+  --color-primary-hover: #2D6A4F;
+  --color-primary-light: #2D6A4F;
+  --color-primary-dark: #1C2320;
+  --color-primary-deep: #11241C;
+  --color-secondary: #54605A;
+  --color-accent: #C68B2C;
+  --color-accent-soft: #FDF6E9;
 
-  --color-forest: #07031a;
-  --color-forest-dark: #050212;
-  --color-forest-light: #4e3f6e;
-  --color-sage: #6c5f74;
-  --color-sage-light: #8e7f97;
-  --color-sage-soft: #f4f1f8;
-  --color-cream: #fff5fd;
-  --color-cream-light: #fdfafd;
-  --color-cream-dark: #dbdeed;
-  --color-gold: #4e3f6e;
-  --color-gold-light: #6c5f74;
-  --color-gold-dark: #07031a;
-  --color-gold-glow: rgba(78, 63, 110, 0.25);
-  
-  /* Primary & Semantic Mappings */
-  --color-primary: #4e3f6e;
-  --color-primary-light: #6c5f74;
-  --color-primary-dark: #07031a;
-  --color-primary-deep: #07031a;
-  --color-secondary: #6c5f74;
-  --color-accent: #4e3f6e;
-  
-  /* Neutral Palette */
-  --color-bg-light: #fff5fd;
-  --color-bg-dark: #fff5fd;
+  /* Semantic Aliases */
+  --color-midnight: #1C2320;
+  --color-slate-violet: #54605A;
+  --color-amethyst: #1B4332;
+  --color-lavender-ice: #E8E1D3;
+  --color-lavender-blush: #FBF8F1;
+  --color-forest: #1C2320;
+  --color-forest-dark: #11241C;
+  --color-forest-light: #1B4332;
+  --color-sage: #54605A;
+  --color-sage-light: #7A8680;
+  --color-sage-soft: #F4EFE4;
+  --color-cream: #FBF8F1;
+  --color-cream-light: #FDFBF7;
+  --color-cream-dark: #E8E1D3;
+  --color-gold: #C68B2C;
+  --color-gold-light: #E5B454;
+  --color-gold-dark: #B85D3B;
+  --color-gold-glow: rgba(198, 139, 44, 0.25);
+
+  /* Neutral Canvas & Ink (WCAG AA+ Contrast) */
+  --color-bg-light: #FBF8F1;
+  --color-bg-dark: #FBF8F1;
   --color-surface-light: #ffffff;
   --color-surface-dark: #ffffff;
-  
-  --color-text-light: #07031a;
-  --color-text-dark: #07031a;
-  --color-text-muted-light: #6c5f74;
-  --color-text-muted-dark: #6c5f74;
-  
+  --color-text-light: #1C2320;
+  --color-text-dark: #1C2320;
+  --color-text-muted-light: #54605A;
+  --color-text-muted-dark: #54605A;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 48px;
+  --space-12: 64px;
+
+  /* Radius Scale */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 9999px;
+
+  /* Layered Soft Shadows */
+  --shadow-xs: 0 2px 6px rgba(28, 35, 32, 0.04);
+  --shadow-sm: 0 6px 18px -6px rgba(28, 35, 32, 0.07), 0 1px 3px rgba(28, 35, 32, 0.03);
+  --shadow-md: 0 14px 34px -10px rgba(28, 35, 32, 0.1), 0 2px 6px rgba(28, 35, 32, 0.04);
+  --shadow-lg: 0 24px 56px -14px rgba(28, 35, 32, 0.14);
+  --shadow-gold: 0 8px 24px -6px rgba(198, 139, 44, 0.28);
+
   /* Glassmorphism */
-  --glass-bg-light: rgba(255, 245, 253, 0.92);
-  --glass-bg-dark: rgba(7, 3, 26, 0.95);
-  --glass-border-light: rgba(78, 63, 110, 0.18);
-  --glass-border-dark: rgba(219, 222, 237, 0.25);
-  --glass-shadow: 0 12px 36px -10px rgba(7, 3, 26, 0.08);
-  
-  /* Typography */
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  
-  /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  
+  --glass-bg-light: rgba(251, 248, 241, 0.88);
+  --glass-bg-dark: rgba(28, 35, 32, 0.94);
+  --glass-border-light: rgba(198, 139, 44, 0.2);
+  --glass-border-dark: rgba(232, 225, 211, 0.22);
+  --glass-shadow: var(--shadow-md);
+
+  /* Typography & Fluid Type Scale */
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+  --text-xs: clamp(0.7rem, 0.78vw, 0.76rem);
+  --text-sm: clamp(0.8rem, 0.9vw, 0.88rem);
+  --text-base: clamp(0.92rem, 1vw, 1rem);
+  --text-lg: clamp(1.05rem, 1.3vw, 1.25rem);
+  --text-xl: clamp(1.35rem, 2.2vw, 1.85rem);
+  --text-2xl: clamp(1.75rem, 3.2vw, 2.5rem);
+  --text-display: clamp(2.1rem, 4.5vw, 3.5rem);
+
+  /* Motion & Easing */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 200ms var(--ease-out);
+  --transition-normal: 280ms var(--ease-out);
+
   /* Active Theme Variables */
   --bg: var(--color-bg-light);
   --surface: var(--color-surface-light);
@@ -63,10 +97,55 @@
   --text-muted: var(--color-text-muted-light);
   --glass-bg: var(--glass-bg-light);
   --glass-border: var(--glass-border-light);
-  --border: rgba(78, 63, 110, 0.18);
+  --border: rgba(28, 35, 32, 0.11);
 }
 
-/* Removed dark mode to force white and green theme */
+/* Global Image Overflow Prevention & Focus Accessibility */
+img, video, svg {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button, a, input, select, textarea {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: rgba(198, 139, 44, 0.26);
+  color: #1C2320;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1B4332 0%, #1C2320 100%);
+  border-radius: 999px;
+  border: 2px solid #F4EFE4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C68B2C;
+}
 
 * {
   box-sizing: border-box;
@@ -82,15 +161,20 @@ html {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   touch-action: manipulation;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
-  background: #fff5fd !important;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(219, 222, 237, 0.55) 0px, transparent 45%),
-    radial-gradient(at 100% 0%, rgba(78, 63, 110, 0.08) 0px, transparent 45%),
-    radial-gradient(at 50% 100%, rgba(219, 222, 237, 0.4) 0px, transparent 50%) !important;
+  background-color: #F4F1E8 !important;
+  background-image:
+    radial-gradient(ellipse 65% 45% at 6% 4%, rgba(27, 67, 50, 0.14) 0%, transparent 62%),
+    radial-gradient(ellipse 58% 42% at 94% 8%, rgba(198, 139, 44, 0.16) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 48% at 14% 58%, rgba(45, 106, 79, 0.10) 0%, transparent 64%),
+    radial-gradient(ellipse 60% 44% at 88% 82%, rgba(201, 93, 46, 0.09) 0%, transparent 60%),
+    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 48%, #F4F1E8 100%) !important;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 28px 28px, 100% 100% !important;
   background-attachment: fixed !important;
   color: var(--text);
   line-height: 1.6;
@@ -200,17 +284,17 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(78, 63, 110, 0.28);
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.28);
   border-radius: 12px;
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #6c5f74 0%, #4e3f6e 100%);
+  background: linear-gradient(135deg, #54605A 0%, #1B4332 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(78, 63, 110, 0.38);
+  box-shadow: 0 8px 22px rgba(27, 67, 50, 0.38);
 }
 
 .btn-primary:active {
@@ -220,12 +304,12 @@ a:hover {
 .btn-outline {
   background: #ffffff;
   color: var(--color-primary);
-  border: 1.5px solid rgba(78, 63, 110, 0.35);
-  box-shadow: 0 2px 8px rgba(7, 3, 26, 0.04);
+  border: 1.5px solid rgba(27, 67, 50, 0.35);
+  box-shadow: 0 2px 8px rgba(28, 35, 32, 0.04);
 }
 
 .btn-outline:hover {
-  background: #f4f1f8;
+  background: #F4EFE4;
   border-color: var(--color-primary);
   color: var(--color-primary-dark);
 }
@@ -271,40 +355,69 @@ a:hover {
 .reveal-stagger.active > *:nth-child(8) { transition-delay: 0.4s; }
 .reveal-stagger.active > *:nth-child(n+9) { transition-delay: 0.4s; }
 
-/* --- Bento Header Utility Classes for Responsive Sections --- */
+/* --- Bento Header Utility Classes — 2026 Deep Botanical Editorial Banner --- */
 .bento-header {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 28px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
-  padding: 36px 32px;
+  margin-bottom: 36px;
+  padding: 36px 38px;
   position: relative;
-  border: 1px solid rgba(78, 63, 110, 0.2);
-  border-radius: 28px;
-  background: linear-gradient(135deg, #ffffff 0%, #fff5fd 50%, #f7f4fc 100%);
-  box-shadow: 0 14px 38px -10px rgba(7, 3, 26, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(229, 180, 84, 0.34) !important;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(229, 180, 84, 0.22) 0%, transparent 46%),
+    radial-gradient(circle at 12% 90%, rgba(64, 145, 108, 0.28) 0%, transparent 50%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 1px, transparent 1px, transparent 22px),
+    linear-gradient(125deg, #0E241B 0%, #173A2B 52%, #1E4936 100%) !important;
+  box-shadow:
+    0 22px 48px -16px rgba(14, 36, 27, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
   overflow: hidden;
 }
 
+.bento-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E5B454, rgba(255, 255, 255, 0.65), #E5B454, transparent);
+  pointer-events: none;
+}
+
+.bento-header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 180, 84, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 .bento-header.with-margin-top {
-  margin-top: 70px;
+  margin-top: 56px;
 }
 
 .bento-header-blob {
   position: absolute;
   top: -100px;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(78, 63, 110, 0.12) 0%, transparent 70%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(229, 180, 84, 0.18) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(40px);
+  filter: blur(42px);
 }
 .bento-header-blob.left { 
   left: -100px; 
-  background: radial-gradient(circle, rgba(219, 222, 237, 0.6) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(82, 183, 136, 0.22) 0%, transparent 70%);
 }
 .bento-header-blob.right { 
   right: -100px; 
@@ -317,27 +430,27 @@ a:hover {
 
 .bento-title-badge {
   display: inline-block;
-  padding: 5px 14px;
-  background: #f3f0f8;
-  border: 1px solid rgba(78, 63, 110, 0.28);
+  padding: 6px 16px;
+  background: rgba(229, 180, 84, 0.16);
+  border: 1px solid rgba(229, 180, 84, 0.48);
   border-radius: 100px;
-  color: #4e3f6e;
+  color: #F4D28A;
   font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 1.5px;
+  font-size: 0.74rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .bento-title-text {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: normal;
-  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
-  font-weight: 600;
-  color: #07031a;
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  font-weight: 700;
+  color: #FFFFFF;
   margin: 0;
-  line-height: 1.25;
-  letter-spacing: -0.5px;
+  line-height: 1.22;
+  letter-spacing: -0.4px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -391,13 +504,13 @@ a:hover {
 }
 
 .brand-logo-crisp-d {
-  filter: drop-shadow(0 2px 6px rgba(78, 63, 110, 0.25));
+  filter: drop-shadow(0 2px 6px rgba(27, 67, 50, 0.25));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .brand-logo-video-wrap:hover .brand-logo-crisp-d {
   transform: scale(1.08);
-  filter: drop-shadow(0 4px 10px rgba(78, 63, 110, 0.45));
+  filter: drop-shadow(0 4px 10px rgba(27, 67, 50, 0.45));
 }
 
 .brand-logo-video-canvas {
@@ -446,49 +559,49 @@ a:hover {
 }
 
 .bento-title-text span.highlight {
-  color: #4e3f6e;
+  color: #F2C97D;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .bento-desc-col {
   flex: 1 1 400px;
   z-index: 1;
-  border-left: 2px solid rgba(78, 63, 110, 0.22);
-  padding-left: 30px;
+  border-left: 2px solid rgba(229, 180, 84, 0.48);
+  padding-left: 28px;
 }
 
 .bento-desc-text {
-  color: #6c5f74;
-  font-size: 1.15rem;
+  color: #E2ECE6;
+  font-size: 1.06rem;
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.75;
   font-weight: 500;
 }
 
 /* Mobile Responsive Overrides */
 @media (max-width: 768px) {
   .bento-header {
-    padding: 16px;
+    padding: 20px 18px;
     gap: 12px;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     flex-direction: column;
     align-items: flex-start;
   }
   .bento-header.with-margin-top {
-    margin-top: 40px;
+    margin-top: 36px;
   }
   .bento-title-col {
     flex-basis: auto;
   }
   .bento-title-badge {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-size: 0.7rem;
     padding: 4px 10px;
   }
   .bento-title-text {
-    font-size: 1.4rem;
+    font-size: 1.38rem;
     gap: 8px;
   }
   .title-with-brand-video {
@@ -504,14 +617,14 @@ a:hover {
   .bento-desc-col {
     flex-basis: auto;
     border-left: none;
-    border-top: 2px solid rgba(78, 63, 110, 0.25);
+    border-top: 1.5px solid rgba(229, 180, 84, 0.42);
     padding-left: 0;
     padding-top: 12px;
     margin-top: 4px;
   }
   .bento-desc-text {
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.88rem;
+    line-height: 1.55;
   }
   .bento-header-blob {
     width: 150px;

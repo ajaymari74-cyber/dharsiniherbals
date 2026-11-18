@@ -1,69 +1,128 @@
+/* Our Journey — 2026 Editorial Heritage Pavilion */
 .journey-editorial-container {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px 100px 20px;
+  max-width: 1140px;
+  margin: 24px auto 48px;
+  padding: 64px 48px 72px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    radial-gradient(ellipse 56% 42% at 50% 0%, rgba(198, 139, 44, 0.16) 0%, transparent 62%),
+    radial-gradient(ellipse 48% 48% at 8% 85%, rgba(27, 67, 50, 0.12) 0%, transparent 64%),
+    radial-gradient(ellipse 46% 46% at 92% 75%, rgba(201, 93, 46, 0.10) 0%, transparent 60%),
+    linear-gradient(170deg, #FFFFFF 0%, #FAF5E8 50%, #EDF4EF 100%);
+  border: 1px solid rgba(198, 139, 44, 0.30);
+  box-shadow:
+    0 26px 60px -22px rgba(17, 36, 28, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  box-sizing: border-box;
+}
+
+.journey-editorial-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #C68B2C, #1B4332, #C68B2C, transparent);
+  pointer-events: none;
+}
+
+.journey-editorial-container::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(198, 139, 44, 0.16);
+  pointer-events: none;
 }
 
 .journey-editorial-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .journey-ed-sub {
-  font-size: 0.9rem;
+  display: inline-block;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #4e3f6e;
-  font-weight: 800;
+  letter-spacing: 3px;
+  color: #F4D28A;
+  background: linear-gradient(135deg, #132F22 0%, #1E4936 100%);
+  border: 1px solid rgba(229, 180, 84, 0.45);
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-weight: 700;
   margin-bottom: 24px;
+  box-shadow: 0 8px 20px -8px rgba(17, 36, 28, 0.32);
 }
 
 .journey-ed-intro {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 60px;
+  color: #3D4D45;
+  line-height: 1.68;
+  max-width: 760px;
+  margin-bottom: 36px;
 }
 
 .journey-ed-quote {
-  font-family: 'Georgia', serif;
-  font-size: 3.5rem;
-  font-weight: 400;
-  color: #111827;
-  line-height: 1.2;
-  margin-bottom: 60px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.85rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #13251D;
+  line-height: 1.24;
+  margin-bottom: 36px;
   font-style: italic;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
+  max-width: 820px;
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.journey-ed-quote::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1B4332, #C68B2C, #1B4332);
 }
 
 .journey-ed-narrative {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 60px auto;
+  max-width: 720px;
+  margin: 0 auto 44px auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .journey-ed-narrative p {
-  font-size: 1.15rem;
-  color: #374151;
-  line-height: 1.8;
+  font-size: 1.08rem;
+  color: #38463F;
+  line-height: 1.82;
   margin: 0;
   text-align: center;
 }
 
 .journey-ed-image-wrapper {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 60px auto;
-  border-radius: 24px;
+  max-width: 820px;
+  margin: 0 auto 44px auto;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 2px solid rgba(198, 139, 44, 0.35);
+  box-shadow: 0 24px 52px -14px rgba(17, 36, 28, 0.22);
 }
 
 .journey-ed-image {
@@ -75,24 +134,44 @@
 }
 
 .journey-ed-image-wrapper:hover .journey-ed-image {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .journey-ed-closing {
-  font-size: 1.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: #4e3f6e;
-  letter-spacing: -0.5px;
+  color: #1B4332;
+  letter-spacing: -0.3px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(27, 67, 50, 0.18);
+  box-shadow: 0 8px 22px -10px rgba(17, 36, 28, 0.12);
 }
 
 @media (max-width: 768px) {
   .journey-editorial-container {
-    padding: 30px 20px 80px 20px;
+    padding: 36px 20px 44px;
+    border-radius: 24px;
+    margin: 16px auto 32px;
+  }
+  .journey-editorial-container::after {
+    inset: 8px;
+    border-radius: 18px;
   }
   .journey-ed-quote {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
   }
   .journey-ed-intro {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+  }
+  .journey-ed-narrative p {
+    font-size: 0.96rem;
+  }
+  .journey-ed-closing {
+    font-size: 1.15rem;
+    padding: 10px 20px;
   }
 }

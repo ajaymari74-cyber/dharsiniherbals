@@ -32,7 +32,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #4e3f6e;
+  background: #1B4332;
   color: #ffffff;
   border: none;
   padding: 12px 20px;
@@ -45,7 +45,7 @@
 }
 
 .abm-btn-primary:hover {
-  background: #4e3f6e;
+  background: #1B4332;
   transform: translateY(-1px);
 }
 
@@ -77,9 +77,9 @@
   flex-shrink: 0;
 }
 
-.abm-stat-icon-wrap.emerald { background: #dbdeed; color: #4e3f6e; }
+.abm-stat-icon-wrap.emerald { background: #E8E1D3; color: #1B4332; }
 .abm-stat-icon-wrap.blue { background: #dbeafe; color: #2563eb; }
-.abm-stat-icon-wrap.purple { background: #f3e8ff; color: #9333ea; }
+.abm-stat-icon-wrap.purple { background: #FDF6E9; color: #1B4332; }
 .abm-stat-icon-wrap.orange { background: #ffedd5; color: #ea580c; }
 
 .abm-stat-info {
@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 8px 14px;
@@ -151,14 +151,14 @@
 }
 
 .abm-tab-btn:hover {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #0f172a;
 }
 
 .abm-tab-btn.active {
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border-color: rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border-color: rgba(27, 67, 50, 0.25);
 }
 
 /* Cards Grid */
@@ -185,7 +185,7 @@
 
 .abm-card-header {
   padding: 14px 18px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #F4EFE4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -198,9 +198,9 @@
 }
 
 .abm-tag-pill {
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   font-size: 0.72rem;
   font-weight: 800;
   padding: 3px 8px;
@@ -214,10 +214,10 @@
   border-radius: 6px;
 }
 
-.abm-status-badge.status-active { background: #dbdeed; color: #4e3f6e; }
+.abm-status-badge.status-active { background: #E8E1D3; color: #1B4332; }
 .abm-status-badge.status-scheduled { background: #e0e7ff; color: #4338ca; }
 .abm-status-badge.status-expired { background: #fee2e2; color: #b91c1c; }
-.abm-status-badge.status-inactive { background: #f1f5f9; color: #64748b; }
+.abm-status-badge.status-inactive { background: #F4EFE4; color: #64748b; }
 
 .abm-card-actions {
   display: flex;
@@ -239,7 +239,7 @@
 }
 
 .abm-icon-btn:hover {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #0f172a;
 }
 
@@ -262,7 +262,7 @@
 
 .abm-card-tagline {
   font-size: 0.85rem;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 600;
   margin: 0 0 8px 0;
 }
@@ -280,11 +280,11 @@
 
 /* Thumbs */
 .abm-included-section {
-  background: #f8fafc;
+  background: #FBF8F1;
   padding: 12px;
   border-radius: 10px;
   margin-bottom: 16px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid #F4EFE4;
 }
 
 .abm-section-label {
@@ -361,7 +361,7 @@
 .abm-price-offer {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .abm-price-reg {
@@ -393,7 +393,7 @@
 /* Card Footer */
 .abm-card-footer {
   padding: 12px 18px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid #F4EFE4;
   background: #fafafa;
   border-radius: 0 0 16px 16px;
   display: flex;
@@ -420,7 +420,7 @@
 }
 
 .abm-btn-copy-url:hover {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #0f172a;
 }
 
@@ -438,9 +438,9 @@
 }
 
 .abm-link-preview:hover {
-  background: #f3f0f8;
-  color: #4e3f6e;
-  border-color: rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  color: #1B4332;
+  border-color: rgba(27, 67, 50, 0.25);
 }
 
 /* Empty State */
@@ -541,7 +541,7 @@
   display: flex;
   border-bottom: 1px solid #e2e8f0;
   padding: 0 28px;
-  background: #f8fafc;
+  background: #FBF8F1;
   overflow-x: auto;
 }
 
@@ -558,8 +558,8 @@
 }
 
 .abm-modal-tabs button.active {
-  color: #4e3f6e;
-  border-bottom-color: #4e3f6e;
+  color: #1B4332;
+  border-bottom-color: #1B4332;
   background: #ffffff;
 }
 
@@ -604,7 +604,7 @@
 .abm-form-group input:focus,
 .abm-form-group textarea:focus,
 .abm-form-group select:focus {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
 }
 
 .abm-form-row {
@@ -626,7 +626,7 @@
 /* Product Picker */
 .abm-picker-section {
   position: relative;
-  background: #f8fafc;
+  background: #FBF8F1;
   padding: 16px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
@@ -677,12 +677,12 @@
   gap: 12px;
   padding: 10px 14px;
   cursor: pointer;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #F4EFE4;
   transition: background 0.15s;
 }
 
 .abm-dropdown-item:hover:not(.disabled) {
-  background: #f3f0f8;
+  background: #F4EFE4;
 }
 
 .abm-dropdown-item.disabled {
@@ -716,7 +716,7 @@
 .abm-drop-action {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 /* Selected Items Rows */
@@ -730,7 +730,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   padding: 10px 14px;
   border-radius: 10px;
@@ -787,7 +787,7 @@
   width: 24px;
   height: 24px;
   border: none;
-  background: #f1f5f9;
+  background: #F4EFE4;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 800;
@@ -809,7 +809,7 @@
 
 .abm-item-subtotal strong {
   display: block;
-  color: #4e3f6e;
+  color: #1B4332;
   font-size: 0.95rem;
 }
 
@@ -825,12 +825,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f3f0f8;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   padding: 12px 18px;
   border-radius: 10px;
   font-size: 0.9rem;
-  color: #07031a;
+  color: #1C2320;
 }
 
 .abm-live-total-bar strong {
@@ -845,7 +845,7 @@
 }
 
 .abm-pricing-stat {
-  background: #f8fafc;
+  background: #FBF8F1;
   border-radius: 12px;
   padding: 16px;
   border: 1px solid #e2e8f0;
@@ -866,7 +866,7 @@
 }
 
 .abm-stat-number.reg { color: #334155; }
-.abm-stat-number.savings { color: #4e3f6e; }
+.abm-stat-number.savings { color: #1B4332; }
 
 .abm-stat-sub {
   font-size: 0.75rem;
@@ -893,26 +893,26 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: #f3f0f8;
-  border: 1px solid rgba(78, 63, 110, 0.25);
+  background: #F4EFE4;
+  border: 1px solid rgba(27, 67, 50, 0.25);
   padding: 14px 18px;
   border-radius: 12px;
 }
 
 .abm-campaign-intro strong {
-  color: #07031a;
+  color: #1C2320;
   font-size: 0.92rem;
   display: block;
 }
 
 .abm-campaign-intro p {
-  color: #4e3f6e;
+  color: #1B4332;
   font-size: 0.82rem;
   margin: 2px 0 0 0;
 }
 
 .abm-generated-url-box {
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   padding: 14px;
   border-radius: 10px;
@@ -930,7 +930,7 @@
   display: block;
   word-break: break-all;
   font-size: 0.82rem;
-  color: #4e3f6e;
+  color: #1B4332;
   background: #ffffff;
   padding: 8px 12px;
   border-radius: 6px;
@@ -948,9 +948,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f3f0f8;
-  border: 1px solid rgba(78, 63, 110, 0.25);
-  color: #4e3f6e;
+  background: #F4EFE4;
+  border: 1px solid rgba(27, 67, 50, 0.25);
+  color: #1B4332;
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.78rem;
@@ -960,13 +960,13 @@
 }
 
 .abm-btn-mini-copy:hover {
-  background: #dbdeed;
-  border-color: #dbdeed;
+  background: #E8E1D3;
+  border-color: #E8E1D3;
 }
 
 .abm-meta-ads-guide {
-  background: #fff5fd;
-  border: 1px solid #dbdeed;
+  background: #FBF8F1;
+  border: 1px solid #E8E1D3;
   border-radius: 10px;
   padding: 16px;
   margin-top: 4px;
@@ -983,23 +983,23 @@
   margin: 0;
   font-size: 0.94rem;
   font-weight: 700;
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .abm-guide-body p {
   margin: 0 0 8px 0;
   font-size: 0.82rem;
   line-height: 1.5;
-  color: #07031a;
+  color: #1C2320;
 }
 
 .abm-guide-body p strong {
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .abm-backend-specs {
   background: #ffffff;
-  border: 1px solid #dbdeed;
+  border: 1px solid #E8E1D3;
   border-radius: 8px;
   padding: 12px 14px;
   margin-top: 10px;
@@ -1008,7 +1008,7 @@
 .abm-backend-specs strong {
   display: block;
   font-size: 0.82rem;
-  color: #4e3f6e;
+  color: #1B4332;
   margin-bottom: 6px;
 }
 
@@ -1021,7 +1021,7 @@
 }
 
 .abm-backend-specs code {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #0f766e;
   padding: 2px 6px;
   border-radius: 4px;
@@ -1049,7 +1049,7 @@
 }
 
 .abm-btn-secondary:hover {
-  background: #f1f5f9;
+  background: #F4EFE4;
 }
 
 @media (max-width: 640px) {

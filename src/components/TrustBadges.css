@@ -1,25 +1,35 @@
+/* Trust Badges — 2026 Botanical Emerald & Pearl Glass Pavilion */
 .prof-trust-container {
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 80px 24px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  max-width: 1280px;
+  margin: 16px auto 48px;
+  padding: 52px 32px 56px;
+  border-radius: 32px;
+  background:
+    radial-gradient(ellipse 52% 48% at 12% 14%, rgba(27, 67, 50, 0.14) 0%, transparent 62%),
+    radial-gradient(ellipse 48% 48% at 90% 88%, rgba(198, 139, 44, 0.16) 0%, transparent 62%),
+    radial-gradient(rgba(27, 67, 50, 0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #EBF3EE 0%, #FAF7EF 52%, #F1E9DA 100%);
+  background-size: 100% 100%, 100% 100%, 24px 24px, 100% 100%;
+  border: 1px solid rgba(198, 139, 44, 0.28);
+  box-shadow:
+    0 24px 56px -20px rgba(17, 36, 28, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Base Reveal Animations - Disabled for performance and layout fixes */
-.prof-stats-marquee-container {
-  width: 100%;
-  overflow: hidden;
-  background: #fff5fd;
-  border-top: 1.5px solid #dbdeed;
-  border-bottom: 1.5px solid #dbdeed;
-  border-radius: 20px;
-  padding: 38px 0;
-  margin-bottom: 60px;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+.prof-trust-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 14%;
+  right: 14%;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, #1B4332, #C68B2C, #1B4332, transparent);
+  pointer-events: none;
 }
 
 .prof-feature-card {
@@ -36,19 +46,23 @@
 .slide-delay-2 { transition-delay: 0.2s; }
 .slide-delay-3 { transition-delay: 0.3s; }
 
-/* Top Stats Marquee */
+/* Top Stats Marquee — 2026 Deep Forest Emerald & Champagne Gold Anchor Band */
 .prof-stats-marquee-container {
   width: 100%;
   overflow: hidden;
-  background: white;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 40px 0;
-  margin-bottom: 60px;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(229, 180, 84, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 80% 50%, rgba(64, 145, 108, 0.24) 0%, transparent 48%),
+    linear-gradient(125deg, #0E241B 0%, #173B2C 50%, #112A20 100%);
+  border: 1px solid rgba(229, 180, 84, 0.36);
+  border-radius: 22px;
+  padding: 30px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 44px -14px rgba(14, 36, 27, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   position: relative;
-  /* Fade edges for professional look */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  z-index: 1;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 .prof-stats-marquee-track {
@@ -78,120 +92,121 @@
 
 .prof-stat-divider {
   width: 1.5px;
-  height: 56px;
-  background: #dbdeed;
+  height: 54px;
+  background: linear-gradient(180deg, transparent, rgba(229, 180, 84, 0.55), transparent);
 }
 
 .prof-stat-number {
-  font-family: 'Georgia', serif;
-  font-size: 3.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.65rem;
   font-weight: 700;
-  color: #07031a;
-  margin: 0 0 10px 0;
+  color: #F2C97D;
+  margin: 0 0 8px 0;
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
 }
 
 .prof-stat-label {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: #6c5f74;
+  color: #E3EDE7;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin: 0;
 }
 
-/* Feature Cards Grid */
+/* Feature Cards Grid — Sleek Compact Proportions */
 .prof-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 22px;
   position: relative;
   z-index: 1;
 }
 
 .prof-feature-card {
   background: #ffffff;
-  border: 1.5px solid #dbdeed;
-  padding: 44px 32px 38px;
-  border-radius: 28px;
+  border: 1px solid #E8E1D3;
+  padding: 30px 26px 26px;
+  border-radius: 20px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(7, 3, 26, 0.04);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 26px -10px rgba(28, 35, 32, 0.06);
+  transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   overflow: hidden;
 }
 
-/* Featured / Highlighted Middle Card (Matching User Reference Image) */
+/* Featured / Highlighted Middle Card (2026 Quiet-Luxury Centerpiece) */
 .prof-feature-card:nth-child(2) {
-  border: 2.5px solid #07031a;
-  background: linear-gradient(180deg, #fff5fd 0%, #ffffff 100%);
-  box-shadow: 0 18px 40px rgba(7, 3, 26, 0.09);
-  transform: translateY(-4px);
+  border: 2px solid #1C2320;
+  background: linear-gradient(180deg, #FAF7EF 0%, #ffffff 100%);
+  box-shadow: 0 22px 48px -12px rgba(28, 35, 32, 0.12), inset 0 3px 0 #C68B2C;
+  transform: translateY(-6px);
 }
 
 .prof-feature-card:hover {
   transform: translateY(-10px) !important;
-  box-shadow: 0 24px 50px rgba(78, 63, 110, 0.16);
-  border-color: #4e3f6e;
+  box-shadow: 0 26px 54px -12px rgba(28, 35, 32, 0.16), 0 0 0 1px rgba(198, 139, 44, 0.35);
+  border-color: #C68B2C;
 }
 
 .prof-feature-card:nth-child(2):hover {
   transform: translateY(-12px) !important;
-  box-shadow: 0 28px 60px rgba(7, 3, 26, 0.2);
-  border-color: #07031a;
+  box-shadow: 0 30px 62px -12px rgba(28, 35, 32, 0.2), inset 0 3px 0 #E5B454;
+  border-color: #1C2320;
 }
 
 .prof-icon-wrapper {
-  width: 58px;
-  height: 58px;
-  background: rgba(78, 63, 110, 0.08);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(198, 139, 44, 0.14) 0%, rgba(27, 67, 50, 0.08) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  border: 1.5px solid rgba(78, 63, 110, 0.18);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid rgba(198, 139, 44, 0.38);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .prof-icon-wrapper svg {
-  stroke: #4e3f6e !important;
-  color: #4e3f6e !important;
+  stroke: #1B4332 !important;
+  color: #1B4332 !important;
   width: 28px;
   height: 28px;
   transition: all 0.35s ease;
 }
 
 .prof-feature-card:hover .prof-icon-wrapper {
-  background: #4e3f6e;
-  border-color: #4e3f6e;
+  background: linear-gradient(135deg, #1C2320 0%, #1B4332 100%);
+  border-color: #C68B2C;
   transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 8px 20px rgba(28, 35, 32, 0.22);
 }
 
 .prof-feature-card:hover .prof-icon-wrapper svg {
-  stroke: #ffffff !important;
-  color: #ffffff !important;
+  stroke: #D99B38 !important;
+  color: #D99B38 !important;
 }
 
 .prof-feature-card:nth-child(2) .prof-icon-wrapper {
-  background: rgba(7, 3, 26, 0.08);
-  border-color: rgba(7, 3, 26, 0.22);
+  background: rgba(28, 35, 32, 0.08);
+  border-color: rgba(28, 35, 32, 0.22);
 }
 
 .prof-feature-card:nth-child(2) .prof-icon-wrapper svg {
-  stroke: #07031a !important;
-  color: #07031a !important;
+  stroke: #1C2320 !important;
+  color: #1C2320 !important;
 }
 
 .prof-feature-card:nth-child(2):hover .prof-icon-wrapper {
-  background: #07031a;
-  border-color: #07031a;
+  background: #1C2320;
+  border-color: #1C2320;
 }
 
 .prof-feature-card:nth-child(2):hover .prof-icon-wrapper svg {
@@ -209,7 +224,7 @@
 .prof-feature-title {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #07031a;
+  color: #1C2320;
   margin: 0 0 14px 0;
   letter-spacing: -0.3px;
   line-height: 1.3;
@@ -218,58 +233,25 @@
 .prof-feature-desc {
   font-size: 0.96rem;
   line-height: 1.7;
-  color: #6c5f74;
+  color: #54605A;
   margin: 0;
   flex: 1;
 }
 
-/* Action Links: Our Sourcing → / Our Standards → / Our Heritage → */
+/* Clean decorative accent underline bar (no injected CSS text) */
 .prof-feature-content::after {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 26px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #07031a;
-  letter-spacing: -0.2px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  width: fit-content;
-}
-
-.prof-feature-card:nth-child(1) .prof-feature-content::after {
-  content: 'Our Sourcing \2192';
-}
-
-.prof-feature-card:nth-child(2) .prof-feature-content::after {
-  content: 'Our Standards \2192';
-}
-
-.prof-feature-card:nth-child(3) .prof-feature-content::after {
-  content: 'Our Heritage \2192';
-}
-
-/* Tamil language mode */
-html[lang="ta"] .prof-feature-card:nth-child(1) .prof-feature-content::after {
-  content: 'எங்கள் மூலப்பொருட்கள் \2192';
-}
-
-html[lang="ta"] .prof-feature-card:nth-child(2) .prof-feature-content::after {
-  content: 'எங்கள் தரநிலைகள் \2192';
-}
-
-html[lang="ta"] .prof-feature-card:nth-child(3) .prof-feature-content::after {
-  content: 'எங்கள் பாரம்பரியம் \2192';
+  content: '';
+  display: block;
+  width: 36px;
+  height: 2.5px;
+  margin-top: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1B4332, #C68B2C);
+  transition: width 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .prof-feature-card:hover .prof-feature-content::after {
-  color: #4e3f6e;
-  transform: translateX(6px);
-}
-
-.prof-feature-card:nth-child(2):hover .prof-feature-content::after {
-  color: #07031a;
-  transform: translateX(6px);
+  width: 58px;
 }
 
 /* Responsive */
@@ -281,17 +263,18 @@ html[lang="ta"] .prof-feature-card:nth-child(3) .prof-feature-content::after {
 
 @media (max-width: 768px) {
   .prof-trust-container {
-    padding: 56px 16px;
+    padding: 36px 16px 40px;
+    border-radius: 24px;
   }
 
   .prof-stats-marquee-container {
     overflow: visible;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #0E241B 0%, #173B2C 100%);
+    border: 1px solid rgba(229, 180, 84, 0.36);
     border-radius: 18px;
     padding: 0;
-    margin-bottom: 40px;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    margin-bottom: 32px;
+    box-shadow: 0 18px 40px rgba(14, 36, 27, 0.25);
     mask-image: none;
     -webkit-mask-image: none;
   }
@@ -314,12 +297,12 @@ html[lang="ta"] .prof-feature-card:nth-child(3) .prof-feature-content::after {
 
   .prof-stat-item:nth-child(1),
   .prof-stat-item:nth-child(3) {
-    border-bottom: 1px solid #eef2f7;
+    border-bottom: 1px solid rgba(229, 180, 84, 0.22);
   }
 
   .prof-stat-item:nth-child(1),
   .prof-stat-item:nth-child(5) {
-    border-right: 1px solid #eef2f7;
+    border-right: 1px solid rgba(229, 180, 84, 0.22);
   }
 
   .prof-stat-divider {

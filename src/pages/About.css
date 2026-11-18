@@ -1,8 +1,13 @@
 .about-page {
   width: 100%;
   min-height: 100vh;
-  background: #f8fafc;
-  /* Softer, slightly cool modern white */
+  background-color: #F4F1E8;
+  background-image:
+    radial-gradient(ellipse 56% 42% at 8% 18%, rgba(27, 67, 50, 0.13) 0%, transparent 62%),
+    radial-gradient(ellipse 52% 40% at 92% 40%, rgba(198, 139, 44, 0.15) 0%, transparent 60%),
+    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
   position: relative;
   overflow: hidden;
 }
@@ -21,7 +26,7 @@
 .about-page::before {
   width: 600px;
   height: 600px;
-  background: rgba(78, 63, 110, 0.15);
+  background: rgba(27, 67, 50, 0.15);
   top: 10%;
   left: -10%;
   animation: floatOrb 20s infinite alternate ease-in-out;
@@ -30,7 +35,7 @@
 .about-page::after {
   width: 700px;
   height: 700px;
-  background: rgba(168, 85, 247, 0.12);
+  background: rgba(198, 139, 44, 0.12);
   bottom: -10%;
   right: -15%;
   animation: floatOrb2 25s infinite alternate ease-in-out;
@@ -56,7 +61,7 @@
   }
 }
 
-/* Hero Section */
+/* Hero Section — 2026 Deep Botanical Obsidian-Emerald Editorial Stage */
 .about-hero {
   position: relative;
   width: 100%;
@@ -66,8 +71,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #07031a 0%, #4e3f6e 50%, #07031a 100%);
-  border-bottom: 2px solid rgba(219, 222, 237, 0.2);
+  background:
+    radial-gradient(ellipse 55% 48% at 18% 20%, rgba(229, 180, 84, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 52% 50% at 85% 80%, rgba(64, 145, 108, 0.28) 0%, transparent 62%),
+    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, #0B1E16 0%, #16392A 52%, #11241C 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
+  border-bottom: 2px solid rgba(229, 180, 84, 0.45);
   color: white;
   overflow: hidden;
   padding-top: 100px;
@@ -79,7 +89,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at 20% 50%, rgba(78, 63, 110, 0.45) 0%, transparent 60%), radial-gradient(circle at 80% 80%, rgba(219, 222, 237, 0.18) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 50%, rgba(27, 67, 50, 0.45) 0%, transparent 60%), radial-gradient(circle at 80% 80%, rgba(232, 225, 211, 0.18) 0%, transparent 50%);
   animation: pulseBg 8s infinite alternate;
 }
 
@@ -109,24 +119,25 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(219, 222, 237, 0.15);
+  background: rgba(232, 225, 211, 0.15);
   padding: 10px 20px;
   border-radius: 40px;
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(219, 222, 237, 0.35); color: #dbdeed;
+  border: 1px solid rgba(232, 225, 211, 0.35); color: #E8E1D3;
 }
 
 .about-title {
-  font-size: 4.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  letter-spacing: -1.5px;
-  text-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.8px;
+  text-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
   color: white;
-  background: linear-gradient(to right, #ffffff, #dbdeed);
+  background: linear-gradient(135deg, #ffffff 25%, #E5B454 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -136,7 +147,7 @@
   font-weight: 400;
   opacity: 0.9;
   line-height: 1.6;
-  color: #dbdeed;
+  color: #E8E1D3;
 }
 
 /* Mission & History Cards */
@@ -170,8 +181,8 @@
 
 .about-info-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(78, 63, 110, 0.12);
-  border: 1px solid rgba(78, 63, 110, 0.3);
+  box-shadow: 0 30px 60px rgba(27, 67, 50, 0.12);
+  border: 1px solid rgba(27, 67, 50, 0.3);
 }
 
 .info-icon-circle {
@@ -190,12 +201,12 @@
 }
 
 .info-icon-circle.green {
-  background: linear-gradient(135deg, #dbdeed, #4e3f6e);
-  box-shadow: 0 10px 25px rgba(78, 63, 110, 0.4);
+  background: linear-gradient(135deg, #E8E1D3, #1B4332);
+  box-shadow: 0 10px 25px rgba(27, 67, 50, 0.4);
 }
 
 .info-icon-circle.purple {
-  background: linear-gradient(135deg, #c084fc, #9333ea);
+  background: linear-gradient(135deg, #D99B38, #1B4332);
   box-shadow: 0 10px 25px rgba(147, 51, 234, 0.4);
 }
 
@@ -291,7 +302,7 @@
 }
 
 .value-icon-circle.green-light {
-  background: #dbdeed;
+  background: #E8E1D3;
 }
 
 .value-icon-circle.blue-light {
@@ -299,7 +310,7 @@
 }
 
 .value-icon-circle.purple-light {
-  background: #f3e8ff;
+  background: #FDF6E9;
 }
 
 .value-card h3 {
@@ -401,13 +412,13 @@
 .different-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #07031a;
+  color: #1C2320;
   margin-bottom: 16px;
   letter-spacing: -1px;
 }
 
 .different-header p {
-  color: #6c5f74;
+  color: #54605A;
   font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto;
@@ -423,8 +434,8 @@
   background: #ffffff;
   border-radius: 28px;
   padding: 44px 32px 38px;
-  box-shadow: 0 10px 30px rgba(7, 3, 26, 0.04);
-  border: 1.5px solid #dbdeed;
+  box-shadow: 0 10px 30px rgba(28, 35, 32, 0.04);
+  border: 1.5px solid #E8E1D3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -437,22 +448,22 @@
 
 /* Featured / Highlighted Middle Card */
 .different-card:nth-child(2) {
-  border: 2.5px solid #07031a;
-  background: linear-gradient(180deg, #fff5fd 0%, #ffffff 100%);
-  box-shadow: 0 18px 40px rgba(7, 3, 26, 0.09);
+  border: 2.5px solid #1C2320;
+  background: linear-gradient(180deg, #FBF8F1 0%, #ffffff 100%);
+  box-shadow: 0 18px 40px rgba(28, 35, 32, 0.09);
   transform: translateY(-4px);
 }
 
 .different-card:hover {
   transform: translateY(-10px) !important;
-  box-shadow: 0 24px 50px rgba(78, 63, 110, 0.16);
-  border-color: #4e3f6e;
+  box-shadow: 0 24px 50px rgba(27, 67, 50, 0.16);
+  border-color: #1B4332;
 }
 
 .different-card:nth-child(2):hover {
   transform: translateY(-12px) !important;
-  box-shadow: 0 28px 60px rgba(7, 3, 26, 0.2);
-  border-color: #07031a;
+  box-shadow: 0 28px 60px rgba(28, 35, 32, 0.2);
+  border-color: #1C2320;
 }
 
 .different-icon-wrapper {
@@ -463,22 +474,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(78, 63, 110, 0.08) !important;
-  border: 1.5px solid rgba(78, 63, 110, 0.18);
+  background: rgba(27, 67, 50, 0.08) !important;
+  border: 1.5px solid rgba(27, 67, 50, 0.18);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .different-icon-wrapper svg {
-  stroke: #4e3f6e !important;
-  color: #4e3f6e !important;
+  stroke: #1B4332 !important;
+  color: #1B4332 !important;
   width: 28px;
   height: 28px;
   transition: all 0.35s ease;
 }
 
 .different-card:hover .different-icon-wrapper {
-  background: #4e3f6e !important;
-  border-color: #4e3f6e;
+  background: #1B4332 !important;
+  border-color: #1B4332;
   transform: scale(1.08) rotate(4deg);
 }
 
@@ -488,18 +499,18 @@
 }
 
 .different-card:nth-child(2) .different-icon-wrapper {
-  background: rgba(7, 3, 26, 0.08) !important;
-  border-color: rgba(7, 3, 26, 0.22);
+  background: rgba(28, 35, 32, 0.08) !important;
+  border-color: rgba(28, 35, 32, 0.22);
 }
 
 .different-card:nth-child(2) .different-icon-wrapper svg {
-  stroke: #07031a !important;
-  color: #07031a !important;
+  stroke: #1C2320 !important;
+  color: #1C2320 !important;
 }
 
 .different-card:nth-child(2):hover .different-icon-wrapper {
-  background: #07031a !important;
-  border-color: #07031a;
+  background: #1C2320 !important;
+  border-color: #1C2320;
 }
 
 .different-card:nth-child(2):hover .different-icon-wrapper svg {
@@ -517,7 +528,7 @@
 .different-text h3 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #07031a;
+  color: #1C2320;
   margin-bottom: 14px;
   text-align: left;
   width: 100%;
@@ -527,7 +538,7 @@
 
 .different-text p {
   font-size: 0.96rem;
-  color: #6c5f74;
+  color: #54605A;
   line-height: 1.7;
   margin: 0;
   text-align: left;
@@ -541,7 +552,7 @@
   margin-top: 26px;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #07031a;
+  color: #1C2320;
   letter-spacing: -0.2px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -574,12 +585,12 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
 }
 
 .different-card:hover .different-text::after {
-  color: #4e3f6e;
+  color: #1B4332;
   transform: translateX(6px);
 }
 
 .different-card:nth-child(2):hover .different-text::after {
-  color: #07031a;
+  color: #1C2320;
   transform: translateX(6px);
 }
 
@@ -632,7 +643,7 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
 .commitment-icon {
   flex-shrink: 0;
   margin-top: 4px;
-  filter: drop-shadow(0 4px 6px rgba(78, 63, 110, 0.3));
+  filter: drop-shadow(0 4px 6px rgba(27, 67, 50, 0.3));
 }
 
 .commitment-text h3 {
@@ -659,11 +670,11 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
 }
 
 .about-cta-box {
-  background: linear-gradient(135deg, #dbdeed 0%, #fff5fd 100%);
+  background: linear-gradient(135deg, #E8E1D3 0%, #FBF8F1 100%);
   border-radius: 32px;
   padding: 80px 40px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(78, 63, 110, 0.1);
+  box-shadow: 0 20px 50px rgba(27, 67, 50, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.8);
   position: relative;
   overflow: hidden;
@@ -676,7 +687,7 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
   right: -100px;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(78, 63, 110, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(27, 67, 50, 0.15) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -710,7 +721,7 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
 }
 
 .about-cta-btn-solid {
-  background: linear-gradient(135deg, #4e3f6e, #07031a);
+  background: linear-gradient(135deg, #1B4332, #1C2320);
   color: white;
   border: none;
   padding: 16px 40px;
@@ -719,18 +730,18 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.3);
+  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.3);
 }
 
 .about-cta-btn-solid:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(78, 63, 110, 0.4);
+  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.4);
 }
 
 .about-cta-btn-outline {
   background: rgba(255, 255, 255, 0.5);
-  color: #4e3f6e;
-  border: 2px solid #4e3f6e;
+  color: #1B4332;
+  border: 2px solid #1B4332;
   padding: 14px 40px;
   border-radius: 12px;
   font-size: 1.1rem;
@@ -740,9 +751,9 @@ html[lang="ta"] .different-card:nth-child(3) .different-text::after {
 }
 
 .about-cta-btn-outline:hover {
-  background: rgba(78, 63, 110, 0.1);
+  background: rgba(27, 67, 50, 0.1);
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(78, 63, 110, 0.1);
+  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.1);
 }
 
 @media (max-width: 1024px) {

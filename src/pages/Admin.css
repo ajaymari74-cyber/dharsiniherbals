@@ -4,8 +4,8 @@
 .admin-layout {
   display: flex;
   min-height: 100vh;
-  background: #f8fafc;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #FBF8F1;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   color: #1e293b;
 }
 
@@ -27,13 +27,13 @@
   align-items: center;
   gap: 12px;
   padding: 24px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #F4EFE4;
 }
 
 .admin-logo-circle {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
   color: white;
   border-radius: 12px;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: center;
   font-weight: 800;
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(78, 63, 110, 0.3);
+  box-shadow: 0 4px 10px rgba(27, 67, 50, 0.3);
 }
 
 .admin-brand h2 {
@@ -80,13 +80,13 @@
 }
 
 .admin-nav li:hover {
-  background: #f1f5f9;
+  background: #F4EFE4;
   color: #0f172a;
 }
 
 .admin-nav li.active {
-  background: #fff5fd;
-  color: #4e3f6e;
+  background: #FBF8F1;
+  color: #1B4332;
 }
 
 .admin-nav li svg {
@@ -121,7 +121,7 @@
   color: #ef4444;
   font-weight: 600;
   cursor: pointer;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid #F4EFE4;
   transition: all 0.2s;
 }
 
@@ -155,7 +155,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   padding: 10px 16px;
   border-radius: 10px;
   width: 350px;
@@ -166,7 +166,7 @@
 .admin-search-bar:focus-within {
   background: #ffffff;
   border-color: #cbd5e1;
-  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
+  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.1);
 }
 
 .admin-search-bar input {
@@ -299,9 +299,9 @@
 }
 
 /* Icon Box Colors */
-.bg-emerald { background: #dbdeed; color: #4e3f6e; }
+.bg-emerald { background: #E8E1D3; color: #1B4332; }
 .bg-blue { background: #dbeafe; color: #2563eb; }
-.bg-purple { background: #f3e8ff; color: #9333ea; }
+.bg-purple { background: #FDF6E9; color: #1B4332; }
 .bg-orange { background: #ffedd5; color: #ea580c; }
 
 .admin-stat-body h2 {
@@ -317,7 +317,7 @@
   gap: 4px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .admin-stat-vs {
@@ -362,7 +362,7 @@
 }
 
 .admin-btn-outline:hover {
-  background: #f8fafc;
+  background: #FBF8F1;
   border-color: #94a3b8;
 }
 
@@ -383,7 +383,7 @@
   color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: #f8fafc;
+  background: #FBF8F1;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -399,7 +399,7 @@
 }
 
 .admin-table tbody tr:hover {
-  background: #f8fafc;
+  background: #FBF8F1;
 }
 
 .admin-table tbody tr:last-child td {
@@ -434,6 +434,6 @@
 }
 
 .status-delivered {
-  background: #dbdeed;
-  color: #4e3f6e;
+  background: #E8E1D3;
+  color: #1B4332;
 }

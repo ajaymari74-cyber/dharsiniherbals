@@ -4,7 +4,13 @@
 }
 
 .track-page-wrapper {
-  background-color: #f1f5f9;
+  background-color: #F4F1E8;
+  background-image:
+    radial-gradient(ellipse 56% 42% at 8% 8%, rgba(27, 67, 50, 0.14) 0%, transparent 62%),
+    radial-gradient(ellipse 52% 40% at 92% 14%, rgba(198, 139, 44, 0.16) 0%, transparent 60%),
+    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
   min-height: calc(100vh - 80px);
   padding: 170px 20px 60px 20px;
   display: flex;
@@ -40,7 +46,7 @@
 }
 
 .text-primary {
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 .mt-4 {
@@ -81,7 +87,7 @@
 }
 
 .back-link:hover {
-  color: #4e3f6e;
+  color: #1B4332;
   transform: translateX(-4px);
 }
 
@@ -105,13 +111,13 @@
 }
 
 .order-total-badge {
-  background: #4e3f6e;
+  background: #1B4332;
   color: white;
   padding: 6px 16px;
   border-radius: 100px;
   font-size: 1rem;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(78, 63, 110, 0.2);
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
 }
 
 .track-status-card {
@@ -147,7 +153,7 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: #f1f5f9;
+  background: #F4EFE4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,9 +162,9 @@
 }
 
 .status-step.active .step-icon {
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
   color: white;
-  box-shadow: 0 12px 24px rgba(78, 63, 110, 0.3);
+  box-shadow: 0 12px 24px rgba(27, 67, 50, 0.3);
   transform: scale(1.1);
 }
 
@@ -176,7 +182,7 @@
 .status-connector {
   flex: 1;
   height: 4px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   border-radius: 4px;
   margin: 0 16px;
   position: relative;
@@ -191,7 +197,7 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background: #4e3f6e;
+  background: #1B4332;
   transition: width 0.5s ease;
 }
 
@@ -213,7 +219,7 @@
 .tracking-number-box strong {
   color: #0f172a;
   font-size: 1.1rem;
-  background: #f1f5f9;
+  background: #F4EFE4;
   padding: 4px 12px;
   border-radius: 8px;
   letter-spacing: 1px;
@@ -255,7 +261,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 16px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #F4EFE4;
   gap: 16px;
 }
 
@@ -269,7 +275,7 @@
   height: 64px;
   flex-shrink: 0;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #FBF8F1;
   border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
@@ -312,13 +318,13 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  background: #f8fafc;
+  background: #FBF8F1;
   padding: 20px;
   border-radius: 16px;
 }
 
 .shipping-icon {
-  color: #4e3f6e;
+  color: #1B4332;
   flex-shrink: 0;
 }
 
@@ -387,8 +393,8 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(135deg, #4e3f6e 0%, #07031a 100%);
-  box-shadow: 0 8px 16px rgba(78, 63, 110, 0.2);
+  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  box-shadow: 0 8px 16px rgba(27, 67, 50, 0.2);
 }
 
 .popup-text h4 {
@@ -438,7 +444,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #f1f5f9;
+  background: #F4EFE4;
   border: none;
   width: 32px;
   height: 32px;
@@ -531,7 +537,7 @@
   padding: 16px;
   border-radius: 12px;
   border: 1px solid #cbd5e1;
-  background: #f8fafc;
+  background: #FBF8F1;
   font-family: inherit;
   font-size: 1rem;
   color: #334155;
@@ -542,13 +548,13 @@
 
 .feedback-form-group textarea:focus {
   outline: none;
-  border-color: #4e3f6e;
+  border-color: #1B4332;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.1);
+  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.1);
 }
 
 .btn-submit-feedback {
-  background: #4e3f6e;
+  background: #1B4332;
   color: white;
   border: none;
   border-radius: 50px;
@@ -561,8 +567,8 @@
 }
 
 .btn-submit-feedback:hover:not(:disabled) {
-  background: #4e3f6e;
-  box-shadow: 0 6px 20px rgba(78, 63, 110, 0.3);
+  background: #1B4332;
+  box-shadow: 0 6px 20px rgba(27, 67, 50, 0.3);
   transform: translateY(-2px);
 }
 

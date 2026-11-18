@@ -1,15 +1,48 @@
+/* Shoppable Videos — 2026 Cinema Obsidian-Emerald Botanical Stage */
 .shoppable-videos-container {
   width: 100%;
   max-width: 100%;
-  padding: 60px 0;
-  background: #fdfcfb;
+  margin: 24px 0 36px;
+  padding: 44px 28px 52px;
+  border-radius: 32px;
+  position: relative;
+  background:
+    radial-gradient(ellipse 50% 45% at 15% 15%, rgba(229, 180, 84, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 52% 48% at 88% 85%, rgba(64, 145, 108, 0.24) 0%, transparent 62%),
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(150deg, #0B1E16 0%, #143326 52%, #17231E 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
+  border: 1px solid rgba(229, 180, 84, 0.32);
+  box-shadow:
+    0 28px 64px -18px rgba(10, 26, 19, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
   overflow: hidden;
   box-sizing: border-box;
 }
 
+.shoppable-videos-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 14%;
+  right: 14%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E5B454, rgba(255, 255, 255, 0.55), #E5B454, transparent);
+  pointer-events: none;
+}
+
+.shoppable-videos-container .bento-header {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(229, 180, 84, 0.28) !important;
+  box-shadow: 0 14px 36px -12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  margin-bottom: 28px;
+}
+
 .sv-header {
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .sv-wrapper {
@@ -42,21 +75,23 @@
 }
 
 .sv-card.ultra {
-  flex: 0 0 300px;
-  height: 500px;
+  flex: 0 0 250px;
+  height: 420px;
   scroll-snap-align: start;
-  border-radius: 24px;
+  border-radius: 22px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  border: 1.5px solid rgba(229, 180, 84, 0.28);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.38s ease, border-color 0.35s ease;
   cursor: pointer;
-  background: #0f172a;
+  background: #0F241B;
 }
 
 .sv-card.ultra:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(78, 63, 110, 0.15);
+  border-color: rgba(242, 201, 125, 0.72);
+  box-shadow: 0 26px 52px -12px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(229, 180, 84, 0.35);
 }
 
 /* Background Autoplaying Video */
@@ -165,8 +200,9 @@
 }
 
 .sv-product-img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
   object-fit: contain;
 }
 
@@ -193,7 +229,7 @@
   font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
   font-size: 1rem;
   font-weight: 800;
-  color: #dbdeed; /* Crisp lime herbal green */
+  color: #E8E1D3; /* Crisp lime herbal green */
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -214,7 +250,7 @@
 }
 
 .sv-buy-btn:hover {
-  background: #4e3f6e;
+  background: #1B4332;
   color: white;
   transform: scale(1.08);
 }
@@ -243,7 +279,7 @@
 .sv-nav-btn.right { right: 16px; }
 
 .sv-nav-btn:hover {
-  background: #4e3f6e;
+  background: #1B4332;
   color: white;
   transform: translateY(-50%) scale(1.08);
 }
@@ -259,7 +295,9 @@
 /* Mobile View Only - Clean, Peekable Reels Layout Without White Void */
 @media (max-width: 768px) {
   .shoppable-videos-container {
-    padding: 24px 0 32px 0;
+    padding: 24px 12px 32px 12px;
+    border-radius: 24px;
+    margin: 16px 0 24px;
   }
 
   .sv-wrapper {
@@ -356,7 +394,7 @@
     font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
     font-size: 0.94rem;
     font-weight: 800;
-    color: #dbdeed;
+    color: #E8E1D3;
   }
 
   .sv-buy-btn {

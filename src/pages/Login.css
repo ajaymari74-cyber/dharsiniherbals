@@ -5,7 +5,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(229, 180, 84, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(45, 106, 79, 0.30) 0%, transparent 55%),
+    rgba(10, 26, 19, 0.74);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +33,7 @@
 .login-modal-overlay::before {
   width: 350px;
   height: 350px;
-  background: rgba(78, 63, 110, 0.35); 
+  background: rgba(27, 67, 50, 0.35); 
   top: 10%;
   left: 15%;
 }
@@ -36,7 +41,7 @@
 .login-modal-overlay::after {
   width: 300px;
   height: 300px;
-  background: rgba(78, 63, 110, 0.3);
+  background: rgba(27, 67, 50, 0.3);
   bottom: 10%;
   right: 15%;
   animation-delay: -4s;
@@ -78,7 +83,7 @@
   flex: 1;
   position: relative;
   overflow: hidden;
-  background: #f8fafc;
+  background: #FBF8F1;
 }
 
 .desktop-hero-img {
@@ -96,7 +101,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(7, 3, 26, 0.95) 0%, rgba(78, 63, 110, 0.3) 60%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to top, rgba(28, 35, 32, 0.95) 0%, rgba(27, 67, 50, 0.3) 60%, rgba(0,0,0,0.3) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -216,9 +221,9 @@
 }
 
 .mobile-input-wrapper:focus-within {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.15), 0 6px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.15), 0 6px 16px rgba(0,0,0,0.06);
   transform: translateY(-2px);
 }
 
@@ -271,7 +276,7 @@
 .subscribe-checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #4e3f6e;
+  accent-color: #1B4332;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -299,7 +304,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #4e3f6e;
+  color: #1B4332;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 2px 4px rgba(0,0,0,0.02) inset;
   transition: all 0.3s ease;
@@ -311,14 +316,14 @@
 
 .otp-box-input:focus,
 .otp-box-input.active-box {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(78, 63, 110, 0.15), 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.15), 0 4px 12px rgba(0,0,0,0.06);
   transform: translateY(-2px);
 }
 
 .otp-box-input.filled {
-  border-color: #4e3f6e;
+  border-color: #1B4332;
   background: #ffffff;
 }
 
@@ -347,7 +352,7 @@
 
 .submit-btn:active {
   transform: translateY(1px);
-  box-shadow: 0 4px 8px rgba(78, 63, 110, 0.2);
+  box-shadow: 0 4px 8px rgba(27, 67, 50, 0.2);
 }
 
 .submit-btn:disabled {
@@ -385,7 +390,7 @@
 .edit-mobile-btn {
   background: none;
   border: none;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 700;
   margin-left: 8px;
   cursor: pointer;
@@ -394,7 +399,7 @@
 }
 
 .edit-mobile-btn:hover {
-  color: #4e3f6e;
+  color: #1B4332;
 }
 
 /* Footer */
@@ -407,21 +412,21 @@
 }
 
 .terms-footer a {
-  color: #4e3f6e;
+  color: #1B4332;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .terms-footer a:hover {
-  color: #4e3f6e;
+  color: #1B4332;
   text-decoration: underline;
 }
 
 .support-email {
   display: inline-block;
   margin-top: 12px;
-  color: #4e3f6e;
+  color: #1B4332;
   font-weight: 700;
   background: rgba(21, 128, 61, 0.1);
   padding: 6px 14px;
@@ -603,8 +608,8 @@
   }
   
   .otp-box-input:focus {
-    box-shadow: 0 0 0 3px rgba(78, 63, 110, 0.2);
-    border-color: #4e3f6e;
+    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.2);
+    border-color: #1B4332;
   }
 
   .submit-btn {
@@ -612,8 +617,8 @@
     font-size: 1.02rem;
     font-weight: 700;
     border-radius: 12px;
-    background: linear-gradient(135deg, #4e3f6e, #4e3f6e);
-    box-shadow: 0 6px 16px rgba(78, 63, 110, 0.3);
+    background: linear-gradient(135deg, #1B4332, #1B4332);
+    box-shadow: 0 6px 16px rgba(27, 67, 50, 0.3);
   }
 
   .terms-footer {
@@ -652,7 +657,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     font-weight: 700;
-    color: #4e3f6e;
+    color: #1B4332;
   }
   .mobile-brand-line2 {
     font-family: 'Playfair Display', serif;
