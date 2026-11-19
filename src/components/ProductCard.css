@@ -14,11 +14,13 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: stretch !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(253, 251, 246, 0.96) 100%) !important;
-  border-radius: var(--radius-lg, 16px) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-radius: 20px !important;
   padding: 0 !important;
-  border: 1px solid rgba(198, 139, 44, 0.24) !important;
-  box-shadow: 0 10px 26px -12px rgba(17, 36, 28, 0.11), 0 2px 6px rgba(17, 36, 28, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 14px 32px -12px rgba(225, 29, 72, 0.14), 0 6px 18px -8px rgba(6, 182, 212, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
   transition: transform 240ms var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
               box-shadow 240ms var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
               border-color 200ms ease !important;
@@ -35,7 +37,7 @@
 
 .uc-card:focus-visible,
 .uc-card.redesigned-product-card:focus-visible {
-  outline: 2px solid var(--color-accent, #C68B2C) !important;
+  outline: 2px solid var(--color-accent, #FF8A3D) !important;
   outline-offset: 2px !important;
 }
 
@@ -47,9 +49,9 @@
   .deals-grid .uc-card.redesigned-product-card:hover,
   .deals-container .uc-card:hover,
   .deals-container .uc-card.redesigned-product-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 22px 42px -14px rgba(17, 36, 28, 0.18), 0 0 0 1px rgba(198, 139, 44, 0.32) !important;
-    border-color: rgba(198, 139, 44, 0.58) !important;
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 46px -14px rgba(225, 29, 72, 0.22), 0 10px 24px -8px rgba(6, 182, 212, 0.18), 0 0 0 1px rgba(255, 65, 108, 0.35) !important;
+    border-color: rgba(255, 65, 108, 0.55) !important;
   }
 
   .uc-card:hover .uc-img,
@@ -144,16 +146,16 @@
   bottom: auto !important;
   right: auto !important;
   z-index: 5 !important;
-  background: #C95D2E !important;
+  background: linear-gradient(135deg, #FF3D68 0%, #FF8A3D 100%) !important;
   color: #ffffff !important;
   font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif) !important;
   font-size: 0.64rem !important;
   font-weight: 800 !important;
-  padding: 3px 8px !important;
+  padding: 3px 9px !important;
   border-radius: 9999px !important;
   letter-spacing: 0.25px !important;
   text-transform: uppercase !important;
-  box-shadow: 0 3px 8px rgba(201, 93, 46, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(255, 61, 104, 0.36) !important;
   border: none !important;
   pointer-events: none !important;
   line-height: 1.2 !important;
@@ -169,12 +171,12 @@
   height: 30px !important;
   border-radius: 50% !important;
   background: rgba(255, 255, 255, 0.94) !important;
-  border: 1px solid rgba(28, 35, 32, 0.1) !important;
-  color: #1C2320 !important;
+  border: 1px solid rgba(24, 24, 38, 0.1) !important;
+  color: #181826 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 2px 8px rgba(28, 35, 32, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(24, 24, 38, 0.08) !important;
   cursor: pointer !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -220,25 +222,25 @@
   display: block !important;
   width: 14px !important;
   height: 14px !important;
-  background-color: #1C2320 !important;
+  background-color: #181826 !important;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' fill-rule='evenodd'%3E%3Cpath d='M21.93,9.95L12.44,3.08L12.1,3.14L11.97,3.41L11.9,6.85L9.54,7.39L7.99,7.93L6.71,8.53L5.03,9.68L3.95,10.75L3.01,12.17L2.4,13.65L2.0,15.8L2.07,18.84L2.27,20.25L2.47,20.86L2.81,20.92L3.08,20.65L3.62,18.23L4.09,16.95L4.69,15.74L5.23,15.0L6.44,13.92L7.52,13.45L8.8,13.25L10.55,13.31L11.97,13.58L11.97,17.02L12.03,17.22L12.44,17.35L21.66,10.69L22.0,10.35ZM20.99,10.22L12.77,16.21L12.71,13.18L12.57,12.98L10.35,12.57L8.33,12.57L6.71,12.98L5.64,13.58L4.56,14.66L4.02,15.47L3.41,16.68L2.81,18.43L2.67,17.42L2.81,15.06L3.28,13.31L4.15,11.7L5.37,10.35L7.12,9.14L9.34,8.2L11.09,7.72L12.57,7.45L12.71,7.25L12.84,4.22Z'/%3E%3C/svg%3E") no-repeat center / contain !important;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' fill-rule='evenodd'%3E%3Cpath d='M21.93,9.95L12.44,3.08L12.1,3.14L11.97,3.41L11.9,6.85L9.54,7.39L7.99,7.93L6.71,8.53L5.03,9.68L3.95,10.75L3.01,12.17L2.4,13.65L2.0,15.8L2.07,18.84L2.27,20.25L2.47,20.86L2.81,20.92L3.08,20.65L3.62,18.23L4.09,16.95L4.69,15.74L5.23,15.0L6.44,13.92L7.52,13.45L8.8,13.25L10.55,13.31L11.97,13.58L11.97,17.02L12.03,17.22L12.44,17.35L21.66,10.69L22.0,10.35ZM20.99,10.22L12.77,16.21L12.71,13.18L12.57,12.98L10.35,12.57L8.33,12.57L6.71,12.98L5.64,13.58L4.56,14.66L4.02,15.47L3.41,16.68L2.81,18.43L2.67,17.42L2.81,15.06L3.28,13.31L4.15,11.7L5.37,10.35L7.12,9.14L9.34,8.2L11.09,7.72L12.57,7.45L12.71,7.25L12.84,4.22Z'/%3E%3C/svg%3E") no-repeat center / contain !important;
   transition: transform 200ms ease, background-color 200ms ease !important;
 }
 
 .uc-card.redesigned-product-card .uc-share-btn:hover:not(.is-shared)::before {
-  background-color: #1B4332 !important;
+  background-color: #E11D48 !important;
 }
 
 .uc-card.redesigned-product-card .uc-share-btn:hover {
   transform: scale(1.08) !important;
-  background: #F4EFE4 !important;
-  border-color: #1B4332 !important;
+  background: #FFF0F5 !important;
+  border-color: #E11D48 !important;
 }
 
 .uc-card.redesigned-product-card .uc-share-btn.is-shared {
-  background: #1B4332 !important;
-  border-color: #1B4332 !important;
+  background: #E11D48 !important;
+  border-color: #E11D48 !important;
   color: #ffffff !important;
 }
 
@@ -281,15 +283,15 @@
 
 .uc-card.redesigned-product-card .uc-category-tag {
   position: static !important;
-  background: #F4EFE4 !important;
-  color: #1B4332 !important;
+  background: #FFF0F5 !important;
+  color: #E11D48 !important;
   font-size: 0.62rem !important;
   font-weight: 700 !important;
   padding: 2px 8px !important;
   border-radius: 9999px !important;
   letter-spacing: 0.25px !important;
   text-transform: uppercase !important;
-  border: 1px solid #E6E0D3 !important;
+  border: 1px solid #FBCFE8 !important;
   max-width: 60% !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -309,13 +311,13 @@
 }
 
 .uc-card.redesigned-product-card .uc-category-leaf-icon {
-  color: #C68B2C !important;
+  color: #FF6B5B !important;
   width: 10px !important;
   height: 10px !important;
   flex-shrink: 0 !important;
 }
 
-/* Verified Green Rating Chip */
+/* Verified Rating Chip */
 .uc-card.redesigned-product-card .uc-rating-row,
 .uc-rating-row {
   position: static !important;
@@ -328,7 +330,7 @@
   white-space: nowrap !important;
   flex-shrink: 0 !important;
   line-height: 1.15 !important;
-  background: #1B4332 !important;
+  background: linear-gradient(135deg, #181826 0%, #312E59 100%) !important;
   border: none !important;
   padding: 2px 7px !important;
   border-radius: 9999px !important;
@@ -370,7 +372,7 @@
   font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif) !important;
   font-size: clamp(0.86rem, 1vw, 0.96rem) !important;
   font-weight: 700 !important;
-  color: #1C2320 !important;
+  color: #181826 !important;
   margin: 2px 0 0 0 !important;
   padding: 0 !important;
   line-height: 1.32 !important;
@@ -395,7 +397,7 @@
 }
 
 .uc-card.redesigned-product-card .uc-title a:hover {
-  color: #1B4332 !important;
+  color: #E11D48 !important;
 }
 
 /* Row 3: Concise 1-Line Description */
@@ -406,7 +408,7 @@
 .deals-container .uc-card.redesigned-product-card .uc-subtitle {
   font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif) !important;
   font-size: 0.74rem !important;
-  color: #54605A !important;
+  color: #4A4660 !important;
   line-height: 1.36 !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 1 !important;
@@ -465,11 +467,11 @@
   display: inline-flex !important;
   align-items: center !important;
   gap: 4px !important;
-  background: #F4EFE4 !important;
-  color: #1C2320 !important;
-  border: 1px solid #E6E0D3 !important;
-  border-radius: 6px !important;
-  padding: 2px 7px !important;
+  background: #E0F7FA !important;
+  color: #0E7490 !important;
+  border: 1px solid #BAE6FD !important;
+  border-radius: 9999px !important;
+  padding: 2px 8px !important;
   font-size: 0.66rem !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
@@ -505,7 +507,7 @@
 .uc-card.redesigned-product-card .uc-price-display {
   display: inline-flex !important;
   align-items: baseline !important;
-  color: #1C2320 !important;
+  color: #181826 !important;
   font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif) !important;
   flex-shrink: 0 !important;
   line-height: 1 !important;
@@ -514,29 +516,29 @@
 .uc-card.redesigned-product-card .uc-currency-sign {
   font-size: 0.86rem !important;
   font-weight: 800 !important;
-  color: #1B4332 !important;
+  color: #E11D48 !important;
   margin-right: 1px !important;
 }
 
 .uc-card.redesigned-product-card .uc-price-val {
   font-size: clamp(1.04rem, 1.2vw, 1.18rem) !important;
   font-weight: 800 !important;
-  color: #1C2320 !important;
+  color: #181826 !important;
   letter-spacing: -0.3px !important;
   line-height: 1 !important;
 }
 
-/* Primary Action CTA Button */
+/* Primary Action CTA Button — Coral-Rose to Sunset Orange Pill */
 .uc-card.redesigned-product-card .uc-add-pill-btn,
 .shop-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
 .shop-root .uc-card.redesigned-product-card .uc-add-pill-btn,
 .deals-grid .uc-card.redesigned-product-card .uc-add-pill-btn,
 .deals-container .uc-card.redesigned-product-card .uc-add-pill-btn {
-  background: #1B4332 !important;
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%) !important;
   color: #ffffff !important;
-  border: 1px solid #1B4332 !important;
-  border-radius: 10px !important;
-  padding: 8px 12px !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  padding: 8px 14px !important;
   min-height: 38px !important;
   font-size: 0.76rem !important;
   font-weight: 700 !important;
@@ -545,8 +547,8 @@
   justify-content: center !important;
   gap: 5px !important;
   cursor: pointer !important;
-  transition: background 200ms ease, border-color 200ms ease, transform 180ms ease, box-shadow 200ms ease !important;
-  box-shadow: 0 3px 10px rgba(27, 67, 50, 0.18) !important;
+  transition: background 200ms ease, transform 180ms ease, box-shadow 200ms ease !important;
+  box-shadow: 0 6px 16px -4px rgba(255, 61, 104, 0.42) !important;
   white-space: nowrap !important;
   flex-shrink: 0 !important;
   width: auto !important;
@@ -568,10 +570,9 @@
 }
 
 .uc-card.redesigned-product-card .uc-add-pill-btn:hover {
-  background: #C95D2E !important;
-  border-color: #C95D2E !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 16px rgba(201, 93, 46, 0.28) !important;
+  background: linear-gradient(135deg, #E11D48 0%, #F43F5E 55%, #FB923C 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 22px -4px rgba(225, 29, 72, 0.50) !important;
 }
 
 .uc-card.redesigned-product-card .uc-add-pill-btn:active {
@@ -579,9 +580,9 @@
 }
 
 .uc-card.redesigned-product-card .uc-add-pill-btn.is-added {
-  background: #2D6A4F !important;
-  border-color: #2D6A4F !important;
+  background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%) !important;
   color: #ffffff !important;
+  box-shadow: 0 6px 16px -4px rgba(6, 182, 212, 0.42) !important;
 }
 
 /* 44px Minimum Touch Target on Touch Devices */

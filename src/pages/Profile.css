@@ -1,12 +1,10 @@
 .profile-page-wrapper {
-  background-color: #F4F1E8;
+  background-color: #FFF7FA;
   background-image:
-    radial-gradient(ellipse 56% 42% at 8% 8%, rgba(27, 67, 50, 0.14) 0%, transparent 62%),
-    radial-gradient(ellipse 52% 40% at 92% 14%, rgba(198, 139, 44, 0.16) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 45% at 50% 92%, rgba(45, 106, 79, 0.10) 0%, transparent 64%),
-    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
-    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px, 100% 100%;
+    radial-gradient(ellipse 62% 48% at 8% 8%, rgba(255, 79, 123, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 48% at 92% 14%, rgba(6, 182, 212, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 56% 48% at 50% 92%, rgba(251, 146, 60, 0.18) 0%, transparent 64%),
+    linear-gradient(135deg, #FFEBF1 0%, #FFF7FA 38%, #F2FAFD 72%, #E2F6FC 100%);
   min-height: calc(100vh - 80px);
   padding: 140px 40px 100px;
   display: flex;
@@ -40,7 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  box-shadow: var(--shadow-sm, 0 6px 18px -6px rgba(28, 35, 32, 0.07));
+  box-shadow: var(--shadow-sm, 0 6px 18px -6px rgba(24, 24, 38, 0.07));
   border: 1px solid #E6E2D8;
 }
 
@@ -55,7 +53,7 @@
 .saas-avatar {
   width: 96px;
   height: 96px;
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF8A3D 55%, #06B6D4 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -63,7 +61,7 @@
   align-items: center;
   font-size: 2.5rem;
   font-weight: 800;
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(255, 61, 104, 0.30), inset 0 2px 4px rgba(255, 255, 255, 0.45);
   border: 4px solid #ffffff;
 }
 
@@ -118,9 +116,9 @@
 }
 
 .saas-nav-item.active {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: white;
-  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.25);
+  box-shadow: 0 10px 22px -6px rgba(255, 61, 104, 0.42);
 }
 
 .saas-nav-item.active:hover {
@@ -147,7 +145,7 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 36px 40px;
-  box-shadow: var(--shadow-sm, 0 6px 18px -6px rgba(28, 35, 32, 0.07));
+  box-shadow: var(--shadow-sm, 0 6px 18px -6px rgba(24, 24, 38, 0.07));
   border: 1px solid #E6E2D8;
   min-height: 560px;
 }
@@ -210,8 +208,8 @@
 .info-icon {
   width: 56px;
   height: 56px;
-  background: rgba(27, 67, 50, 0.1);
-  color: #1B4332;
+  background: rgba(225, 29, 72, 0.1);
+  color: #E11D48;
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -254,8 +252,8 @@
 }
 .btn-change-mobile {
   background: transparent;
-  border: 1.5px solid #1B4332;
-  color: #1B4332;
+  border: 1.5px solid #E11D48;
+  color: #E11D48;
   font-size: 0.78rem;
   font-weight: 700;
   padding: 4px 14px;
@@ -265,7 +263,7 @@
   font-family: inherit;
 }
 .btn-change-mobile:hover {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: #fff;
 }
 .profile-mobile-input-row,
@@ -284,13 +282,13 @@
   font-size: 1rem;
   font-family: inherit;
   color: #0f172a;
-  background: #FBF8F1;
+  background: #FFF7FA;
   outline: none;
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
 .mobile-change-input:focus {
-  border-color: #1B4332;
+  border-color: #E11D48;
   background: #fff;
 }
 .profile-mobile-actions {
@@ -306,7 +304,7 @@
 }
 .profile-mobile-actions .btn-save:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(27, 67, 50, 0.25);
+  box-shadow: 0 6px 16px rgba(225, 29, 72, 0.25);
 }
 
 .profile-mobile-error {
@@ -325,7 +323,7 @@
 .profile-resend-otp {
   background: transparent;
   border: none;
-  color: #1B4332;
+  color: #E11D48;
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
@@ -339,9 +337,9 @@
   cursor: not-allowed;
 }
 .profile-mobile-success {
-  background: #FBF8F1;
-  border: 1.5px solid rgba(27, 67, 50, 0.25);
-  color: #1B4332;
+  background: #FFF7FA;
+  border: 1.5px solid rgba(225, 29, 72, 0.25);
+  color: #E11D48;
   border-radius: 12px;
   padding: 12px 18px;
   font-size: 0.9rem;
@@ -383,7 +381,7 @@
 }
 
 .btn-shop-now {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -392,12 +390,12 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
 }
 
 .btn-shop-now:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.3);
 }
 
 .orders-list {
@@ -418,7 +416,7 @@
 .order-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(255,255,255,0.8);
   transform: translateY(-4px);
-  border-color: rgba(27, 67, 50, 0.2);
+  border-color: rgba(225, 29, 72, 0.2);
 }
 
 .order-card-header {
@@ -440,7 +438,7 @@
   width: 72px;
   height: 72px;
   border-radius: 16px;
-  background: #FBF8F1;
+  background: #FFF7FA;
   border: 1px solid rgba(0,0,0,0.04);
   display: flex;
   align-items: center;
@@ -480,7 +478,7 @@
 
 .order-status.pending {
   background: #fffbeb;
-  color: #C68B2C;
+  color: #FF8A3D;
 }
 
 .order-status.shipped, .order-status.processing {
@@ -489,8 +487,8 @@
 }
 
 .order-status.delivered {
-  background: #FBF8F1;
-  color: #1B4332;
+  background: #FFF7FA;
+  color: #E11D48;
 }
 
 .order-items-summary {
@@ -510,7 +508,7 @@
 .extra-items-count {
   font-size: 0.9rem;
   color: #64748b;
-  background: #F4EFE4;
+  background: #FFF0F5;
   padding: 4px 12px;
   border-radius: 100px;
   font-weight: 600;
@@ -552,7 +550,7 @@
 }
 
 .btn-track-order {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   border: none;
   color: white;
   padding: 12px 24px;
@@ -561,12 +559,12 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
 }
 
 .btn-track-order:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.3);
 }
 
 /* Wishlist — Matches Shop Medium Product Card Grid System */
@@ -587,14 +585,14 @@
   border: 1px solid #E6E2D8;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm, 0 4px 16px -6px rgba(28, 35, 32, 0.07));
+  box-shadow: var(--shadow-sm, 0 4px 16px -6px rgba(24, 24, 38, 0.07));
   transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms ease, border-color 200ms ease;
 }
 
 .wishlist-row:hover {
   transform: translateY(-4px);
-  border-color: rgba(27, 67, 50, 0.35);
-  box-shadow: var(--shadow-md, 0 14px 30px -10px rgba(28, 35, 32, 0.12));
+  border-color: rgba(225, 29, 72, 0.35);
+  box-shadow: var(--shadow-md, 0 14px 30px -10px rgba(24, 24, 38, 0.12));
 }
 
 .wishlist-row-img-wrapper {
@@ -634,7 +632,7 @@
 .wishlist-row-details h4 {
   font-size: 0.92rem;
   font-weight: 700;
-  color: #1C2320;
+  color: #181826;
   margin: 0 0 6px 0;
   line-height: 1.32;
   display: -webkit-box;
@@ -647,7 +645,7 @@
 .wishlist-row-details p {
   font-size: 1.08rem;
   font-weight: 800;
-  color: #1B4332;
+  color: #E11D48;
   margin: 0;
 }
 
@@ -665,7 +663,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -674,13 +672,13 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 8px 20px rgba(225, 29, 72, 0.3);
   white-space: nowrap;
 }
 
 .btn-add-all-to-cart:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(27, 67, 50, 0.4);
+  box-shadow: 0 14px 28px rgba(225, 29, 72, 0.4);
 }
 
 .btn-add-all-to-cart:disabled {
@@ -691,8 +689,8 @@
 
 /* Wishlist Move to Cart CTA Button */
 .btn-wishlist-row-cart {
-  background: #1B4332;
-  border: 1px solid #1B4332;
+  background: #E11D48;
+  border: 1px solid #E11D48;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.82rem;
@@ -706,8 +704,8 @@
 }
 
 .btn-wishlist-row-cart:hover {
-  background: #C95D2E;
-  border-color: #C95D2E;
+  background: #FF416C;
+  border-color: #FF416C;
   transform: translateY(-1px);
 }
 
@@ -751,7 +749,7 @@
 
 /* Address Styling */
 .btn-add-address {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -763,12 +761,12 @@
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
 }
 
 .btn-add-address:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.3);
 }
 
 .address-list {
@@ -778,19 +776,19 @@
 }
 
 .address-card {
-  background: #FBF8F1;
+  background: #FFF7FA;
   border: 1.5px solid #E6E2D8;
   border-radius: 16px;
   padding: 22px;
   position: relative;
   transition: all 240ms cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: var(--shadow-xs, 0 2px 6px rgba(28, 35, 32, 0.04));
+  box-shadow: var(--shadow-xs, 0 2px 6px rgba(24, 24, 38, 0.04));
 }
 
 .address-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(255,255,255,0.8);
   transform: translateY(-4px);
-  border-color: rgba(27, 67, 50, 0.2);
+  border-color: rgba(225, 29, 72, 0.2);
 }
 
 .address-card-header {
@@ -828,7 +826,7 @@
 }
 
 .btn-edit-address {
-  background: #FBF8F1;
+  background: #FFF7FA;
   color: #0f172a;
   border: 1px solid #e2e8f0;
   padding: 12px 20px;
@@ -845,7 +843,7 @@
 }
 
 .btn-edit-address:hover {
-  background: #F4EFE4;
+  background: #FFF0F5;
 }
 
 .btn-delete-address {
@@ -904,7 +902,7 @@
   font-weight: 500;
   font-family: inherit;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: #FBF8F1;
+  background-color: #FFF7FA;
   color: #0f172a;
 }
 
@@ -913,8 +911,8 @@
 .address-form select:focus {
   outline: none;
   background-color: #ffffff;
-  border-color: #1B4332;
-  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.1);
+  border-color: #E11D48;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.1);
 }
 
 .address-form .form-row {
@@ -934,7 +932,7 @@
 
 .btn-cancel {
   padding: 14px 28px;
-  background: #FBF8F1;
+  background: #FFF7FA;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
   font-weight: 700;
@@ -945,13 +943,13 @@
 }
 
 .btn-cancel:hover {
-  background: #F4EFE4;
+  background: #FFF0F5;
   color: #0f172a;
 }
 
 .btn-save {
   padding: 14px 28px;
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   border: none;
   border-radius: 20px;
   font-weight: 700;
@@ -959,12 +957,12 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.2);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
 }
 
 .btn-save:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.3);
 }
 
 /* Delete Modal */
@@ -1195,7 +1193,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: #FBF8F1 !important;
+    background: #FFF7FA !important;
     border: 1px solid #e2e8f0 !important;
     color: #64748b !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04) !important;
@@ -1203,10 +1201,10 @@
   }
 
   .saas-nav-item.active {
-    background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%) !important;
+    background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%) !important;
     color: #ffffff !important;
-    border: 1px solid #1B4332 !important;
-    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.35) !important;
+    border: 1px solid #E11D48 !important;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35) !important;
     transform: translateY(-1px) !important;
   }
 
@@ -1222,7 +1220,7 @@
 
 
 .btn-wishlist-cart {
-  background: #FBF8F1;
+  background: #FFF7FA;
   border: 1px solid #cbd5e1;
   color: #0f172a;
   border-radius: 4px;
@@ -1233,7 +1231,7 @@
 }
 
 .btn-wishlist-cart:hover {
-  background: #F4EFE4;
+  background: #FFF0F5;
   border-color: #94a3b8;
 }
 
@@ -1363,9 +1361,9 @@
 }
 
 .btn-review-order {
-  background: #FBF8F1;
-  color: #1B4332;
-  border: 1px solid rgba(27, 67, 50, 0.25);
+  background: #FFF7FA;
+  color: #E11D48;
+  border: 1px solid rgba(225, 29, 72, 0.25);
   border-radius: 8px;
   padding: 8px 14px;
   font-weight: 600;
@@ -1378,9 +1376,9 @@
 }
 
 .btn-review-order:hover {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: #ffffff;
-  border-color: #1B4332;
+  border-color: #E11D48;
   transform: translateY(-1px);
 }
 
@@ -1415,7 +1413,7 @@
   font-size: 1.05rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #FBF8F1;
+  background-color: #FFF7FA;
   color: #0f172a;
   cursor: pointer;
   box-sizing: border-box;
@@ -1425,15 +1423,15 @@
 
 .address-form .custom-select-trigger:hover {
   background-color: #ffffff;
-  border-color: rgba(27, 67, 50, 0.45);
+  border-color: rgba(225, 29, 72, 0.45);
 }
 
 .address-form .custom-select-trigger:focus,
 .address-form .custom-select-trigger:focus-within {
   outline: none;
   background-color: #ffffff;
-  border-color: #1B4332;
-  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.1);
+  border-color: #E11D48;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.1);
 }
 
 .address-form .custom-select-trigger span {
@@ -1521,12 +1519,12 @@
 }
 
 .address-form .custom-select-option:hover {
-  background-color: #FBF8F1;
-  color: #1B4332;
+  background-color: #FFF7FA;
+  color: #E11D48;
 }
 
 .address-form .custom-select-option.selected {
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: #ffffff;
   font-weight: 700;
 }

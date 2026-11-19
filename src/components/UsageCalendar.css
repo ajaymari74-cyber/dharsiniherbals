@@ -37,13 +37,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #FBF8F1;
-  color: #1B4332;
+  background-color: #FFF7FA;
+  color: #E11D48;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 600;
-  border: 1px solid #E8E1D3;
+  border: 1px solid #F3DCE7;
 }
 
 .calendar-grid {
@@ -83,10 +83,10 @@
 }
 
 .calendar-cell.highlight-order {
-  background-color: #1B4332;
+  background-color: #E11D48;
   color: white;
-  border-color: #1B4332;
-  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.3);
+  border-color: #E11D48;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
   font-weight: 700;
   transform: scale(1.05);
   z-index: 2;

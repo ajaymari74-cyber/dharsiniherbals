@@ -1,4 +1,4 @@
-/* Our Journey — 2026 Editorial Heritage Pavilion */
+/* Our Journey — 2026 Sunset Coral-Peach to Luminous Aqua Heritage Pavilion */
 .journey-editorial-container {
   width: 100%;
   max-width: 1140px;
@@ -9,13 +9,16 @@
   overflow: hidden;
   border-radius: 34px;
   background:
-    radial-gradient(ellipse 56% 42% at 50% 0%, rgba(198, 139, 44, 0.16) 0%, transparent 62%),
-    radial-gradient(ellipse 48% 48% at 8% 85%, rgba(27, 67, 50, 0.12) 0%, transparent 64%),
-    radial-gradient(ellipse 46% 46% at 92% 75%, rgba(201, 93, 46, 0.10) 0%, transparent 60%),
-    linear-gradient(170deg, #FFFFFF 0%, #FAF5E8 50%, #EDF4EF 100%);
-  border: 1px solid rgba(198, 139, 44, 0.30);
+    radial-gradient(ellipse 56% 48% at 12% 14%, rgba(255, 79, 123, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 54% 48% at 88% 82%, rgba(6, 182, 212, 0.26) 0%, transparent 64%),
+    radial-gradient(ellipse 48% 42% at 50% 0%, rgba(251, 146, 60, 0.20) 0%, transparent 60%),
+    linear-gradient(145deg, rgba(255, 232, 239, 0.90) 0%, rgba(255, 252, 253, 0.94) 50%, rgba(220, 246, 252, 0.90) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(255, 255, 255, 0.90);
   box-shadow:
-    0 26px 60px -22px rgba(17, 36, 28, 0.13),
+    0 26px 60px -22px rgba(225, 29, 72, 0.18),
+    0 12px 30px -12px rgba(6, 182, 212, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.96);
   box-sizing: border-box;
 }
@@ -27,7 +30,7 @@
   left: 15%;
   right: 15%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #C68B2C, #1B4332, #C68B2C, transparent);
+  background: linear-gradient(90deg, transparent, #FF3D68, #FF9642, #06B6D4, transparent);
   pointer-events: none;
 }
 
@@ -36,7 +39,7 @@
   position: absolute;
   inset: 14px;
   border-radius: 24px;
-  border: 1px solid rgba(198, 139, 44, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   pointer-events: none;
 }
 
@@ -53,20 +56,20 @@
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #F4D28A;
-  background: linear-gradient(135deg, #132F22 0%, #1E4936 100%);
-  border: 1px solid rgba(229, 180, 84, 0.45);
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FF3D68 0%, #FF8A3D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 8px 22px;
   border-radius: 999px;
   font-weight: 700;
   margin-bottom: 24px;
-  box-shadow: 0 8px 20px -8px rgba(17, 36, 28, 0.32);
+  box-shadow: 0 8px 22px -6px rgba(255, 61, 104, 0.44);
 }
 
 .journey-ed-intro {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #3D4D45;
+  color: #3D3952;
   line-height: 1.68;
   max-width: 760px;
   margin-bottom: 36px;
@@ -76,7 +79,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.85rem, 3.8vw, 3rem);
   font-weight: 700;
-  color: #13251D;
+  color: #181826;
   line-height: 1.24;
   margin-bottom: 36px;
   font-style: italic;
@@ -93,9 +96,9 @@
   left: 50%;
   transform: translateX(-50%);
   width: 84px;
-  height: 3px;
+  height: 3.5px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #1B4332, #C68B2C, #1B4332);
+  background: linear-gradient(90deg, #FF3D68, #FF9642, #06B6D4);
 }
 
 .journey-ed-narrative {
@@ -109,7 +112,7 @@
 
 .journey-ed-narrative p {
   font-size: 1.08rem;
-  color: #38463F;
+  color: #37344E;
   line-height: 1.82;
   margin: 0;
   text-align: center;
@@ -121,8 +124,8 @@
   margin: 0 auto 44px auto;
   border-radius: 26px;
   overflow: hidden;
-  border: 2px solid rgba(198, 139, 44, 0.35);
-  box-shadow: 0 24px 52px -14px rgba(17, 36, 28, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.90);
+  box-shadow: 0 24px 52px -14px rgba(225, 29, 72, 0.20), 0 10px 26px -8px rgba(6, 182, 212, 0.16);
 }
 
 .journey-ed-image {
@@ -141,13 +144,13 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.45rem;
   font-weight: 700;
-  color: #1B4332;
+  color: #E11D48;
   letter-spacing: -0.3px;
   padding: 12px 28px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(27, 67, 50, 0.18);
-  box-shadow: 0 8px 22px -10px rgba(17, 36, 28, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(255, 65, 108, 0.28);
+  box-shadow: 0 10px 26px -10px rgba(225, 29, 72, 0.16);
 }
 
 @media (max-width: 768px) {

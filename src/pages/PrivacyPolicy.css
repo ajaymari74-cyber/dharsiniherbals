@@ -1,29 +1,25 @@
-/* Privacy Policy & Help Hub Styles — 2026 Botanical Architecture */
+/* Privacy Policy & Help Hub Styles — 2026 Coral-Rose to Aqua Aurora Architecture */
 .privacy-policy-page {
   padding-top: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #F4F1E8;
+  background-color: #FFF7FA;
   background-image:
-    radial-gradient(ellipse 56% 42% at 8% 22%, rgba(27, 67, 50, 0.13) 0%, transparent 62%),
-    radial-gradient(ellipse 52% 40% at 92% 42%, rgba(198, 139, 44, 0.15) 0%, transparent 60%),
-    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
-    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
-  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
+    radial-gradient(ellipse 62% 48% at 8% 22%, rgba(255, 79, 123, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 48% at 92% 42%, rgba(6, 182, 212, 0.28) 0%, transparent 62%),
+    linear-gradient(135deg, #FFEBF1 0%, #FFF7FA 38%, #F2FAFD 72%, #E2F6FC 100%);
   font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
-  color: #1f2937;
+  color: #181826;
 }
 
 /* Header */
 .privacy-policy-header {
   background:
-    radial-gradient(ellipse 55% 48% at 18% 22%, rgba(229, 180, 84, 0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 52% 50% at 85% 80%, rgba(64, 145, 108, 0.28) 0%, transparent 62%),
-    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(135deg, #0B1E16 0%, #16392A 52%, #11241C 100%);
-  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
-  border-bottom: 2px solid rgba(229, 180, 84, 0.45);
+    radial-gradient(ellipse 58% 52% at 15% 20%, rgba(255, 138, 61, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 56% 52% at 85% 80%, rgba(6, 182, 212, 0.52) 0%, transparent 62%),
+    linear-gradient(125deg, #E11D48 0%, #F43F6E 36%, #9333EA 68%, #0891B2 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
   color: #ffffff;
   padding: 150px 20px 56px;
   text-align: center;
@@ -38,7 +34,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(27, 67, 50, 0.45) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.45) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -56,7 +52,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #FBF8F1;
+  color: #FFF7FA;
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 500;
@@ -79,9 +75,9 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: rgba(27, 67, 50, 0.2);
-  border: 1px solid rgba(27, 67, 50, 0.35);
-  color: #FBF8F1;
+  background: rgba(225, 29, 72, 0.2);
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  color: #FFF7FA;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 5px 14px;
@@ -101,7 +97,7 @@
 
 .effective-date {
   font-size: 1rem;
-  color: #E8E1D3;
+  color: #F3DCE7;
   opacity: 0.92;
   font-weight: 400;
   max-width: 650px;
@@ -158,26 +154,26 @@
 }
 
 .policy-tab-btn:hover {
-  color: #1C2320;
-  background-color: #FBF8F1;
+  color: #181826;
+  background-color: #FFF7FA;
 }
 
 .policy-tab-btn.active {
-  background: #1C2320;
+  background: #181826;
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(6, 95, 70, 0.25);
 }
 
 .policy-tab-btn.faq-quicklink {
   margin-left: auto;
-  background-color: #F4EFE4;
-  color: #1B4332;
-  border: 1px dashed #E8E1D3;
+  background-color: #FFF0F5;
+  color: #E11D48;
+  border: 1px dashed #F3DCE7;
 }
 
 .policy-tab-btn.faq-quicklink:hover {
-  background-color: #E8E1D3;
-  color: #1C2320;
+  background-color: #F3DCE7;
+  color: #181826;
 }
 
 /* Timelines Strip */
@@ -210,8 +206,8 @@
 }
 
 .timeline-icon-box.dispatch {
-  background: #F4EFE4;
-  color: #1B4332;
+  background: #FFF0F5;
+  color: #E11D48;
 }
 
 .timeline-icon-box.delivery {
@@ -221,12 +217,12 @@
 
 .timeline-icon-box.notify {
   background: #fef3c7;
-  color: #C68B2C;
+  color: #FF8A3D;
 }
 
 .timeline-icon-box.refund {
   background: #FDF6E9;
-  color: #1B4332;
+  color: #E11D48;
 }
 
 .timeline-text {
@@ -279,7 +275,7 @@
 .section-header-row h2 {
   font-size: 1.65rem;
   font-weight: 700;
-  color: #1C2320;
+  color: #181826;
   margin-bottom: 6px;
 }
 
@@ -310,14 +306,14 @@
 .card-badge-num {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #1B4332;
-  background: #F4EFE4;
+  color: #E11D48;
+  background: #FFF0F5;
   padding: 4px 10px;
   border-radius: 8px;
 }
 
 .card-header-icon {
-  color: #1B4332;
+  color: #E11D48;
 }
 
 .policy-card-header h3 {
@@ -358,7 +354,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.98rem;
-  color: #1C2320;
+  color: #181826;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -377,7 +373,7 @@
 
 .info-box em {
   font-size: 0.85rem;
-  color: #1B4332;
+  color: #E11D48;
   font-style: italic;
   display: block;
   margin-top: 6px;
@@ -401,7 +397,7 @@
 }
 
 .icon-check {
-  color: #1B4332;
+  color: #E11D48;
   flex-shrink: 0;
   margin-top: 3px;
 }
@@ -416,9 +412,9 @@
 }
 
 .callout-box.success {
-  background-color: #F4EFE4;
-  border-left: 4px solid #1B4332;
-  color: #1C2320;
+  background-color: #FFF0F5;
+  border-left: 4px solid #E11D48;
+  color: #181826;
 }
 
 .callout-box.alert {
@@ -426,7 +422,7 @@
   align-items: flex-start;
   gap: 14px;
   background-color: #fffbeb;
-  border-left: 4px solid #D99B38;
+  border-left: 4px solid #FF8A3D;
   color: #92400e;
 }
 
@@ -434,11 +430,11 @@
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 4px;
-  color: #B85D3B;
+  color: #E11D48;
 }
 
 .callout-icon {
-  color: #C68B2C;
+  color: #FF8A3D;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -447,12 +443,12 @@
   display: inline-block;
   margin-top: 14px;
   font-size: 0.85rem;
-  color: #1C2320;
-  background: #FBF8F1;
+  color: #181826;
+  background: #FFF7FA;
   padding: 6px 14px;
   border-radius: 8px;
   font-weight: 600;
-  border: 1px solid #E8E1D3;
+  border: 1px solid #F3DCE7;
 }
 
 /* Shipping Workflow */
@@ -488,7 +484,7 @@
 }
 
 .step-circle.highlight {
-  background: #1B4332;
+  background: #E11D48;
   color: #ffffff;
 }
 
@@ -542,7 +538,7 @@
 
 .step-num {
   display: inline-block;
-  background: #1C2320;
+  background: #181826;
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
@@ -580,12 +576,12 @@
 }
 
 .eligibility-col.eligible {
-  background: #FBF8F1;
-  border-color: #E8E1D3;
+  background: #FFF7FA;
+  border-color: #F3DCE7;
 }
 
 .eligibility-col.eligible h4 {
-  color: #1C2320;
+  color: #181826;
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -630,12 +626,12 @@
 }
 
 .cancel-box.approved {
-  background: #FBF8F1;
-  border-color: #FBF8F1;
+  background: #FFF7FA;
+  border-color: #FFF7FA;
 }
 
 .cancel-box.approved h4 {
-  color: #1B4332;
+  color: #E11D48;
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -680,8 +676,8 @@
 .contact-hub-icon {
   width: 48px;
   height: 48px;
-  background: #F4EFE4;
-  color: #1B4332;
+  background: #FFF0F5;
+  color: #E11D48;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -707,7 +703,7 @@
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px dashed #e5e7eb;
-  color: #1C2320 !important;
+  color: #181826 !important;
 }
 
 .phone-links, .email-links {
@@ -718,7 +714,7 @@
 }
 
 .phone-link, .email-link {
-  color: #1C2320;
+  color: #181826;
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
@@ -754,7 +750,7 @@
 }
 
 .contact-action-btn.primary-btn {
-  background: #1C2320;
+  background: #181826;
   color: #ffffff;
 }
 
@@ -766,7 +762,7 @@
 
 /* Bottom Support Banner */
 .policy-bottom-support {
-  background: linear-gradient(135deg, #1C2320 0%, #1B4332 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   color: #ffffff;
   border-radius: 20px;
   padding: 30px;
@@ -774,7 +770,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  box-shadow: 0 12px 30px rgba(28, 35, 32, 0.15);
+  box-shadow: 0 12px 30px rgba(24, 24, 38, 0.15);
   margin-top: 10px;
 }
 
@@ -785,7 +781,7 @@
 }
 
 .support-banner-icon {
-  color: #1B4332;
+  color: #E11D48;
   flex-shrink: 0;
 }
 
@@ -797,7 +793,7 @@
 }
 
 .support-banner-content p {
-  color: #E8E1D3;
+  color: #F3DCE7;
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
@@ -815,7 +811,7 @@
   align-items: center;
   gap: 8px;
   background: #ffffff;
-  color: #1C2320;
+  color: #181826;
   font-weight: 700;
   font-size: 0.92rem;
   padding: 12px 20px;
@@ -826,7 +822,7 @@
 }
 
 .banner-faq-btn:hover {
-  background: #FBF8F1;
+  background: #FFF7FA;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

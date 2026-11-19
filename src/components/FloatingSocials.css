@@ -85,7 +85,7 @@
 }
 
 .floating-action-item:focus-visible {
-  outline: 2px solid #1B4332;
+  outline: 2px solid #E11D48;
   outline-offset: 4px;
   border-radius: 999px;
 }
@@ -106,8 +106,8 @@
 }
 
 .floating-action-item:hover .floating-action-label {
-  background: #FBF8F1;
-  color: #1B4332;
+  background: #FFF7FA;
+  color: #E11D48;
 }
 
 /* Circular Action Icon */
@@ -139,7 +139,7 @@
 }
 
 .action-assistant .floating-action-icon {
-  background: linear-gradient(135deg, #1B4332 0%, #4338ca 100%);
+  background: linear-gradient(135deg, #E11D48 0%, #4338ca 100%);
 }
 
 /* Main Single Floating Launcher Trigger Button */
@@ -149,15 +149,15 @@
   min-width: 50px;
   min-height: 50px;
   border-radius: 50%;
-  border: 1.5px solid rgba(27, 67, 50, 0.22);
+  border: 1.5px solid rgba(225, 29, 72, 0.22);
   background: #ffffff;
-  color: #1B4332;
+  color: #E11D48;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(28, 35, 32, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(24, 24, 38, 0.08);
   transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   z-index: 100;
@@ -167,20 +167,20 @@
 
 .floating-launcher-trigger:hover {
   transform: translateY(-2px) scale(1.06);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18), 0 4px 10px rgba(28, 35, 32, 0.12);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18), 0 4px 10px rgba(24, 24, 38, 0.12);
 }
 
 .floating-launcher-trigger:focus-visible {
-  outline: 3px solid #1B4332;
+  outline: 3px solid #E11D48;
   outline-offset: 3px;
 }
 
 .floating-launcher-trigger.active {
-  background: linear-gradient(135deg, #1C2320 0%, #1B4332 100%);
-  border-color: #1C2320;
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
+  border-color: #181826;
   color: #ffffff;
   transform: rotate(90deg) scale(0.96);
-  box-shadow: 0 8px 22px rgba(28, 35, 32, 0.35);
+  box-shadow: 0 8px 22px rgba(24, 24, 38, 0.35);
 }
 
 .launcher-icon-wrap {
@@ -204,12 +204,12 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1B4332 0%, #1C2320 100%);
+  background: linear-gradient(135deg, #FF3D68 0%, #FF6B5B 55%, #FF9642 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.35);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
   transition: transform 0.25s ease;
 }
 
@@ -235,11 +235,11 @@
 .online-dot {
   width: 10px;
   height: 10px;
-  background: #1B4332;
+  background: #E11D48;
   border: 2px solid #ffffff;
   border-radius: 50%;
   display: block;
-  box-shadow: 0 0 6px rgba(27, 67, 50, 0.7);
+  box-shadow: 0 0 6px rgba(225, 29, 72, 0.7);
   animation: pulsePip 2s infinite ease-in-out;
 }
 

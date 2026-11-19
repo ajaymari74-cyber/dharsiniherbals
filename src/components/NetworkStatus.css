@@ -31,12 +31,12 @@
 /* Offline state (Amber / Charcoal) */
 .network-status-capsule.offline {
   background: rgba(15, 23, 42, 0.92);
-  color: #FBF8F1;
+  color: #FFF7FA;
   border: 1px solid rgba(245, 158, 11, 0.35);
 }
 
 .network-status-capsule.offline .network-icon {
-  color: #E5B454;
+  color: #FBBF24;
 }
 
 .network-status-icon-dot {
@@ -47,14 +47,14 @@
 }
 
 .offline-dot {
-  background: #E5B454;
-  box-shadow: 0 0 8px #E5B454;
+  background: #FBBF24;
+  box-shadow: 0 0 8px #FBBF24;
   animation: pulse-dot 1.5s infinite;
 }
 
 /* Online state (Emerald) */
 .network-status-capsule.online {
-  background: rgba(27, 67, 50, 0.95);
+  background: rgba(225, 29, 72, 0.95);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }

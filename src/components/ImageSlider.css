@@ -6,14 +6,14 @@
   max-height: 540px;
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 26px;
   z-index: 10;
   box-shadow:
-    0 26px 56px -16px rgba(14, 36, 27, 0.28),
-    0 0 0 1px rgba(198, 139, 44, 0.35),
-    0 8px 24px -8px rgba(198, 139, 44, 0.16);
-  border: 1.5px solid rgba(229, 180, 84, 0.42);
-  background: #10261C;
+    0 26px 56px -16px rgba(225, 29, 72, 0.28),
+    0 14px 32px -10px rgba(6, 182, 212, 0.24),
+    0 0 0 1.5px rgba(255, 255, 255, 0.72);
+  border: 1.5px solid rgba(255, 255, 255, 0.78);
+  background: linear-gradient(125deg, #E11D48 0%, #F43F6E 42%, #06B6D4 100%);
 }
 
 .promo-slide {
@@ -219,7 +219,7 @@
 }
 
 .promo-small-title {
-  color: #E5B454;
+  color: #FBBF24;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -277,7 +277,7 @@
 
 .promo-bottom-action .promo-shop-btn,
 .promo-shop-btn {
-  background: linear-gradient(135deg, #C95D2E 0%, #B44B1E 100%);
+  background: linear-gradient(135deg, #FF416C 0%, #E11D48 100%);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.28);
   padding: 12px 28px;
@@ -285,7 +285,7 @@
   font-weight: 800;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 10px 28px rgba(198, 139, 44, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 28px rgba(255, 138, 61, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -307,14 +307,14 @@
 .promo-bottom-action .promo-shop-btn:hover,
 .promo-shop-btn:hover {
   transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 14px 34px rgba(198, 139, 44, 0.58), inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 0 14px 34px rgba(255, 138, 61, 0.58), inset 0 2px 0 rgba(255, 255, 255, 0.7);
   background: linear-gradient(135deg, #F0DA9D 0%, #D4AA55 100%);
 }
 
 .promo-bottom-action .promo-shop-btn:active,
 .promo-shop-btn:active {
   transform: translateY(1px) scale(0.98);
-  box-shadow: 0 4px 12px rgba(198, 139, 44, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 138, 61, 0.4);
 }
 
 .promo-shop-btn-mobile {
@@ -352,7 +352,7 @@
   right: 5%;
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #E5B454 0%, #D99B38 100%);
+  background: linear-gradient(135deg, #FBBF24 0%, #FF8A3D 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -443,7 +443,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(229, 200, 129, 0.42);
-  color: #FBF8F1;
+  color: #FFF7FA;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -468,11 +468,11 @@
 }
 
 .slider-arrow:hover {
-  background: linear-gradient(135deg, #D99B38 0%, #C68B2C 100%);
+  background: linear-gradient(135deg, #FF8A3D 0%, #FF8A3D 100%);
   color: #11241C;
-  border-color: #D99B38;
+  border-color: #FF8A3D;
   transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 10px 26px rgba(198, 139, 44, 0.42);
+  box-shadow: 0 10px 26px rgba(255, 138, 61, 0.42);
 }
 
 @media (max-width: 900px) {
@@ -500,7 +500,7 @@
 
 .slider-dot.active {
   width: 24px;
-  background: linear-gradient(90deg, #D99B38, #C68B2C);
+  background: linear-gradient(90deg, #FF8A3D, #FF8A3D);
   transform: none;
   box-shadow: 0 0 12px rgba(229, 200, 129, 0.65);
 }

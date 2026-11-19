@@ -1,13 +1,11 @@
 .contact-page {
   width: 100%;
   min-height: 100vh;
-  background-color: #F4F1E8;
+  background-color: #FFF7FA;
   background-image:
-    radial-gradient(ellipse 56% 42% at 8% 18%, rgba(27, 67, 50, 0.13) 0%, transparent 62%),
-    radial-gradient(ellipse 52% 40% at 92% 40%, rgba(198, 139, 44, 0.15) 0%, transparent 60%),
-    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
-    linear-gradient(180deg, #F6F4EC 0%, #EFEBE0 52%, #F4F1E8 100%);
-  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
+    radial-gradient(ellipse 62% 48% at 8% 18%, rgba(255, 79, 123, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 48% at 92% 40%, rgba(6, 182, 212, 0.28) 0%, transparent 62%),
+    linear-gradient(135deg, #FFEBF1 0%, #FFF7FA 38%, #F2FAFD 72%, #E2F6FC 100%);
   position: relative;
   overflow: hidden;
 }
@@ -24,7 +22,7 @@
 .contact-page::before {
   width: 600px;
   height: 600px;
-  background: rgba(27, 67, 50, 0.12);
+  background: rgba(225, 29, 72, 0.12);
   top: 10%;
   left: -10%;
   animation: floatOrb 20s infinite alternate ease-in-out;
@@ -32,7 +30,7 @@
 .contact-page::after {
   width: 700px;
   height: 700px;
-  background: rgba(198, 139, 44, 0.14);
+  background: rgba(255, 138, 61, 0.14);
   bottom: -10%;
   right: -15%;
   animation: floatOrb2 25s infinite alternate ease-in-out;
@@ -47,15 +45,13 @@
   100% { transform: translate(-100px, -100px) scale(1.05); }
 }
 
-/* Hero Section — 2026 Deep Botanical Obsidian-Emerald Editorial Stage */
+/* Hero Section — 2026 Vivid Coral-Rose to Sky-Aqua Aurora Stage */
 .contact-hero {
   background:
-    radial-gradient(ellipse 55% 48% at 18% 22%, rgba(229, 180, 84, 0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 52% 50% at 85% 80%, rgba(64, 145, 108, 0.28) 0%, transparent 62%),
-    radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(135deg, #0B1E16 0%, #16392A 52%, #11241C 100%);
-  background-size: 100% 100%, 100% 100%, 28px 28px, 100% 100%;
-  border-bottom: 2px solid rgba(229, 180, 84, 0.48);
+    radial-gradient(ellipse 58% 52% at 15% 20%, rgba(255, 138, 61, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 56% 52% at 85% 80%, rgba(6, 182, 212, 0.52) 0%, transparent 62%),
+    linear-gradient(125deg, #E11D48 0%, #F43F6E 36%, #9333EA 68%, #0891B2 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
   padding: 168px 20px 156px;
   text-align: center;
   color: white;
@@ -67,7 +63,7 @@
   content: '';
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: radial-gradient(circle at 20% 50%, rgba(198, 139, 44, 0.22) 0%, transparent 58%), radial-gradient(circle at 80% 80%, rgba(232, 225, 211, 0.16) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 20% 50%, rgba(255, 138, 61, 0.22) 0%, transparent 58%), radial-gradient(circle at 80% 80%, rgba(255, 224, 236, 0.16) 0%, transparent 50%);
   animation: pulseBg 8s infinite alternate;
   pointer-events: none;
 }
@@ -91,7 +87,7 @@
   margin-bottom: 18px;
   letter-spacing: -0.8px;
   text-shadow: 0 15px 40px rgba(0,0,0,0.18);
-  background: linear-gradient(135deg, #ffffff 20%, #D99B38 100%);
+  background: linear-gradient(135deg, #ffffff 20%, #FF8A3D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -102,7 +98,7 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  color: #E8E1D3;
+  color: #F3DCE7;
 }
 
 /* Overlapping Info Cards */
@@ -127,8 +123,8 @@
   border-radius: 24px;
   padding: 36px 22px;
   text-align: center;
-  box-shadow: 0 18px 42px -14px rgba(28, 35, 32, 0.08);
-  border: 1px solid rgba(198, 139, 44, 0.26);
+  box-shadow: 0 18px 42px -14px rgba(24, 24, 38, 0.08);
+  border: 1px solid rgba(255, 138, 61, 0.26);
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   display: flex;
   flex-direction: column;
@@ -143,8 +139,8 @@
 
 .contact-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 26px 52px -12px rgba(28, 35, 32, 0.14), 0 0 0 1px rgba(198, 139, 44, 0.38);
-  border-color: #C68B2C;
+  box-shadow: 0 26px 52px -12px rgba(24, 24, 38, 0.14), 0 0 0 1px rgba(255, 138, 61, 0.38);
+  border-color: #FF8A3D;
   background: #ffffff;
 }
 
@@ -156,7 +152,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  border: 1.5px solid rgba(198, 139, 44, 0.35);
+  border: 1.5px solid rgba(255, 138, 61, 0.35);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -164,10 +160,10 @@
   transform: scale(1.1) translateY(-4px);
 }
 
-.contact-icon-circle.green { background: #F4EFE4; }
+.contact-icon-circle.green { background: #FFF0F5; }
 .contact-icon-circle.blue { background: #EEF4F1; }
 .contact-icon-circle.red { background: #FAF3E3; }
-.contact-icon-circle.purple { background: #F4EFE4; }
+.contact-icon-circle.purple { background: #FFF0F5; }
 
 .contact-card h3 {
   font-size: 1.3rem;
@@ -184,7 +180,7 @@
 }
 
 .contact-card-link:hover p {
-  color: #1B4332;
+  color: #E11D48;
   font-weight: 700;
 }
 
@@ -209,22 +205,22 @@
   background: #ffffff;
   border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 22px 54px -16px rgba(28, 35, 32, 0.09);
-  border: 1px solid rgba(198, 139, 44, 0.28);
+  box-shadow: 0 22px 54px -16px rgba(24, 24, 38, 0.09);
+  border: 1px solid rgba(255, 138, 61, 0.28);
 }
 
 .contact-form-header {
-  background: linear-gradient(135deg, #FBF8F1 0%, #F4EFE4 100%);
+  background: linear-gradient(135deg, #FFF7FA 0%, #FFF0F5 100%);
   padding: 28px 36px;
   text-align: left;
-  border-bottom: 1px solid rgba(198, 139, 44, 0.22);
+  border-bottom: 1px solid rgba(255, 138, 61, 0.22);
 }
 
 .contact-form-header h2 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.95rem;
   font-weight: 700;
-  color: #1C2320;
+  color: #181826;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,7 +229,7 @@
 }
 
 .header-icon {
-  color: #1B4332;
+  color: #E11D48;
 }
 
 .contact-form-body {
@@ -283,9 +279,9 @@
 .form-group input:focus, 
 .form-group textarea:focus, 
 .form-group select:focus {
-  border-color: #1B4332;
+  border-color: #E11D48;
   background: white;
-  box-shadow: 0 0 0 4px rgba(27, 67, 50, 0.15);
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.15);
 }
 
 .select-wrapper {
@@ -309,7 +305,7 @@
 }
 
 .btn-submit-contact {
-  background: linear-gradient(135deg, #1B4332, #1C2320);
+  background: linear-gradient(135deg, #E11D48, #181826);
   color: white;
   border: none;
   padding: 18px;
@@ -323,12 +319,12 @@
   gap: 12px;
   transition: all 0.3s ease;
   margin-top: 10px;
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.25);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.25);
 }
 
 .btn-submit-contact:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(27, 67, 50, 0.35);
+  box-shadow: 0 15px 30px rgba(225, 29, 72, 0.35);
 }
 
 /* Right Column: Sidebar */
@@ -380,8 +376,8 @@
 .feature-icon {
   width: 48px;
   height: 48px;
-  background: #E8E1D3;
-  color: #1B4332;
+  background: #F3DCE7;
+  color: #E11D48;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -435,8 +431,8 @@
 .social-circle {
   width: 56px;
   height: 56px;
-  background: #E8E1D3;
-  color: #1B4332;
+  background: #F3DCE7;
+  color: #E11D48;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -445,10 +441,10 @@
 }
 
 .social-circle:hover {
-  background: linear-gradient(135deg, #1B4332, #1C2320);
+  background: linear-gradient(135deg, #E11D48, #181826);
   color: white;
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(27, 67, 50, 0.3);
+  box-shadow: 0 10px 20px rgba(225, 29, 72, 0.3);
 }
 
 @media (max-width: 1024px) {

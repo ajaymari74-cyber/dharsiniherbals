@@ -76,7 +76,7 @@ html, body {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(27, 67, 50, 0.2);
+  border: 1px solid rgba(225, 29, 72, 0.2);
   font-size: 0.95rem;
   white-space: nowrap;
 }
@@ -90,7 +90,7 @@ html, body {
 
 .wishlist-toast-view {
   font-weight: 700;
-  color: #1B4332;
+  color: #E11D48;
   text-decoration: underline;
   margin-left: 8px;
 }

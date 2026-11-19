@@ -17,17 +17,15 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Top Features Section — 2026 Botanical Silk Pavilion */
+/* Top Features Section — 2026 Coral-Rose to Aqua Glass Horizon */
 .pf-features-section {
   background:
-    radial-gradient(ellipse 50% 60% at 12% 30%, rgba(27, 67, 50, 0.12) 0%, transparent 64%),
-    radial-gradient(ellipse 50% 60% at 88% 70%, rgba(198, 139, 44, 0.14) 0%, transparent 64%),
-    radial-gradient(rgba(27, 67, 50, 0.055) 1px, transparent 1px),
-    linear-gradient(140deg, #E8F2EC 0%, #FAF7EF 52%, #F1E9DA 100%);
-  background-size: 100% 100%, 100% 100%, 24px 24px, 100% 100%;
+    radial-gradient(ellipse 50% 60% at 12% 30%, rgba(255, 79, 123, 0.24) 0%, transparent 64%),
+    radial-gradient(ellipse 50% 60% at 88% 70%, rgba(6, 182, 212, 0.24) 0%, transparent 64%),
+    linear-gradient(140deg, rgba(255, 234, 241, 0.90) 0%, rgba(255, 250, 252, 0.94) 52%, rgba(220, 246, 252, 0.90) 100%);
   padding: 58px 20px;
-  border-top: 1px solid rgba(198, 139, 44, 0.28);
-  border-bottom: 1px solid rgba(198, 139, 44, 0.22);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.88);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.72);
 }
 
 .pf-features-grid {
@@ -46,8 +44,8 @@
   padding: 24px 18px;
   border-radius: 18px;
   background: #ffffff;
-  border: 1px solid #E8E1D3;
-  box-shadow: 0 6px 20px -10px rgba(28, 35, 32, 0.05);
+  border: 1px solid #F3DCE7;
+  box-shadow: 0 6px 20px -10px rgba(24, 24, 38, 0.05);
   transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease;
 }
 
@@ -55,13 +53,13 @@
   width: 74px;
   height: 74px;
   background: #ffffff;
-  border: 1.5px solid rgba(198, 139, 44, 0.28);
+  border: 1.5px solid rgba(255, 138, 61, 0.28);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  box-shadow: 0 8px 24px rgba(28, 35, 32, 0.06);
+  box-shadow: 0 8px 24px rgba(24, 24, 38, 0.06);
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
 }
@@ -81,7 +79,7 @@
 
 /* Colored glowing shadows based on icon */
 .pf-hover-green:hover .pf-icon-circle {
-  box-shadow: 0 16px 32px rgba(27, 67, 50, 0.25);
+  box-shadow: 0 16px 32px rgba(225, 29, 72, 0.25);
   transform: translateY(-4px);
 }
 
@@ -112,14 +110,14 @@
 }
 
 /* Text color changes on hover */
-.pf-hover-green:hover .pf-feature-title { color: #1B4332; }
+.pf-hover-green:hover .pf-feature-title { color: #E11D48; }
 .pf-hover-orange:hover .pf-feature-title { color: #ea580c; }
 .pf-hover-yellow:hover .pf-feature-title { color: #ca8a04; }
 
 
 /* Bottom WhatsApp Signup Section */
 .pf-signup-section {
-  background: linear-gradient(135deg, #1C2320 0%, #1B4332 50%, #54605A 100%);
+  background: linear-gradient(135deg, #181826 0%, #E11D48 50%, #4A4660 100%);
   background-size: 200% 200%;
   animation: gradientFlow 10s ease infinite;
   padding: 100px 20px;
@@ -148,7 +146,7 @@
 .pf-orb-1 {
   width: 300px;
   height: 300px;
-  background: #1B4332;
+  background: #E11D48;
   top: -100px;
   left: -50px;
   animation-duration: 20s;
@@ -157,7 +155,7 @@
 .pf-orb-2 {
   width: 400px;
   height: 400px;
-  background: #1C2320;
+  background: #181826;
   bottom: -150px;
   right: -100px;
   animation-duration: 18s;
@@ -167,7 +165,7 @@
 .pf-orb-3 {
   width: 240px;
   height: 240px;
-  background: #C68B2C;
+  background: #FF8A3D;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -191,7 +189,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #FBF8F1;
+  color: #FFF7FA;
   margin: 0 0 16px 0;
   display: flex;
   align-items: center;
@@ -215,7 +213,7 @@
 
 .pf-signup-subtitle {
   font-size: 1.15rem;
-  color: #E8E1D3;
+  color: #F3DCE7;
   margin: 0 0 40px 0;
   font-weight: 500;
 }
@@ -259,7 +257,7 @@
 }
 
 .pf-shiny-btn {
-  background: linear-gradient(135deg, #D99B38 0%, #C68B2C 100%);
+  background: linear-gradient(135deg, #FF8A3D 0%, #FF8A3D 100%);
   color: #11241C;
   border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 0 32px;
@@ -284,7 +282,7 @@
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, rgba(27, 67, 50, 0) 0%, rgba(27, 67, 50, 0.15) 50%, rgba(27, 67, 50, 0) 100%);
+  background: linear-gradient(to right, rgba(225, 29, 72, 0) 0%, rgba(225, 29, 72, 0.15) 50%, rgba(225, 29, 72, 0) 100%);
   transform: skewX(-20deg);
   animation: btnShine 4s infinite 1s;
 }
@@ -298,7 +296,7 @@
 .pf-shiny-btn:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  color: #1C2320;
+  color: #181826;
 }
 
 .pf-btn-icon {
@@ -324,7 +322,7 @@
 }
 
 .pf-checkbox {
-  accent-color: #1B4332;
+  accent-color: #E11D48;
   width: 18px;
   height: 18px;
   cursor: pointer;
